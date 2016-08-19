@@ -12,11 +12,19 @@ namespace Virtual
 		SDL_Init(SDL_INIT_EVERYTHING);
 	
 		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer",width, height, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SDL_WINDOW_SHOWN);
-	
+		
+		eventManager = new EventManager();
+
 		onInit();
-		while(true)
+		while(!eventManager->isClosed())
 		{
+			eventManager->pollEvents();
+
 			onUpdate();
 		}
+	}
+	Device::~Device(void)
+	{
+
 	}
 }

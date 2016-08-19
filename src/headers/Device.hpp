@@ -7,6 +7,8 @@
 
 #include <SDL2/SDL.h>
 
+#include "EventManager.hpp"
+
 namespace Virtual
 {
 	/*Device class manage sublibs and engine*/
@@ -16,13 +18,15 @@ namespace Virtual
 		/*Constructor takes width and height of engine window*/
 		Device(int, int);
 	
-		~Device();
+		~Device(void);
 	protected:
 		/*onInit() start before main loop*/
-		virtual	void onInit() = 0;
+		virtual	void onInit(void) = 0;
 
 		/*onUpdate() start in rendering loop*/
-		virtual void onUpdate() = 0;
+		virtual void onUpdate(void) = 0;
+	protected:
+		EventManager * eventManager;
 	private:
 		SDL_Window* window;
 	};
