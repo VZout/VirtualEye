@@ -13,7 +13,8 @@
 	{
 	public:
 		EventManager(void);
-		
+		~EventManager();
+
 		/*Check is window closed*/
 		bool isClosed(void);
 

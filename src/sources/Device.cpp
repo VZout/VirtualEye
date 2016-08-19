@@ -27,6 +27,10 @@ namespace Virtual
 	}
 	Device::~Device(void)
 	{
+		//Deleting handles
+		delete eventManager;
+		delete renderer;
 
+		SDL_DestroyWindow(window);
 	}
 }

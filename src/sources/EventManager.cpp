@@ -11,6 +11,10 @@
 	{
 		event = new SDL_Event();
 	}
+	EventManager::~EventManager(void)
+	{
+		delete event;
+	}
 	int EventManager::pollEvents(void)
 	{
 		keyState = SDL_GetKeyboardState(NULL);
