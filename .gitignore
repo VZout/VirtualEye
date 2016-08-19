@@ -37,4 +37,7 @@ Session.vim
 .netrwhist
 *~
 # auto-generated tag files
-tags
+tags]]]]]]
+
+main.cpp
+run

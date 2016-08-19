@@ -22,10 +22,10 @@ namespace Virtual
 		~Device(void);
 	protected:
 		/*onInit() start before main loop*/
-		virtual	void onInit(void) = 0;
+		virtual	void onInit(void){};
 
 		/*onUpdate() start in rendering loop*/
-		virtual void onUpdate(void) = 0;
+		virtual void onUpdate(void){};
 	protected:
 		EventManager * eventManager;
 		Renderer * renderer;
