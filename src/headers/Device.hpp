@@ -3,6 +3,8 @@
  *	 MIT License  http://choosealicense.com/licenses/mit		 *
  *  =============================================================*/
 
+#pragma once
+
 #include <SDL2/SDL.h>
 
 namespace Virtual
