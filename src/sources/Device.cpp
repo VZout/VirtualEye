@@ -14,11 +14,13 @@ namespace Virtual
 		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer",width, height, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SDL_WINDOW_SHOWN);
 		
 		eventManager = new EventManager();
+		renderer = new Renderer(window);
 
 		onInit();
 		while(!eventManager->isClosed())
 		{
 			eventManager->pollEvents();
+			renderer->draw();
 
 			onUpdate();
 		}

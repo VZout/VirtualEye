@@ -8,6 +8,7 @@
 #include <SDL2/SDL.h>
 
 #include "EventManager.hpp"
+#include "Renderer.hpp"
 
 namespace Virtual
 {
@@ -27,6 +28,7 @@ namespace Virtual
 		virtual void onUpdate(void) = 0;
 	protected:
 		EventManager * eventManager;
+		Renderer * renderer;
 	private:
 		SDL_Window* window;
 	};
