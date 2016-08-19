@@ -5,15 +5,18 @@
 
 #include "Device.hpp"
 
-Device::Device(int width, int height)
+namespace Virtual
 {
-	SDL_Init(SDL_INIT_EVERYTHING);
-	
-	window = SDL_CreateWindow("VirtualEye | SDL2 Renderer",width, height, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SDL_WINDOW_SHOWN);
-	
-	onInit();
-	while(true)
+	Device::Device(int width, int height)
 	{
-		onUpdate();
+		SDL_Init(SDL_INIT_EVERYTHING);
+	
+		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer",width, height, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SDL_WINDOW_SHOWN);
+	
+		onInit();
+		while(true)
+		{
+			onUpdate();
+		}
 	}
 }
