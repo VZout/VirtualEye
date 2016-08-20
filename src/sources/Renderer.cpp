@@ -10,6 +10,8 @@ namespace Virtual
 	Renderer::Renderer(SDL_Window * window)
 	{
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+		if(!renderer)
+			std::cout << "VirtualEye new log: Renderer creation failed!" << std::endl;
 	}
 	Renderer::~Renderer(void)
 	{
