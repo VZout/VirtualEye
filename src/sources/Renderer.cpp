@@ -1,7 +1,7 @@
-/* =============================================================*
- *  VirtualEye (c)         Dmitro Szewczuk                      *
- *  MIT License  http://choosealicense.com/licenses/mit         *
- * =============================================================*/ 
+/*  =============================================================*
+ *   VirtualEye (c)         Dmitro Szewczuk                      *
+ *   MIT License  http://choosealicense.com/licenses/mit         *
+ *  =============================================================*/ 
 
 #include "../headers/Renderer.hpp"
 
