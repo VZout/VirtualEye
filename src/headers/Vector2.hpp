@@ -3,6 +3,8 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/
 
+#pragma once
+
 namespace Virtual
 {
  	template<typename T> struct Vector2

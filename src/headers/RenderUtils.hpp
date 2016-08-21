@@ -13,6 +13,10 @@ namespace Virtual
 {
 	class Texture
 	{
+	public:
+		void setTexture(SDL_Texture*);
+		
+		SDL_Texture* getTexture();
 	protected:
 		SDL_Texture * texture;	
 	};
@@ -21,17 +25,24 @@ namespace Virtual
 	class Drawable
 	{
 	public:
-		virtual void draw() = 0;
+		virtual void draw(SDL_Renderer*) = 0;
 
 		/*Getters*/
 		Vector2<int> getPosition();
 		Vector2<int> getParametres();
 		
 		/*Setters*/
-		void setPosition(Vector2<int> position);
-		void setParametres(Vector2<int> parametres);
+		void setPosition(Vector2<int>);
+		void setParametres(Vector2<int>);
 
 	protected:	
 		SDL_Rect rect;
+	};
+	class Sprite
+		:public Drawable,
+		 public Texture	
+	{
+	public:
+		void draw(SDL_Renderer*);
 	};
 }

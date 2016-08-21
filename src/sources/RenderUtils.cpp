@@ -7,6 +7,17 @@
 
 namespace Virtual
 {
+	/*Texture*/
+	void Texture::setTexture(SDL_Texture * texture)
+	{
+		this->texture = texture;
+	}
+	SDL_Texture * Texture::getTexture()
+	{
+		return texture;
+	}
+
+	/*Drawable*/
 	Vector2<int> Drawable::getPosition()
 	{
 		return Vector2<int>(rect.x, rect.y);
@@ -24,5 +35,11 @@ namespace Virtual
 	{
 		rect.w = parametres.x;
 		rect.h = parametres.y;
+	}
+
+	/*Sprite*/
+	void Sprite::draw(SDL_Renderer * renderer)
+	{
+		SDL_RenderCopy(renderer, texture, NULL, &rect);
 	}
 }
