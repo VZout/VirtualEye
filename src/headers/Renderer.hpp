@@ -9,6 +9,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <string>
+#include <iostream>
 #include <SDL2/SDL_image.h> 
 
 #include "RenderUtils.hpp"
@@ -30,6 +31,6 @@ namespace Virtual
 	private:
 		SDL_Renderer * renderer;
 		
-		std::vector<Drawable*> vector;	
+		std::vector<Sprite*> vector;
 	};
 }

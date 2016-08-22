@@ -23,23 +23,26 @@ namespace Virtual
 		SDL_RenderClear(renderer);
 		
 		//TODO: MEMORY LEAK 
-		/*for(auto &i : vector)
-			i->draw(renderer);*/
+		for(auto &i : vector)
+			i->draw(renderer);
 		SDL_RenderPresent(renderer);
 	}
 	void Renderer::loadSprite(std::string path, Vector2<int> position)
 	{
-#include <iostream>
 		Sprite * s = new Sprite;
-		s->texture = IMG_LoadTexture(renderer, path.c_str());
+        SDL_Texture* texture = IMG_LoadTexture(renderer, path.c_str());
+		s->setTexture(texture);
 		s->setPosition(position);
 		
-		Vector2<int> * pos = new Vector2<int>;
-		SDL_QueryTexture(&s->getTexture(), NULL, NULL, &pos->x, &pos->y);
+		Vector2<int> * par = new Vector2<int>;
+		SDL_QueryTexture(s->texture, NULL, NULL, &par->x, &par->y);
+		s->setParametres(*par);
+
 		std::cout << "a" << std::endl;
 		vector.push_back(s);
 
 		delete s;
-		delete pos;
+		delete par;
+        SDL_DestroyTexture(texture);
 	}
 }	

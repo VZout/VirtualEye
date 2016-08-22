@@ -22,6 +22,7 @@ namespace Virtual
 	
 		~Device(void);
 
+		/*Function start main loop*/
 		void start();
 	protected:
 		/*onInit() start before main loop*/
