@@ -5,8 +5,14 @@
 
 #pragma once
 
+#include <vector>
 #include <iostream>
 #include <SDL2/SDL.h>
+#include <string>
+#include <SDL2/SDL_image.h> 
+
+#include "RenderUtils.hpp"
+#include "Vector2.hpp"
 
 namespace Virtual
 {
@@ -14,12 +20,16 @@ namespace Virtual
  	class Renderer
 	{
 	public:
-		Renderer(SDL_Window * window);
+		Renderer(SDL_Window *);
 		~Renderer(void);
 	
 		/*Funcion clear screen, rendering scene and swapped buffers*/
-		void draw(); //TODO SCENE RENDERING
+		void draw();
+
+		void loadSprite(std::string, Vector2<int>);
 	private:
 		SDL_Renderer * renderer;
+		
+		std::vector<Drawable*> vector;	
 	};
- }
+}

@@ -11,14 +11,16 @@
 
 namespace Virtual
 {
+	class Renderer;
 	class Texture
 	{
 	public:
 		void setTexture(SDL_Texture*);
 		
-		SDL_Texture* getTexture();
+		SDL_Texture& getTexture();
 	protected:
 		SDL_Texture * texture;	
+	friend class Renderer;
 	};
 	
 	/*With Drawable you can manipulate position and parametres and draw objects*/
@@ -38,9 +40,9 @@ namespace Virtual
 	protected:	
 		SDL_Rect rect;
 	};
+
 	class Sprite
-		:public Drawable,
-		 public Texture	
+		:public Texture, public Drawable	
 	{
 	public:
 		void draw(SDL_Renderer*);

@@ -17,7 +17,9 @@ namespace Virtual
 
 		eventManager = new EventManager();
 		renderer = new Renderer(window);
-
+	}
+	void Device::start()
+	{
 		onInit();
 		while(!eventManager->isClosed())
 		{

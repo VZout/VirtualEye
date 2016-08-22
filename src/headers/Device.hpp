@@ -1,6 +1,6 @@
 /*  =============================================================*
- *   VirtualEye (c)			Dmitro Szewczuk						 *
- *	 MIT License  http://choosealicense.com/licenses/mit		 *
+ *   VirtualEye (c)			Dmitro Szewczuk		 *
+ *   MIT License  hhttp://choosealicense.com/licenses/mit/	 *
  *  =============================================================*/
 
 #pragma once
@@ -21,12 +21,14 @@ namespace Virtual
 		Device(int, int);
 	
 		~Device(void);
+
+		void start();
 	protected:
 		/*onInit() start before main loop*/
-		virtual	void onInit(void){};
+		virtual void onInit(){ };
 
 		/*onUpdate() start in rendering loop*/
-		virtual void onUpdate(void){};
+		virtual void onUpdate(){ };
 	protected:
 		EventManager * eventManager;
 		Renderer * renderer;

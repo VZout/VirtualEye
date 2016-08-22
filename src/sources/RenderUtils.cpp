@@ -12,9 +12,9 @@ namespace Virtual
 	{
 		this->texture = texture;
 	}
-	SDL_Texture * Texture::getTexture()
+	SDL_Texture & Texture::getTexture()
 	{
-		return texture;
+		return *texture;
 	}
 
 	/*Drawable*/
