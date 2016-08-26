@@ -27,7 +27,10 @@ namespace Virtual
 		/*Funcion clear screen, rendering scene and swapped buffers*/
 		void draw();
 
-		void loadSprite(std::string, Vector2<int>);
+		void loadSprite(std::string, Vector2<int>, std::string);
+		
+		/*Returns reference to chosen element*/
+		Sprite& getElementById(std::string);
 	private:
 		SDL_Renderer * renderer;
 		

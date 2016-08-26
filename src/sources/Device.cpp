@@ -18,6 +18,7 @@ namespace Virtual
 		eventManager = new EventManager();
 		renderer = new Renderer(window);
 	}
+	//Start game loop
 	void Device::start()
 	{
 		onInit();

@@ -8,6 +8,10 @@
 namespace Virtual
 {
 	/*Texture*/
+	Texture::~Texture()
+	{
+		SDL_DestroyTexture(texture);
+	}
 	void Texture::setTexture(SDL_Texture * texture)
 	{
 		this->texture = texture;
@@ -26,6 +30,11 @@ namespace Virtual
 	{
 		return Vector2<int>(rect.w, rect.h);
 	}
+	std::string	Drawable::getName()
+	{
+		return name;
+	}
+	
 	void Drawable::setPosition(Vector2<int> position)
 	{
 		rect.x = position.x;
@@ -35,6 +44,10 @@ namespace Virtual
 	{
 		rect.w = parametres.x;
 		rect.h = parametres.y;
+	}
+	void Drawable::setName(std::string name)
+	{
+		this->name = name;
 	}
 
 	/*Sprite*/

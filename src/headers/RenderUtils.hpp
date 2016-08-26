@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include <iostream>
 #include <SDL2/SDL.h>
 
 #include "Vector2.hpp"
@@ -15,6 +16,7 @@ namespace Virtual
 	class Texture
 	{
 	public:
+		~Texture();
 		void setTexture(SDL_Texture*);
 		
 		SDL_Texture& getTexture();
@@ -32,13 +34,17 @@ namespace Virtual
 		/*Getters*/
 		Vector2<int> getPosition();
 		Vector2<int> getParametres();
+		std::string  getName();
 		
 		/*Setters*/
-		void setPosition(Vector2<int>);
+		void setPosition  (Vector2<int>);
 		void setParametres(Vector2<int>);
+		void setName	  (std::string name);
 
 	protected:	
 		SDL_Rect rect;
+		std::string name;
+		
 	};
 
 	class Sprite
