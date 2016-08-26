@@ -1,6 +1,6 @@
 /*  =============================================================*
- *   VirtualEye (c)			Dmitro Szewczuk		 *
- *   MIT License  hhttp://choosealicense.com/licenses/mit/	 *
+ *   VirtualEye (c)			Dmitro Szewczuk		 				 *
+ *   MIT License  hhttp://choosealicense.com/licenses/mit/		 *
  *  =============================================================*/
 
 #pragma once
@@ -33,7 +33,10 @@ namespace Virtual
 	protected:
 		EventManager * eventManager;
 		Renderer * renderer;
+		Camera * camera;
+		Vector2<int> levelProperties;
 	private:
 		SDL_Window* window;
+		int width, height;
 	};
 }

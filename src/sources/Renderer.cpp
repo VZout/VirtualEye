@@ -10,6 +10,7 @@ namespace Virtual
 	Renderer::Renderer(SDL_Window * window)
 	{
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
 		if(!renderer)
 			std::cout << "VirtualEye new log: Renderer creation failed!" << std::endl;
 	}
@@ -18,13 +19,13 @@ namespace Virtual
 		SDL_DestroyRenderer(renderer);
 		vector.clear();
 	}
-	void Renderer::draw(void)
+	void Renderer::draw(Camera & camera)
 	{
 		SDL_SetRenderDrawColor(renderer, 125, 0, 255, 255);
 		SDL_RenderClear(renderer);
 		
 		for(auto &i : vector)
-			i->draw(renderer);
+			i->draw(renderer, camera);
 			
 		SDL_RenderPresent(renderer);
 	}

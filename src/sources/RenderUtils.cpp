@@ -57,8 +57,9 @@ namespace Virtual
 	}
 
 	/*Sprite*/
-	void Sprite::draw(SDL_Renderer * renderer)
+	void Sprite::draw(SDL_Renderer * renderer, Camera& camera)
 	{
-		SDL_RenderCopy(renderer, texture, NULL, &rect);
+		SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
+		SDL_RenderCopy(renderer, texture, NULL, &dRect);
 	}
 }

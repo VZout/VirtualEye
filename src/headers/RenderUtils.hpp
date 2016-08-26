@@ -9,6 +9,7 @@
 #include <SDL2/SDL.h>
 
 #include "Vector2.hpp"
+#include "Camera.hpp"
 
 namespace Virtual
 {
@@ -29,7 +30,7 @@ namespace Virtual
 	class Drawable
 	{
 	public:
-		virtual void draw(SDL_Renderer*) = 0;
+		virtual void draw(SDL_Renderer*, Camera&) = 0;
 
 		/*Getters*/
 		Vector2<int> getPosition();
@@ -54,6 +55,6 @@ namespace Virtual
 		:public Texture, public Drawable	
 	{
 	public:
-		void draw(SDL_Renderer*);
+		void draw(SDL_Renderer*, Camera&);
 	};
 }

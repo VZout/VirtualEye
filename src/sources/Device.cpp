@@ -9,6 +9,9 @@ namespace Virtual
 {
 	Device::Device(int width, int height)
 	{
+		this->width = width;
+		this->height = height;
+		
 		SDL_Init(SDL_INIT_EVERYTHING);
 	
 		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer",SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
@@ -17,6 +20,7 @@ namespace Virtual
 
 		eventManager = new EventManager();
 		renderer = new Renderer(window);
+		camera = new Camera();
 	}
 	//Start game loop
 	void Device::start()
@@ -24,8 +28,9 @@ namespace Virtual
 		onInit();
 		while(!eventManager->isClosed())
 		{
+			camera->update(Vector2<int>(width, height), levelProperties);
 			eventManager->pollEvents();
-			renderer->draw();
+			renderer->draw(*camera);
 
 			onUpdate();
 		}

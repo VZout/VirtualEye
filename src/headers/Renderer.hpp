@@ -29,7 +29,7 @@ namespace Virtual
 		~Renderer(void);
 	
 		/*Funcion clear screen, rendering scene and swapped buffers*/
-		void draw(void);
+		void draw(Camera &);
 
 		/*Deleting all sprites in vector*/
 		void clearScene(void);
@@ -41,6 +41,7 @@ namespace Virtual
 		Sprite& getElementById(std::string);
 	private:
 		SDL_Renderer * renderer;
+		Camera * camera;
 		
 		std::vector<sprite_ptr> vector;
 	};
