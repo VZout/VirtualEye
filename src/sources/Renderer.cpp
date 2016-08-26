@@ -16,11 +16,9 @@ namespace Virtual
 	Renderer::~Renderer(void)
 	{
 		SDL_DestroyRenderer(renderer);
-		
-		for(auto &i : vector)
-			delete i;
+		vector.clear();
 	}
-	void Renderer::draw()
+	void Renderer::draw(void)
 	{
 		SDL_SetRenderDrawColor(renderer, 125, 0, 255, 255);
 		SDL_RenderClear(renderer);
@@ -29,6 +27,10 @@ namespace Virtual
 			i->draw(renderer);
 			
 		SDL_RenderPresent(renderer);
+	}
+	void Renderer::clearScene(void)
+	{
+		vector.clear();
 	}
 	void Renderer::loadSprite(std::string path, Vector2<int> position, std::string name)
 	{

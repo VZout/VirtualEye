@@ -25,8 +25,12 @@ namespace Virtual
 		~Renderer(void);
 	
 		/*Funcion clear screen, rendering scene and swapped buffers*/
-		void draw();
+		void draw(void);
 
+		/*Deleting all sprites in vector*/
+		void clearScene(void);
+
+		/*Loads sprite into sprite vector*/
 		void loadSprite(std::string, Vector2<int>, std::string);
 		
 		/*Returns reference to chosen element*/
