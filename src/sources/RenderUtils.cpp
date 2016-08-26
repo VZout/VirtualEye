@@ -49,6 +49,12 @@ namespace Virtual
 	{
 		this->name = name;
 	}
+	
+	void Drawable::move(Vector2<int> position)
+	{
+		rect.x += position.x;
+		rect.y += position.y;
+	}
 
 	/*Sprite*/
 	void Sprite::draw(SDL_Renderer * renderer)

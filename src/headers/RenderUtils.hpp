@@ -39,8 +39,11 @@ namespace Virtual
 		/*Setters*/
 		void setPosition  (Vector2<int>);
 		void setParametres(Vector2<int>);
-		void setName	  (std::string name);
+		void setName	  (std::string);
 
+		/*Custom*/
+		void move(Vector2<int>);
+		
 	protected:	
 		SDL_Rect rect;
 		std::string name;

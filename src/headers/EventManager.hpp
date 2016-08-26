@@ -8,6 +8,8 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
+#define KEY(x) SDLK_##x
+
 namespace Virtual
 {
 	class EventManager
@@ -18,6 +20,9 @@ namespace Virtual
 
 		/*Check is window closed*/
 		bool isClosed(void);
+		
+		/*Check is key pressed*/
+		bool isKeyPressed(int);
 
 		/*Close window*/
 		void close(void);

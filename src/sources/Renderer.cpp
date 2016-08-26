@@ -16,6 +16,9 @@ namespace Virtual
 	Renderer::~Renderer(void)
 	{
 		SDL_DestroyRenderer(renderer);
+		
+		for(auto &i : vector)
+			delete i;
 	}
 	void Renderer::draw()
 	{
@@ -41,6 +44,8 @@ namespace Virtual
 		Vector2<int> * par = new Vector2<int>;
 		SDL_QueryTexture(&s->getTexture(), NULL, NULL, &par->x, &par->y);
 		s->setParametres(*par);
+		
+		delete par;
 
 		vector.push_back(s);
 	}

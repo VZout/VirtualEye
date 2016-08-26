@@ -28,6 +28,13 @@
 		else 
 			return false;
 	}
+	bool EventManager::isKeyPressed(int key)
+	{
+		if(keyState[SDL_GetScancodeFromKey(key)])
+			return true;
+		else
+			return false;
+	}
 	void EventManager::close(void)
 	{
 		event->type = SDL_QUIT;
