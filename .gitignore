@@ -39,5 +39,8 @@ Session.vim
 # auto-generated tag files
 tags
 
+# Images
+*.png
+
 main.cpp
 run
