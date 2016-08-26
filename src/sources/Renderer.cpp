@@ -34,7 +34,7 @@ namespace Virtual
 	}
 	void Renderer::loadSprite(std::string path, Vector2<int> position, std::string name)
 	{
-		Sprite * s = new Sprite;
+		sprite_ptr s(new Sprite);
 		
 		//Texture & position pushing
         SDL_Texture* texture = IMG_LoadTexture(renderer, path.c_str());

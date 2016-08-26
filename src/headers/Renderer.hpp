@@ -7,9 +7,11 @@
 
 #include <vector>
 #include <iostream>
-#include <SDL2/SDL.h>
 #include <string>
 #include <iostream>
+#include <memory>
+
+#include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h> 
 
 #include "RenderUtils.hpp"
@@ -17,6 +19,8 @@
 
 namespace Virtual
 {
+	typedef std::shared_ptr<Sprite> sprite_ptr;
+
 	/*This class control rendering buffers*/
  	class Renderer
 	{
@@ -38,6 +42,6 @@ namespace Virtual
 	private:
 		SDL_Renderer * renderer;
 		
-		std::vector<Sprite*> vector;
+		std::vector<sprite_ptr> vector;
 	};
 }
