@@ -25,6 +25,7 @@ namespace Virtual
 		//TODO: MEMORY LEAK 
 		for(auto &i : vector)
 			i->draw(renderer);
+			
 		SDL_RenderPresent(renderer);
 	}
 	void Renderer::loadSprite(std::string path, Vector2<int> position)
@@ -38,11 +39,6 @@ namespace Virtual
 		SDL_QueryTexture(s->texture, NULL, NULL, &par->x, &par->y);
 		s->setParametres(*par);
 
-		std::cout << "a" << std::endl;
 		vector.push_back(s);
-
-		delete s;
-		delete par;
-        SDL_DestroyTexture(texture);
 	}
 }	
