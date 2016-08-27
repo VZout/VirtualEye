@@ -8,10 +8,10 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
-#define KEY(x) SDLK_##x
-
 namespace Virtual
 {
+	#define KEY(x) SDLK_##x
+	
 	class EventManager
 	{
 	public:

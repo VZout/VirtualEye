@@ -18,18 +18,20 @@ namespace Virtual
 		if(!window)
 			std::cout << "VirtualEye new log: Window creation failed!" << std::endl;
 
-		eventManager = new EventManager();
-		renderer = new Renderer(window);
-		camera = new Camera();
+		eventManager = std::shared_ptr<EventManager>(new EventManager);
+		renderer = std::shared_ptr<Renderer>(new Renderer(window));
+		camera = std::shared_ptr<Camera>(new Camera);
+		
+		camera->setCenter(Vector2<int>(width / 2, height / 2));
 	}
 	//Start game loop
-	void Device::start()
+	int Device::start()
 	{
 		onInit();
 		while(!eventManager->isClosed())
 		{
-			camera->update(Vector2<int>(width, height), levelProperties);
 			eventManager->pollEvents();
+			camera->update(Vector2<int>(width, height), levelProperties);
 			renderer->draw(*camera);
 
 			onUpdate();
@@ -37,10 +39,6 @@ namespace Virtual
 	}
 	Device::~Device(void)
 	{
-		//Deleting handles
-		delete eventManager;
-		delete renderer;
-
 		SDL_DestroyWindow(window);
 	}
 }

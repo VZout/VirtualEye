@@ -23,7 +23,7 @@ namespace Virtual
 		~Device(void);
 
 		/*Function start main loop*/
-		void start();
+		int start();
 	protected:
 		/*onInit() start before main loop*/
 		virtual void onInit(){ };
@@ -31,9 +31,10 @@ namespace Virtual
 		/*onUpdate() start in rendering loop*/
 		virtual void onUpdate(){ };
 	protected:
-		EventManager * eventManager;
-		Renderer * renderer;
-		Camera * camera;
+		std::shared_ptr<EventManager> eventManager;
+		std::shared_ptr<Renderer> renderer;
+		std::shared_ptr<Camera> camera;
+		
 		Vector2<int> levelProperties;
 	private:
 		SDL_Window* window;

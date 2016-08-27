@@ -17,6 +17,7 @@ namespace Virtual
 		public:
 			/*Gets window and level parametres*/
 			void update(Vector2<int>, Vector2<int>);
+			
 			/*Get center of camera position*/
 			void setCenter(Vector2<int>);
 			

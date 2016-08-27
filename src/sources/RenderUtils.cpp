@@ -50,10 +50,10 @@ namespace Virtual
 		this->name = name;
 	}
 	
-	void Drawable::move(Vector2<int> position)
+	void Drawable::move(Vector2<int> relativePosition)
 	{
-		rect.x += position.x;
-		rect.y += position.y;
+		rect.x += relativePosition.x;
+		rect.y += relativePosition.y;
 	}
 
 	/*Sprite*/
