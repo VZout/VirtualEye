@@ -21,6 +21,7 @@ namespace Virtual
 			/*Get center of camera position*/
 			void setCenter(Vector2<int>);
 			
+			/*This funciton move the center of camera*/
 			void move(Vector2<int>);
 			
 			/*Returns rect to manipulate position in engine*/
