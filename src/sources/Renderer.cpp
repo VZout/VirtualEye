@@ -53,6 +53,31 @@ namespace Virtual
 
 		vector.push_back(s);
 	}
+	void Renderer::loadMap(std::string iniPath)
+	{
+		std::shared_ptr<Map> map(new Map);
+		
+		//Loading ini file
+		std::ifstream file;
+		file.open(iniPath);
+		if(file.is_open())
+		{
+			file >> map->width >> map->height >> map->mapPath >> map->texturePath >> map->tilesSize >> map->maxNumber;
+			
+			//Loading map file
+			std::ifstream mapFile;
+			mapFile.open(map->mapPath);
+			if(mapFile.is_open())
+			{
+				std::string buffer;
+				while(std::getline(mapFile, buffer))
+				{
+					map->mapString.push_back(buffer);
+					std::cout << buffer << std::endl;
+				}
+			}
+		}
+	}
 	Sprite& Renderer::getElementById(std::string name)
 	{
 		for(auto &i : vector)

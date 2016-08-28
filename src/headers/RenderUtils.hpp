@@ -6,6 +6,8 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
+
 #include <SDL2/SDL.h>
 
 #include "Vector2.hpp"
@@ -57,5 +59,16 @@ namespace Virtual
 	{
 	public:
 		void draw(SDL_Renderer*, Camera&);
+	};
+	
+	struct Map
+	{
+		std::vector<std::string> mapString;
+		std::string mapPath;
+		std::string texturePath;
+		int tilesSize;
+		int maxNumber;
+		int width;
+		int height;
 	};
 }
