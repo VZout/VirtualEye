@@ -73,10 +73,11 @@ namespace Virtual
 				while(std::getline(mapFile, buffer))
 				{
 					map->mapString.push_back(buffer);
-					std::cout << buffer << std::endl;
 				}
 			}
+			else return;
 		}
+		else return;
 	}
 	Sprite& Renderer::getElementById(std::string name)
 	{

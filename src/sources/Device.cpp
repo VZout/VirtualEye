@@ -23,6 +23,7 @@ namespace Virtual
 		camera = std::shared_ptr<Camera>(new Camera);
 		
 		camera->setCenter(Vector2<int>(0, 0));
+		levelProperties = Vector2<int>(width, height);
 	}
 	//Start game loop
 	int Device::start()

@@ -22,33 +22,15 @@ namespace Virtual
 	}
 
 	/*Drawable*/
-	Vector2<int> Drawable::getPosition()
-	{
-		return Vector2<int>(rect.x, rect.y);
-	}
-	Vector2<int> Drawable::getParametres()
-	{
-		return Vector2<int>(rect.w, rect.h);
-	}
 	std::string	Drawable::getName()
 	{
 		return name;
 	}
-	bool Drawable::getIsStatic()
+	bool Drawable::isStatic()
 	{
 		return is_static;
 	}
 	
-	void Drawable::setPosition(Vector2<int> position)
-	{
-		rect.x = position.x;
-		rect.y = position.y;
-	}
-	void Drawable::setParametres(Vector2<int> parametres)
-	{
-		rect.w = parametres.x;
-		rect.h = parametres.y;
-	}
 	void Drawable::setName(std::string name)
 	{
 		this->name = name;
@@ -58,12 +40,32 @@ namespace Virtual
 		is_static = is;
 	}
 	
-	void Drawable::move(Vector2<int> relativePosition)
+	/*Transformable*/
+	void Transformable::setPosition(Vector2<int> position)
+	{
+		rect.x = position.x;
+		rect.y = position.y;
+	}
+	void Transformable::setParametres(Vector2<int> parametres)
+	{
+		rect.w = parametres.x;
+		rect.h = parametres.y;
+	}
+	
+	Vector2<int> Transformable::getPosition()
+	{
+		return Vector2<int>(rect.x, rect.y);
+	}
+	Vector2<int> Transformable::getParametres()
+	{
+		return Vector2<int>(rect.w, rect.h);
+	}
+	
+	void Transformable::move(Vector2<int> relativePosition)
 	{
 		rect.x += relativePosition.x;
 		rect.y += relativePosition.y;
 	}
-
 	/*Sprite*/
 	void Sprite::draw(SDL_Renderer * renderer, Camera& camera)
 	{

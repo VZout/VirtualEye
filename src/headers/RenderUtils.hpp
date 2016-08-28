@@ -15,7 +15,6 @@
 
 namespace Virtual
 {
-	class Renderer;
 	class Texture
 	{
 	public:
@@ -27,8 +26,26 @@ namespace Virtual
 		SDL_Texture * texture;	
 	};
 	
-	/*With Drawable you can manipulate position and parametres and draw objects*/
+	/*With Drawable you can draw objects*/
 	class Drawable
+	{
+	public:
+		virtual void draw(SDL_Renderer*, Camera&) = 0;
+
+		/*Getters*/
+		std::string  getName();
+		bool isStatic();
+		
+		/*Setters*/
+		void setName	  (std::string);
+		void setIsStatic  (bool);
+	protected:	
+		std::string name;
+		bool is_static;
+		
+	};
+	/*With Drawable you can manipulate position and parametres objects*/
+	class Transformable
 	{
 	public:
 		virtual void draw(SDL_Renderer*, Camera&) = 0;
@@ -36,26 +53,19 @@ namespace Virtual
 		/*Getters*/
 		Vector2<int> getPosition();
 		Vector2<int> getParametres();
-		std::string  getName();
-		bool getIsStatic();
-		
+
 		/*Setters*/
 		void setPosition  (Vector2<int>);
 		void setParametres(Vector2<int>);
-		void setName	  (std::string);
-		void setIsStatic  (bool);
 
 		/*Custom*/
 		void move(Vector2<int>);
 	protected:	
 		SDL_Rect rect;
-		std::string name;
-		bool is_static;
-		
 	};
 
 	class Sprite
-		:public Texture, public Drawable	
+		:public Texture, public Drawable, public Transformable	
 	{
 	public:
 		void draw(SDL_Renderer*, Camera&);
@@ -63,6 +73,7 @@ namespace Virtual
 	
 	struct Map
 	{
+		SDL_Rect cropRect;
 		std::vector<std::string> mapString;
 		std::string mapPath;
 		std::string texturePath;
