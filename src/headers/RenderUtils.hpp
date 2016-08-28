@@ -23,7 +23,6 @@ namespace Virtual
 		SDL_Texture& getTexture();
 	protected:
 		SDL_Texture * texture;	
-	friend class Renderer;
 	};
 	
 	/*With Drawable you can manipulate position and parametres and draw objects*/
@@ -36,18 +35,20 @@ namespace Virtual
 		Vector2<int> getPosition();
 		Vector2<int> getParametres();
 		std::string  getName();
+		bool getIsStatic();
 		
 		/*Setters*/
 		void setPosition  (Vector2<int>);
 		void setParametres(Vector2<int>);
 		void setName	  (std::string);
+		void setIsStatic  (bool);
 
 		/*Custom*/
 		void move(Vector2<int>);
-		
 	protected:	
 		SDL_Rect rect;
 		std::string name;
+		bool is_static;
 		
 	};
 

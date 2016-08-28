@@ -35,7 +35,7 @@ namespace Virtual
 		void clearScene(void);
 
 		/*Loads sprite into sprite vector*/
-		void loadSprite(std::string, Vector2<int>, std::string);
+		void loadSprite(std::string, Vector2<int>, std::string, bool);
 		
 		/*Returns reference to chosen element*/
 		Sprite& getElementById(std::string);

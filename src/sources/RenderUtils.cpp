@@ -34,6 +34,10 @@ namespace Virtual
 	{
 		return name;
 	}
+	bool Drawable::getIsStatic()
+	{
+		return is_static;
+	}
 	
 	void Drawable::setPosition(Vector2<int> position)
 	{
@@ -49,6 +53,10 @@ namespace Virtual
 	{
 		this->name = name;
 	}
+	void Drawable::setIsStatic(bool is)
+	{
+		is_static = is;
+	}
 	
 	void Drawable::move(Vector2<int> relativePosition)
 	{
@@ -59,7 +67,14 @@ namespace Virtual
 	/*Sprite*/
 	void Sprite::draw(SDL_Renderer * renderer, Camera& camera)
 	{
-		SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
-		SDL_RenderCopy(renderer, texture, NULL, &dRect);
+		if(!is_static)
+		{
+			SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
+			SDL_RenderCopy(renderer, texture, NULL, &dRect);
+		}
+		else
+		{
+			SDL_RenderCopy(renderer, texture, NULL, &rect);
+		}
 	}
 }

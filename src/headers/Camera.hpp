@@ -1,6 +1,6 @@
 /*  =============================================================*
  *   VirtualEye (c)			Dmitro Szewczuk		 				 *
- *   MIT License  hhttp://choosealicense.com/licenses/mit/		 *
+ *   MIT License  http://choosealicense.com/licenses/mit/		 *
  *  =============================================================*/
  
 #pragma once
@@ -20,6 +20,8 @@ namespace Virtual
 			
 			/*Get center of camera position*/
 			void setCenter(Vector2<int>);
+			
+			void move(Vector2<int>);
 			
 			/*Returns rect to manipulate position in engine*/
 			SDL_Rect getRect();

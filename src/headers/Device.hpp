@@ -1,6 +1,6 @@
 /*  =============================================================*
  *   VirtualEye (c)			Dmitro Szewczuk		 				 *
- *   MIT License  hhttp://choosealicense.com/licenses/mit/		 *
+ *   MIT License  http://choosealicense.com/licenses/mit/		 *
  *  =============================================================*/
 
 #pragma once

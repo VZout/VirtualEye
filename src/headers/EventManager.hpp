@@ -8,9 +8,12 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
+#include "Vector2.hpp"
+
 namespace Virtual
 {
 	#define KEY(x) SDLK_##x
+	#define MOUSE_KEY(x) SDL_BUTTON_##x
 	
 	class EventManager
 	{
@@ -23,12 +26,16 @@ namespace Virtual
 		
 		/*Check is key pressed*/
 		bool isKeyPressed(int);
+		
+		bool isMouseKeyPressed(int);
 
 		/*Close window*/
 		void close(void);
 
 		/*Capturing events*/
 		int pollEvents(void);
+		
+		Vector2<int> getMousePosition();
 	private:
 		SDL_Event * event;
 		const Uint8 * keyState;

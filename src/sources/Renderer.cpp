@@ -33,7 +33,7 @@ namespace Virtual
 	{
 		vector.clear();
 	}
-	void Renderer::loadSprite(std::string path, Vector2<int> position, std::string name)
+	void Renderer::loadSprite(std::string path, Vector2<int> position, std::string name, bool is)
 	{
 		sprite_ptr s(new Sprite);
 		
@@ -42,6 +42,7 @@ namespace Virtual
 		s->setTexture(texture);
 		s->setPosition(position);
 		s->setName(name);
+		s->setIsStatic(is);
 		
 		//Detect of Width and Height
 		Vector2<int> * par = new Vector2<int>;

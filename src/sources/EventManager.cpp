@@ -35,8 +35,21 @@
 		else
 			return false;
 	}
+	bool EventManager::isMouseKeyPressed(int key)
+	{
+		if(SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT))
+			return true;
+		else
+			return false;
+	}
 	void EventManager::close(void)
 	{
 		event->type = SDL_QUIT;
+	}
+	Vector2<int> EventManager::getMousePosition()
+	{
+		Vector2<int> pos(0, 0);
+		SDL_GetMouseState(&pos.x, &pos.y);
+		return pos;
 	}
  }

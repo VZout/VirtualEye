@@ -1,6 +1,6 @@
 /*  =============================================================*
  *   VirtualEye (c)			Dmitro Szewczuk		 				 *
- *   MIT License  hhttp://choosealicense.com/licenses/mit/		 *
+ *   MIT License  http://choosealicense.com/licenses/mit/		 *
  *  =============================================================*/
  
 #include "../headers/Camera.hpp"
@@ -23,14 +23,19 @@ namespace Virtual
 		if(rect.y > level.y - rect.h)
 			rect.y = level.y - rect.h;
 	}
-	SDL_Rect Camera::getRect()
-	{
-		return rect;
-	}
 	void Camera::setCenter(Vector2<int> center)
 	{
 		//Setting camera position
 		rect.x = center.x - rect.w / 2;
 		rect.y = center.y - rect.h / 2;
+	}
+	void Camera::move(Vector2<int> relativePosition)
+	{
+		rect.x += relativePosition.x;
+		rect.y += relativePosition.y;
+	}
+	SDL_Rect Camera::getRect()
+	{
+		return rect;
 	}
 }

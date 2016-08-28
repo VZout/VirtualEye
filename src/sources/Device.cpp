@@ -22,7 +22,7 @@ namespace Virtual
 		renderer = std::shared_ptr<Renderer>(new Renderer(window));
 		camera = std::shared_ptr<Camera>(new Camera);
 		
-		camera->setCenter(Vector2<int>(width / 2, height / 2));
+		camera->setCenter(Vector2<int>(0, 0));
 	}
 	//Start game loop
 	int Device::start()
@@ -36,6 +36,8 @@ namespace Virtual
 
 			onUpdate();
 		}
+		
+		return 0;
 	}
 	Device::~Device(void)
 	{
