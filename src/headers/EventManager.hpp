@@ -26,7 +26,6 @@ namespace Virtual
 		
 		/*Check is key pressed*/
 		bool isKeyPressed(int);
-		
 		bool isMouseKeyPressed(int);
 
 		/*Close window*/
@@ -35,6 +34,7 @@ namespace Virtual
 		/*Capturing events*/
 		int pollEvents(void);
 		
+		/*Returns position relative to window*/
 		Vector2<int> getMousePosition();
 	private:
 		SDL_Event * event;

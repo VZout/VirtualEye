@@ -12,7 +12,7 @@ namespace Virtual
 	{
 		SDL_DestroyTexture(texture);
 	}
-	void Texture::setTexture(SDL_Texture * texture)
+	void Texture::setTexture(SDL_Texture* texture)
 	{
 		this->texture = texture;
 	}

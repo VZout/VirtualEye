@@ -55,7 +55,7 @@ namespace Virtual
 
 		vector.push_back(s);
 	}
-	void Renderer::loadMap(std::string iniPath)
+	Vector2<int> Renderer::loadMap(std::string iniPath)
 	{
 		std::shared_ptr<Map> map(new Map);
 		
@@ -77,9 +77,9 @@ namespace Virtual
 					map->mapString.push_back(buffer);
 				}
 			}
-			else return;
+			else return Vector2<int>(800, 600);
 		}
-		else return;
+		else return Vector2<int>(800, 600);
 
 		SDL_Texture * texture = IMG_LoadTexture(renderer, map->texturePath.c_str());
 		
@@ -98,17 +98,20 @@ namespace Virtual
 				tile->setCropPosition(Vector2<int>(0, 0));
 				tile->setCropParametres(Vector2<int>(map->tilesSize, map->tilesSize));
 				
+				tile->setName("Map");
 				tile->setIsStatic(false);
 				
-				for(int k = 0; k < map->maxNumber + 1; k++)
+				for(int k = 0; k< map->maxNumber + 1; k++)
 				{
-					if(map->mapString[i][j] == static_cast<char>(k + 48)) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
-					std::cout << k * map->tilesSize << std::endl;
+					if(map->mapString[i][j] == static_cast<char>(k+48)) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
+					if(map->mapString[i][j] == ' ') continue;
 				}
 				
 				vector.push_back(tile);
 			}
 		}
+		
+		return Vector2<int>(map->tilesSize * map->width, map->tilesSize * map->height);
 	}
 	Sprite& Renderer::getElementById(std::string name)
 	{

@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <vector>
+#include <memory>
 
 #include <SDL2/SDL.h>
 
@@ -55,7 +56,7 @@ namespace Virtual
 		Vector2<int> getCropParametres();
 
 		/*Setters*/
-		void setPosition  (Vector2<int>);
+		void setPosition(Vector2<int>);
 		void setParametres(Vector2<int>);
 		void setCropPosition  (Vector2<int>);
 		void setCropParametres(Vector2<int>);

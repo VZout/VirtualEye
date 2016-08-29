@@ -18,10 +18,12 @@ namespace Virtual
 		if(!window)
 			std::cout << "VirtualEye new log: Window creation failed!" << std::endl;
 
+		//Subdevices of engine
 		eventManager = std::shared_ptr<EventManager>(new EventManager);
 		renderer = std::shared_ptr<Renderer>(new Renderer(window));
 		camera = std::shared_ptr<Camera>(new Camera);
 		
+		//Setting camera and level
 		camera->setCenter(Vector2<int>(0, 0));
 		levelProperties = Vector2<int>(width, height);
 	}

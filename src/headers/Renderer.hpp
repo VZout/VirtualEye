@@ -38,7 +38,8 @@ namespace Virtual
 		/*Loads sprite into sprite vector*/
 		void loadSprite(std::string, Vector2<int>, std::string, bool = false);
 		
-		void loadMap(std::string);
+		/*Load map from iom file*/
+		Vector2<int> loadMap(std::string);
 		
 		/*Returns reference to chosen element*/
 		Sprite& getElementById(std::string);
