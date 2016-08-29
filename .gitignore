@@ -42,5 +42,9 @@ tags
 # Images
 *.png
 
+#map files
+*.iom
+*.dom
+
 main.cpp
 run

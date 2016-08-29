@@ -43,11 +43,13 @@ namespace Virtual
 		s->setPosition(position);
 		s->setName(name);
 		s->setIsStatic(is);
+		s->setCropPosition(Vector2<int>(0, 0));
 		
 		//Detect of Width and Height
 		Vector2<int> * par = new Vector2<int>;
 		SDL_QueryTexture(&s->getTexture(), NULL, NULL, &par->x, &par->y);
 		s->setParametres(*par);
+		s->setCropParametres(*par);
 		
 		delete par;
 
@@ -85,18 +87,22 @@ namespace Virtual
 		{
 			for(int j = 0; j < map->width; j++)
 			{
-				std::shared_ptr<Tile> tile(new Tile);
+				sprite_ptr tile(new Sprite);
 				tile->setTexture(texture);
-				tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
-				tile->cropRect.x = 0;
-				tile->cropRect.w = map->tilesSize;
-				tile->cropRect.h = map->tilesSize;
+				
+				//Setting global parametres
 				tile->setPosition(Vector2<int>(map->tilesSize * i, map->tilesSize * j));
+				tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
+				
+				//Setting texture parametres
+				tile->setCropPosition(Vector2<int>(0, 0));
+				tile->setCropParametres(Vector2<int>(map->tilesSize, map->tilesSize));
+				
 				tile->setIsStatic(false);
 				
-				for(int k = 0; k == map->maxNumber; k++)
+				for(int k = 0; k <= map->maxNumber; k++)
 				{
-					if(map->mapString[i][j] == (char)k) tile->cropRect.y = k * map->tilesSize;
+					if(map->mapString[i][j] == (char)k) tile->setCropPosition(Vector2<int>(0, k*map->tilesSize));
 				}
 				
 				vector.push_back(tile);

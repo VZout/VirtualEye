@@ -48,20 +48,23 @@ namespace Virtual
 	class Transformable
 	{
 	public:
-		virtual void draw(SDL_Renderer*, Camera&) = 0;
-
 		/*Getters*/
 		Vector2<int> getPosition();
 		Vector2<int> getParametres();
+		Vector2<int> getCropPosition();
+		Vector2<int> getCropParametres();
 
 		/*Setters*/
 		void setPosition  (Vector2<int>);
 		void setParametres(Vector2<int>);
+		void setCropPosition  (Vector2<int>);
+		void setCropParametres(Vector2<int>);
 
 		/*Custom*/
 		void move(Vector2<int>);
 	protected:	
 		SDL_Rect rect;
+		SDL_Rect cropRect;
 	};
 
 	/*Simple image*/
@@ -70,16 +73,6 @@ namespace Virtual
 	{
 	public:
 		void draw(SDL_Renderer*, Camera&);
-	};
-	
-	/*Tile loaded from map*/
-	class Tile
-		:public Sprite
-	{
-	public:
-		void draw(SDL_Renderer*, Camera&);
-		
-		SDL_Rect cropRect;
 	};
 	
 	/*"Storage" of map information*/
