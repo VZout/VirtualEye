@@ -91,7 +91,7 @@ namespace Virtual
 				tile->setTexture(texture);
 				
 				//Setting global parametres
-				tile->setPosition(Vector2<int>(map->tilesSize * i, map->tilesSize * j));
+				tile->setPosition(Vector2<int>(map->tilesSize * j, map->tilesSize * i));
 				tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
 				
 				//Setting texture parametres
@@ -100,9 +100,10 @@ namespace Virtual
 				
 				tile->setIsStatic(false);
 				
-				for(int k = 0; k <= map->maxNumber; k++)
+				for(int k = 0; k < map->maxNumber + 1; k++)
 				{
-					if(map->mapString[i][j] == (char)k) tile->setCropPosition(Vector2<int>(0, k*map->tilesSize));
+					if(map->mapString[i][j] == static_cast<char>(k + 48)) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
+					std::cout << k * map->tilesSize << std::endl;
 				}
 				
 				vector.push_back(tile);
