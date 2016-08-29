@@ -64,6 +64,7 @@ namespace Virtual
 		SDL_Rect rect;
 	};
 
+	/*Simple image*/
 	class Sprite
 		:public Texture, public Drawable, public Transformable	
 	{
@@ -71,10 +72,21 @@ namespace Virtual
 		void draw(SDL_Renderer*, Camera&);
 	};
 	
+	/*Tile loaded from map*/
+	class Tile
+		:public Sprite
+	{
+	public:
+		void draw(SDL_Renderer*, Camera&);
+		
+		SDL_Rect cropRect;
+	};
+	
+	/*"Storage" of map information*/
 	struct Map
 	{
-		SDL_Rect cropRect;
 		std::vector<std::string> mapString;
+		
 		std::string mapPath;
 		std::string texturePath;
 		int tilesSize;

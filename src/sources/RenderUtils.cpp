@@ -79,4 +79,17 @@ namespace Virtual
 			SDL_RenderCopy(renderer, texture, NULL, &rect);
 		}
 	}
+	/*Sprite*/
+	void Tile::draw(SDL_Renderer * renderer, Camera& camera)
+	{
+		if(!is_static)
+		{
+			SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
+			SDL_RenderCopy(renderer, texture, &cropRect, &dRect);
+		}
+		else
+		{
+			SDL_RenderCopy(renderer, texture, &cropRect, &rect);
+		}
+	}
 }

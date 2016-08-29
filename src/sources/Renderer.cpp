@@ -78,6 +78,30 @@ namespace Virtual
 			else return;
 		}
 		else return;
+
+		SDL_Texture * texture = IMG_LoadTexture(renderer, map->texturePath.c_str());
+		
+		for(int i = 0; i < map->height; i++)
+		{
+			for(int j = 0; j < map->width; j++)
+			{
+				std::shared_ptr<Tile> tile(new Tile);
+				tile->setTexture(texture);
+				tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
+				tile->cropRect.x = 0;
+				tile->cropRect.w = map->tilesSize;
+				tile->cropRect.h = map->tilesSize;
+				tile->setPosition(Vector2<int>(map->tilesSize * i, map->tilesSize * j));
+				tile->setIsStatic(false);
+				
+				for(int k = 0; k == map->maxNumber; k++)
+				{
+					if(map->mapString[i][j] == (char)k) tile->cropRect.y = k * map->tilesSize;
+				}
+				
+				vector.push_back(tile);
+			}
+		}
 	}
 	Sprite& Renderer::getElementById(std::string name)
 	{
