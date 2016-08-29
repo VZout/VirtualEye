@@ -83,31 +83,37 @@ namespace Virtual
 
 		SDL_Texture * texture = IMG_LoadTexture(renderer, map->texturePath.c_str());
 		
+		
 		for(int i = 0; i < map->height; i++)
 		{
 			for(int j = 0; j < map->width; j++)
 			{
-				sprite_ptr tile(new Sprite);
-				tile->setTexture(texture);
-				
-				//Setting global parametres
-				tile->setPosition(Vector2<int>(map->tilesSize * j, map->tilesSize * i));
-				tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
-				
-				//Setting texture parametres
-				tile->setCropPosition(Vector2<int>(0, 0));
-				tile->setCropParametres(Vector2<int>(map->tilesSize, map->tilesSize));
-				
-				tile->setName("Map");
-				tile->setIsStatic(false);
-				
-				for(int k = 0; k< map->maxNumber + 1; k++)
+				if(map->mapString[i][j] != ' ')
 				{
-					if(map->mapString[i][j] == static_cast<char>(k+48)) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
-					if(map->mapString[i][j] == ' ') continue;
+					sprite_ptr tile(new Sprite);
+					tile->setTexture(texture);
+					
+					//Setting global parametres
+					tile->setPosition(Vector2<int>(map->tilesSize * j, map->tilesSize * i));
+					tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
+					
+					//Setting texture parametres
+					tile->setCropPosition(Vector2<int>(0, 0));
+					tile->setCropParametres(Vector2<int>(map->tilesSize, map->tilesSize));
+					
+					tile->setName("Map");
+					tile->setIsStatic(false);
+					
+					for(int k = 0; k< map->maxNumber + 1; k++)
+					{
+						if(map->mapString[i][j] == static_cast<char>(k+48)) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
+						if(map->mapString[i][j] == ' ') continue;
+					}
+					
+					vector.push_back(tile);
 				}
-				
-				vector.push_back(tile);
+				else
+					j--;
 			}
 		}
 		
