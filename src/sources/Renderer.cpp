@@ -71,14 +71,18 @@ namespace Virtual
 			mapFile.open(map->mapPath);
 			if(mapFile.is_open())
 			{
-				int buffer;
 				for(int i = 0; i < map->width * map->height; i++)
 				{
-					file >> buffer;
-					map->mapString.push_back(buffer);
+					int n = 0;
+					mapFile >> n;
+					map->mapString.push_back(n);
+					std::cout << n << std::endl;
 				}
+				mapFile.close();
 			}
 			else return Vector2<int>(800, 600);
+			
+			file.close();
 		}
 		else return Vector2<int>(800, 600);
 
@@ -105,7 +109,7 @@ namespace Virtual
 					
 				for(int k = 0; k < map->maxNumber + 1; k++)
 				{
-					if(map->mapString[i] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
+					if(map->mapString[j] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
 				}
 					
 				vector.push_back(tile);
