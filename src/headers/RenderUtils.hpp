@@ -79,7 +79,7 @@ namespace Virtual
 	/*"Storage" of map information*/
 	struct Map
 	{
-		std::vector<int> mapString;
+		std::vector<std::vector<int>> mapString;
 		
 		std::string mapPath;
 		std::string texturePath;
