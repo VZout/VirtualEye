@@ -71,9 +71,10 @@ namespace Virtual
 			mapFile.open(map->mapPath);
 			if(mapFile.is_open())
 			{
-				std::string buffer;
-				while(std::getline(mapFile, buffer))
+				int buffer;
+				for(int i = 0; i < map->width * map->height; i++)
 				{
+					file >> buffer;
 					map->mapString.push_back(buffer);
 				}
 			}
@@ -83,40 +84,35 @@ namespace Virtual
 
 		SDL_Texture * texture = IMG_LoadTexture(renderer, map->texturePath.c_str());
 		
-		
+		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
 		{
 			for(int j = 0; j < map->width; j++)
 			{
-				if(map->mapString[i][j] != ' ')
+				sprite_ptr tile(new Sprite);
+				tile->setTexture(texture);
+					
+				//Setting global parametres
+				tile->setPosition(Vector2<int>(map->tilesSize * j, map->tilesSize * i));
+				tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
+					
+				//Setting texture parametres
+				tile->setCropPosition(Vector2<int>(0, 0));
+				tile->setCropParametres(Vector2<int>(map->tilesSize, map->tilesSize));
+					
+				tile->setName("Map");
+				tile->setIsStatic(false);
+					
+				for(int k = 0; k < map->maxNumber + 1; k++)
 				{
-					sprite_ptr tile(new Sprite);
-					tile->setTexture(texture);
-					
-					//Setting global parametres
-					tile->setPosition(Vector2<int>(map->tilesSize * j, map->tilesSize * i));
-					tile->setParametres(Vector2<int>(map->tilesSize, map->tilesSize));
-					
-					//Setting texture parametres
-					tile->setCropPosition(Vector2<int>(0, 0));
-					tile->setCropParametres(Vector2<int>(map->tilesSize, map->tilesSize));
-					
-					tile->setName("Map");
-					tile->setIsStatic(false);
-					
-					for(int k = 0; k< map->maxNumber + 1; k++)
-					{
-						if(map->mapString[i][j] == static_cast<char>(k+48)) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
-						if(map->mapString[i][j] == ' ') continue;
-					}
-					
-					vector.push_back(tile);
+					if(map->mapString[i] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
 				}
-				else
-					j--;
+					
+				vector.push_back(tile);
 			}
 		}
 		
+		//Returning width and height of map
 		return Vector2<int>(map->tilesSize * map->width, map->tilesSize * map->height);
 	}
 	Sprite& Renderer::getElementById(std::string name)
