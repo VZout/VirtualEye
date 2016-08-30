@@ -80,11 +80,11 @@ namespace Virtual
 					for(int j = 0; j < map->width; j++)
 					{
 						//Storage values
-						int buffer = 0;
+						auto buffer = 0;
 							
 						mapFile >> buffer;
 						v.push_back(buffer);
-						
+							
 						//Identity of max number
 						if(buffer > max_num)
 							max_num = buffer;
