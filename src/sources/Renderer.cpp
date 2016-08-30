@@ -59,33 +59,44 @@ namespace Virtual
 	{
 		std::shared_ptr<Map> map(new Map);
 		
+		int max_num = 0;
+		
 		//Loading ini file
 		std::ifstream file;
 		file.open(iniPath);
 		if(file.is_open())
 		{
-			file >> map->width >> map->height >> map->mapPath >> map->texturePath >> map->tilesSize >> map->maxNumber;
+			file >> map->width >> map->height >> map->mapPath >> map->texturePath >> map->tilesSize;
 			
 			//Loading map file
 			std::ifstream mapFile;
 			mapFile.open(map->mapPath);
 			if(mapFile.is_open())
 			{
+				//Storage info about map
 				for(int i = 0; i < map->height; i++)
 				{
 					std::vector<int> v;
 					for(int j = 0; j < map->width; j++)
 					{
+						//Storage values
 						int buffer = 0;
+							
 						mapFile >> buffer;
 						v.push_back(buffer);
+						
+						//Identity of max number
+						if(buffer > max_num)
+							max_num = buffer;
 					}
 					map->mapString.push_back(v);
 				}
+				//Closing map file
 				mapFile.close();
 			}
 			else return Vector2<int>(800, 600);
 			
+			//Closing ini file
 			file.close();
 		}
 		else return Vector2<int>(800, 600);
@@ -110,8 +121,9 @@ namespace Virtual
 					
 				tile->setName("Map");
 				tile->setIsStatic(false);
-					
-				for(int k = 0; k < map->maxNumber + 1; k++)
+				
+				//Identity of values
+				for(int k = 0; k < max_num + 1; k++)
 				{
 					if(map->mapString[i][j] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
 				}
