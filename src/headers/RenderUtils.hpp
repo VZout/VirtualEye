@@ -83,7 +83,8 @@ namespace Virtual
 	struct Map
 	{
 		std::vector<std::vector<int>> mapVector;
-		std::vector<std::shared_ptr<Sprite>> mapSprite;
+		std::vector<std::vector<std::shared_ptr<Sprite>>> mapSprite;
+		std::shared_ptr<Sprite> getTileAt(int, int);
 		
 		Texture texture;
 		

@@ -28,8 +28,11 @@ namespace Virtual
 		SDL_RenderClear(renderer);
 		
 		//Rendering map
-		for(auto &i : map->mapSprite)
-			i->draw(renderer, camera);
+		for(int k = 0; k < map->mapSprite.size(); k++)
+		{
+			for(auto &i : map->mapSprite[k])
+				i->draw(renderer, camera);
+		}
 			
 		//Rendering sprites
 		for(auto &i : vector)
@@ -113,6 +116,7 @@ namespace Virtual
 		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
 		{
+			std::vector<sprite_ptr> v;
 			for(int j = 0; j < map->width; j++)
 			{
 				sprite_ptr tile(new Sprite);
@@ -125,7 +129,7 @@ namespace Virtual
 				//Setting texture parametres
 				tile->setCropPosition(Vector2<int>(0, 0));
 				tile->setCropParametres(Vector2<int>(map->tilesSize, map->tilesSize));
-					
+				
 				tile->setName("Map");
 				tile->setIsStatic(false);
 				
@@ -135,8 +139,9 @@ namespace Virtual
 					if(map->mapVector[i][j] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
 				}
 					
-				map->mapSprite.push_back(std::move(tile));
+				v.push_back(std::move(tile));
 			}
+			map->mapSprite.push_back(v);
 		}
 		
 		//Returning width and height of map
