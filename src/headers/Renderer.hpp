@@ -41,11 +41,14 @@ namespace Virtual
 		/*Load map from iom file*/
 		Vector2<int> loadMap(std::string);
 		
+		std::shared_ptr<Map> getMap();
+		
 		/*Returns reference to chosen element*/
 		Sprite& getElementById(std::string);
 	private:
 		SDL_Renderer * renderer;
-		Camera * camera;
+		std::shared_ptr<Camera> camera;
+		std::shared_ptr<Map> map;
 		
 		std::vector<sprite_ptr> vector;
 	};

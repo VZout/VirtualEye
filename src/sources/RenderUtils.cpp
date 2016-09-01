@@ -80,10 +80,23 @@ namespace Virtual
 		return Vector2<int>(cropRect.w, cropRect.h);
 	}
 	
+	Vector2<int> Transformable::getCenter()
+	{
+		return Vector2<int>(rect.x - rect.w / 2, rect.y - rect.h / 2);
+	}
+	
 	void Transformable::move(Vector2<int> relativePosition)
 	{
 		rect.x += relativePosition.x;
 		rect.y += relativePosition.y;
+	}
+	bool Transformable::isCollide(Transformable &other)
+	{
+			if(rect.x < other.getPosition().x + other.getParametres().x && rect.x + rect.w > other.getPosition().x && 
+			rect.y < other.getPosition().y + other.getParametres().y && rect.y + rect.h > other.getPosition().y)
+				return true;
+			else 
+				return false;
 	}
 	/*Sprite*/
 	void Sprite::draw(SDL_Renderer * renderer, Camera& camera)

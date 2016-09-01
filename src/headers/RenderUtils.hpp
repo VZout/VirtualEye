@@ -54,6 +54,8 @@ namespace Virtual
 		Vector2<int> getParametres();
 		Vector2<int> getCropPosition();
 		Vector2<int> getCropParametres();
+		
+		Vector2<int> getCenter();
 
 		/*Setters*/
 		void setPosition(Vector2<int>);
@@ -63,6 +65,7 @@ namespace Virtual
 
 		/*Custom*/
 		void move(Vector2<int>);
+		bool isCollide(Transformable &);
 	protected:	
 		SDL_Rect rect;
 		SDL_Rect cropRect;
@@ -80,6 +83,8 @@ namespace Virtual
 	struct Map
 	{
 		std::vector<std::vector<int>> mapString;
+		
+		Texture texture;
 		
 		std::string mapPath;
 		std::string texturePath;

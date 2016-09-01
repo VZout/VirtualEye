@@ -11,6 +11,9 @@ namespace Virtual
 	{
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
+		map = std::shared_ptr<Map>(new Map);
+		camera = std::shared_ptr<Camera>(new Camera);
+
 		if(!renderer)
 			std::cout << "VirtualEye new log: Renderer creation failed!" << std::endl;
 	}
@@ -57,8 +60,6 @@ namespace Virtual
 	}
 	Vector2<int> Renderer::loadMap(std::string iniPath)
 	{
-		std::shared_ptr<Map> map(new Map);
-		
 		int max_num = 0;
 		
 		//Loading ini file
@@ -102,6 +103,7 @@ namespace Virtual
 		else return Vector2<int>(800, 600);
 
 		SDL_Texture * texture = IMG_LoadTexture(renderer, map->texturePath.c_str());
+		map->texture.setTexture(texture);
 		
 		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
@@ -109,7 +111,7 @@ namespace Virtual
 			for(int j = 0; j < map->width; j++)
 			{
 				sprite_ptr tile(new Sprite);
-				tile->setTexture(texture);
+				tile->setTexture(&map->texture.getTexture());
 					
 				//Setting global parametres
 				tile->setPosition(Vector2<int>(map->tilesSize * j, map->tilesSize * i));
@@ -142,5 +144,9 @@ namespace Virtual
 			if(i->getName() == name)
 				return *i;
 		}
+	}
+	std::shared_ptr<Map> Renderer::getMap()
+	{
+		
 	}
 }	
