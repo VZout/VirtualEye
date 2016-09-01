@@ -27,6 +27,11 @@ namespace Virtual
 		SDL_SetRenderDrawColor(renderer, 125, 0, 255, 255);
 		SDL_RenderClear(renderer);
 		
+		//Rendering map
+		for(auto &i : map->mapSprite)
+			i->draw(renderer, camera);
+			
+		//Rendering sprites
 		for(auto &i : vector)
 			i->draw(renderer, camera);
 			
@@ -90,7 +95,7 @@ namespace Virtual
 						if(buffer > max_num)
 							max_num = buffer;
 					}
-					map->mapString.push_back(v);
+					map->mapVector.push_back(v);
 				}
 				//Closing map file
 				mapFile.close();
@@ -104,7 +109,7 @@ namespace Virtual
 
 		SDL_Texture * texture = IMG_LoadTexture(renderer, map->texturePath.c_str());
 		map->texture.setTexture(texture);
-		
+
 		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
 		{
@@ -127,10 +132,10 @@ namespace Virtual
 				//Identity of values
 				for(int k = 0; k < max_num + 1; k++)
 				{
-					if(map->mapString[i][j] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
+					if(map->mapVector[i][j] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
 				}
 					
-				vector.push_back(tile);
+				map->mapSprite.push_back(std::move(tile));
 			}
 		}
 		
@@ -147,6 +152,6 @@ namespace Virtual
 	}
 	std::shared_ptr<Map> Renderer::getMap()
 	{
-		
+		return map;
 	}
 }	
