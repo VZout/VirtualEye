@@ -79,11 +79,20 @@ namespace Virtual
 		void draw(SDL_Renderer*, Camera&);
 	};
 	
+	class Tile
+		: public Sprite
+	{
+		int tile;
+	public:
+		void setTile(int);
+		int getTile();
+	};
+	
 	/*"Storage" of map information*/
 	struct Map
 	{
 		std::vector<std::vector<int>> mapVector;
-		std::vector<std::vector<std::shared_ptr<Sprite>>> mapSprite;
+		std::vector<std::vector<std::shared_ptr<Tile>>> mapSprite;
 		std::shared_ptr<Sprite> getTileAt(int, int);
 		
 		Texture texture;

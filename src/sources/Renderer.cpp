@@ -116,10 +116,10 @@ namespace Virtual
 		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
 		{
-			std::vector<sprite_ptr> v;
+			std::vector<std::shared_ptr<Tile>> v;
 			for(int j = 0; j < map->width; j++)
 			{
-				sprite_ptr tile(new Sprite);
+				std::shared_ptr<Tile> tile(new Tile);
 				tile->setTexture(&map->texture.getTexture());
 					
 				//Setting global parametres
@@ -136,7 +136,11 @@ namespace Virtual
 				//Identity of values
 				for(int k = 0; k < max_num + 1; k++)
 				{
-					if(map->mapVector[i][j] == k) tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
+					if(map->mapVector[i][j] == k) 
+					{
+						tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
+						tile->setTile(k);
+					}
 				}
 					
 				v.push_back(std::move(tile));

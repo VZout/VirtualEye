@@ -111,6 +111,15 @@ namespace Virtual
 			SDL_RenderCopy(renderer, texture, &cropRect, &rect);
 		}
 	}
+	/*Tile*/
+	void Tile::setTile(int n)
+	{
+		tile = n;
+	}
+	int Tile::getTile()
+	{
+		return tile;
+	}
 	/*Map*/
 	std::shared_ptr<Sprite> Map::getTileAt(int x, int y)
 	{
