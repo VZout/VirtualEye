@@ -66,6 +66,8 @@ namespace Virtual
 		/*Custom*/
 		void move(Vector2<int>);
 		bool isCollide(Transformable &);
+		
+		Rectangle<int> getRectangle();
 	protected:	
 		SDL_Rect rect;
 		SDL_Rect cropRect;
@@ -79,6 +81,7 @@ namespace Virtual
 		void draw(SDL_Renderer*, Camera&);
 	};
 	
+	/*Single tile in a map*/
 	class Tile
 		: public Sprite
 	{
@@ -93,7 +96,7 @@ namespace Virtual
 	{
 		std::vector<std::vector<int>> mapVector;
 		std::vector<std::vector<std::shared_ptr<Tile>>> mapSprite;
-		std::shared_ptr<Sprite> getTileAt(int, int);
+		std::shared_ptr<Tile> getTileAt(int, int);
 		
 		Texture texture;
 		

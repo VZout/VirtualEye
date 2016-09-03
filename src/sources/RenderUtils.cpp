@@ -90,6 +90,10 @@ namespace Virtual
 		rect.x += relativePosition.x;
 		rect.y += relativePosition.y;
 	}
+	Rectangle<int> Transformable::getRectangle()
+	{
+		return {rect.x, rect.y, rect.w, rect.h};
+	}
 	bool Transformable::isCollide(Transformable &other)
 	{
 			if(rect.x < other.getPosition().x + other.getParametres().x && rect.x + rect.w > other.getPosition().x && 
@@ -121,7 +125,7 @@ namespace Virtual
 		return tile;
 	}
 	/*Map*/
-	std::shared_ptr<Sprite> Map::getTileAt(int x, int y)
+	std::shared_ptr<Tile> Map::getTileAt(int x, int y)
 	{
 		return mapSprite[x][y];
 	}

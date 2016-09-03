@@ -41,6 +41,7 @@ namespace Virtual
 		/*Load map from iom file*/
 		Vector2<int> loadMap(std::string);
 		
+		/*Returns dynamic pointer to map*/
 		std::shared_ptr<Map> getMap();
 		
 		/*Returns reference to chosen element*/

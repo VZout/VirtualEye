@@ -20,6 +20,7 @@ namespace Virtual
 		/*Constructor takes width and height of engine window*/
 		Device(int, int);
 	
+		/*Deletes window memory*/
 		~Device(void);
 
 		/*Function start main loop*/
