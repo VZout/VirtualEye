@@ -7,7 +7,7 @@
 
 #include <SDL2/SDL.h>
 
-#include "Vector2.hpp"
+#include "Math.hpp"
 
 namespace Virtual
 {

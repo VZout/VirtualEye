@@ -11,7 +11,7 @@
 
 #include <SDL2/SDL.h>
 
-#include "Vector2.hpp"
+#include "Math.hpp"
 #include "Camera.hpp"
 
 namespace Virtual

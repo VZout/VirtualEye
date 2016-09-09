@@ -16,7 +16,6 @@
 #include <SDL2/SDL_image.h> 
 
 #include "RenderUtils.hpp"
-#include "Vector2.hpp"
 
 namespace Virtual
 {
