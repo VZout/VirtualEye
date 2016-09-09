@@ -28,11 +28,9 @@ namespace Virtual
 		SDL_RenderClear(renderer);
 		
 		//Rendering map
-		for(int k = 0; k < map->mapSprite.size(); k++)
-		{
-			for(auto &i : map->mapSprite[k])
-				i->draw(renderer, camera);
-		}
+		for(int i = 0; i < map->mapSprite.size(); i++)
+			for(auto &o : map->mapSprite[i])
+				o->draw(renderer, camera);
 			
 		//Rendering sprites
 		for(auto &i : vector)
@@ -49,7 +47,7 @@ namespace Virtual
 		sprite_ptr s(new Sprite);
 		
 		//Texture & position pushing
-        SDL_Texture* texture = IMG_LoadTexture(renderer, path.c_str());
+		SDL_Texture* texture = IMG_LoadTexture(renderer, path.c_str());
 		s->setTexture(texture);
 		s->setPosition(position);
 		s->setName(name);
@@ -135,13 +133,11 @@ namespace Virtual
 				
 				//Identity of values
 				for(int k = 0; k < max_num + 1; k++)
-				{
 					if(map->mapVector[i][j] == k) 
 					{
 						tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
 						tile->setTile(k);
 					}
-				}
 					
 				v.push_back(std::move(tile));
 			}

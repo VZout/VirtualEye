@@ -13,7 +13,7 @@
 namespace Virtual
 {
 	#define KEY(x) SDLK_##x
-	#define MOUSE_KEY(x) SDL_BUTTON_##x
+	#define MOUSE_BUTTON(x) SDL_BUTTON_##x
 	
 	class EventManager
 	{
