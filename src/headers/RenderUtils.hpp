@@ -54,6 +54,7 @@ namespace Virtual
 		Vector2<int> getParametres();
 		Vector2<int> getCropPosition();
 		Vector2<int> getCropParametres();
+		Rectangle<int> getRectangle();
 		
 		Vector2<int> getCenter();
 
@@ -62,12 +63,11 @@ namespace Virtual
 		void setParametres(Vector2<int>);
 		void setCropPosition  (Vector2<int>);
 		void setCropParametres(Vector2<int>);
+		void setRectangle(Rectangle<int>);
 
 		/*Custom*/
 		void move(Vector2<int>);
 		bool isCollide(Transformable &);
-		
-		Rectangle<int> getRectangle();
 	protected:	
 		SDL_Rect rect;
 		SDL_Rect cropRect;

@@ -61,7 +61,13 @@ namespace Virtual
 		cropRect.w = parametres.x;
 		cropRect.h = parametres.y;
 	}
-	
+	void Transformable::setRectangle(Rectangle<int> rectangle)
+	{
+		rect.x = rectangle.x;
+		rect.y = rectangle.y;
+		rect.w = rectangle.w;
+		rect.h = rectangle.h;
+	}
 	Vector2<int> Transformable::getPosition()
 	{
 		return Vector2<int>(rect.x, rect.y);
