@@ -30,6 +30,10 @@ namespace Virtual
 	{
 		return is_static;
 	}
+	bool Drawable::isDrawing()
+	{
+		return is_drawing;
+	}
 	
 	void Drawable::setName(std::string name)
 	{
@@ -38,6 +42,10 @@ namespace Virtual
 	void Drawable::setIsStatic(bool is)
 	{
 		is_static = is;
+	}
+	void Drawable::setIsDrawing(bool is)
+	{
+		is_drawing = is;
 	}
 	
 	/*Transformable*/
@@ -111,14 +119,17 @@ namespace Virtual
 	/*Sprite*/
 	void Sprite::draw(SDL_Renderer * renderer, Camera& camera)
 	{
-		if(!is_static)
+		if(is_drawing)
 		{
-			SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
-			SDL_RenderCopy(renderer, texture, &cropRect, &dRect);
-		}
-		else
-		{
-			SDL_RenderCopy(renderer, texture, &cropRect, &rect);
+			if(!is_static)
+			{
+				SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
+				SDL_RenderCopy(renderer, texture, &cropRect, &dRect);
+			}
+			else
+			{
+				SDL_RenderCopy(renderer, texture, &cropRect, &rect);
+			}
 		}
 	}
 	/*Tile*/

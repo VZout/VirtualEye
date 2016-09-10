@@ -47,12 +47,12 @@ namespace Virtual
 		sprite_ptr s(new Sprite);
 		
 		//Texture & position pushing
-		SDL_Texture* texture = IMG_LoadTexture(renderer, path.c_str());
-		s->setTexture(texture);
+		s->setTexture(IMG_LoadTexture(renderer, path.c_str()));
 		s->setPosition(position);
 		s->setName(name);
 		s->setIsStatic(is);
 		s->setCropPosition(Vector2<int>(0, 0));
+		s->setIsDrawing(true);
 		
 		//Detect of Width and Height
 		Vector2<int> * par = new Vector2<int>;
@@ -108,8 +108,7 @@ namespace Virtual
 		}
 		else return Vector2<int>(800, 600);
 
-		SDL_Texture * texture = IMG_LoadTexture(renderer, map->texturePath.c_str());
-		map->texture.setTexture(texture);
+		map->texture.setTexture(IMG_LoadTexture(renderer, map->texturePath.c_str()));
 
 		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
@@ -130,6 +129,7 @@ namespace Virtual
 				
 				tile->setName("Map");
 				tile->setIsStatic(false);
+				tile->setIsDrawing(true);
 				
 				//Identity of values
 				for(int k = 0; k < max_num + 1; k++)

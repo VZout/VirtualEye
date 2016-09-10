@@ -36,14 +36,16 @@ namespace Virtual
 		/*Getters*/
 		std::string  getName();
 		bool isStatic();
+		bool isDrawing();
 		
 		/*Setters*/
 		void setName	  (std::string);
 		void setIsStatic  (bool);
+		void setIsDrawing (bool);
 	protected:	
 		std::string name;
 		bool is_static;
-		
+		bool is_drawing;
 	};
 	/*With Drawable you can manipulate position and parametres objects*/
 	class Transformable
