@@ -3,7 +3,7 @@
  *   MIT License  http://choosealicense.com/licenses/mit/		 *
  *  =============================================================*/
  
-#include "../headers/Camera.hpp"
+#include "../include/Camera.hpp"
 
 namespace Virtual
 {	

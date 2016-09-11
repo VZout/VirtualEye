@@ -22,7 +22,7 @@ namespace Virtual
 		~Texture();
 		void setTexture(SDL_Texture*);
 		
-		SDL_Texture& getTexture();
+		SDL_Texture* getTexture();
 	protected:
 		SDL_Texture * texture;	
 	};

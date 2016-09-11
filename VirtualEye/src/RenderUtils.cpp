@@ -3,7 +3,7 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/ 
 
-#include "../headers/RenderUtils.hpp"
+#include "../include/RenderUtils.hpp"
 
 namespace Virtual
 {
@@ -16,9 +16,9 @@ namespace Virtual
 	{
 		this->texture = texture;
 	}
-	SDL_Texture & Texture::getTexture()
+	SDL_Texture * Texture::getTexture()
 	{
-		return *texture;
+		return texture;
 	}
 
 	/*Drawable*/

@@ -3,7 +3,7 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/ 
 
-#include "../headers/Renderer.hpp"
+#include "../include/Renderer.hpp"
 
 namespace Virtual
 {
@@ -56,7 +56,7 @@ namespace Virtual
 		
 		//Detect of Width and Height
 		Vector2<int> * par = new Vector2<int>;
-		SDL_QueryTexture(&s->getTexture(), NULL, NULL, &par->x, &par->y);
+		SDL_QueryTexture(s->getTexture(), NULL, NULL, &par->x, &par->y);
 		s->setParametres(*par);
 		s->setCropParametres(*par);
 		
@@ -117,7 +117,7 @@ namespace Virtual
 			for(int j = 0; j < map->width; j++)
 			{
 				std::shared_ptr<Tile> tile(new Tile);
-				tile->setTexture(&map->texture.getTexture());
+				tile->setTexture(map->texture.getTexture());
 					
 				//Setting global parametres
 				tile->setPosition(Vector2<int>(map->tilesSize * j, map->tilesSize * i));

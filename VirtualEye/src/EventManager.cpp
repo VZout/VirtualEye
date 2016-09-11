@@ -3,7 +3,7 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/
 
- #include "../headers/EventManager.hpp"
+ #include "../include/EventManager.hpp"
 
  namespace Virtual
  {
