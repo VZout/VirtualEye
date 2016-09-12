@@ -10,12 +10,11 @@ namespace Virtual
 	Renderer::Renderer(SDL_Window * window)
 	{
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+		if(!renderer)
+			std::cout << "VirtualEye new log: Renderer creation failed!" << std::endl;
 
 		map = std::shared_ptr<Map>(new Map);
 		camera = std::shared_ptr<Camera>(new Camera);
-
-		if(!renderer)
-			std::cout << "VirtualEye new log: Renderer creation failed!" << std::endl;
 	}
 	Renderer::~Renderer(void)
 	{
@@ -48,6 +47,8 @@ namespace Virtual
 		
 		//Texture & position pushing
 		s->setTexture(IMG_LoadTexture(renderer, path.c_str()));
+		if(s->getTexture() == NULL)
+			std::cout << "VirtualEye new log: sprite loading form " << path << " failed!" << std::endl;
 		s->setPosition(position);
 		s->setName(name);
 		s->setIsStatic(is);
@@ -109,6 +110,8 @@ namespace Virtual
 		else return Vector2<int>(800, 600);
 
 		map->texture.setTexture(IMG_LoadTexture(renderer, map->texturePath.c_str()));
+		if(map->texture.getTexture() == NULL)
+			std::cout << "VirtualEye new log: map tiles loading form " << map->texturePath << " failed!" << std::endl;
 
 		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
