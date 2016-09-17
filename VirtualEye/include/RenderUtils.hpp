@@ -17,6 +17,7 @@
 
 namespace Virtual
 {
+	/*Dynamic texture class*/
 	class Texture
 	{
 	public:
@@ -28,13 +29,13 @@ namespace Virtual
 		SDL_Texture * texture;	
 	};
 	
+	/*Dynamic font class*/
 	class Font
 	{
 	public:
-		~Font();
-		
+		~Font();		
 		void setFont(TTF_Font*);
-		
+
 		TTF_Font* getFont();
 	protected:
 		TTF_Font* font;

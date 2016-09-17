@@ -53,6 +53,7 @@ namespace Virtual
 		std::shared_ptr<Camera> camera;
 		std::shared_ptr<Map> map;
 		
-		std::vector<sprite_ptr> vector;
+		std::vector<std::shared_ptr<Sprite>> spriteVector;
+		std::vector<std::shared_ptr<Label>> labelVector;
 	};
 }

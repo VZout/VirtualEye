@@ -19,7 +19,8 @@ namespace Virtual
 	Renderer::~Renderer(void)
 	{
 		SDL_DestroyRenderer(renderer);
-		vector.clear();
+		spriteVector.clear();
+		labelVector.clear();
 	}
 	void Renderer::draw(Camera & camera)
 	{
@@ -32,14 +33,18 @@ namespace Virtual
 				o->draw(renderer, camera);
 			
 		//Rendering sprites
-		for(auto &i : vector)
+		for(auto &i : spriteVector)
+			i->draw(renderer, camera);
+			
+		for(auto &i : labelVector)
 			i->draw(renderer, camera);
 			
 		SDL_RenderPresent(renderer);
 	}
 	void Renderer::clearScene(void)
 	{
-		vector.clear();
+		spriteVector.clear();
+		labelVector.clear();
 	}
 	void Renderer::loadSprite(std::string path, Vector2<int> position, std::string name, bool is)
 	{
@@ -63,7 +68,7 @@ namespace Virtual
 		
 		delete par;
 
-		vector.push_back(s);
+		spriteVector.push_back(s);
 	}
 	Vector2<int> Renderer::loadMap(std::string iniPath)
 	{
@@ -167,11 +172,16 @@ namespace Virtual
 		label->setIsStatic(is);
 		label->setIsDrawing(true);
 				
-		vector.push_back(label);
+		labelVector.push_back(label);
 	}
 	Sprite& Renderer::getElementById(std::string name)
 	{
-		for(auto &i : vector)
+		for(auto &i : spriteVector)
+		{
+			if(i->getName() == name)
+				return *i;
+		}
+		for(auto &i : labelVector)
 		{
 			if(i->getName() == name)
 				return *i;

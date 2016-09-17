@@ -16,7 +16,7 @@ private:
 	{
 		levelProperties = renderer->loadMap("ini.iom");
 		renderer->loadSprite("player.png", {25, 25}, "player");
-		renderer->loadLabel("Slimamif.ttf", "Hello", Vector2<int>(100, 100), Color(0, 0, 0), "text", 100);
+		renderer->loadLabel("Slimamif.ttf", "Hello", {100, 100}, {0, 0, 0}, "text", 100);
 	}
 	void onUpdate()
 	{
@@ -24,9 +24,6 @@ private:
 		
 		if(eventManager->isKeyPressed(KEY(RIGHT))) velocity.x += 4;
 		if(eventManager->isKeyPressed(KEY(LEFT)))  velocity.x -= 4;
-		
-		if(renderer->getElementById("player").isCollide(*renderer->getMap()->getTileAt(Vector2<int>(0, 0))))
-			std::cout << "a" << std::endl;
 		
 		camera->setCenter(renderer->getElementById("player").getPosition());
 		renderer->getElementById("player").move(velocity);
