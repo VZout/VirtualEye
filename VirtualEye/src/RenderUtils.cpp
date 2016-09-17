@@ -7,12 +7,26 @@
 
 namespace Virtual
 {
+	/*Font*/
+	Font::~Font()
+	{
+		TTF_CloseFont(font);
+	}
+	void Font::setFont(TTF_Font* font)
+	{
+		this->font = font;
+	}
+	TTF_Font * Font::getFont()
+	{
+		return font;
+	}
+	
 	/*Texture*/
 	Texture::~Texture()
 	{
 		SDL_DestroyTexture(texture);
 	}
-	void Texture::setTexture(SDL_Texture* texture)
+	void Texture::setTexture(SDL_Texture * texture)
 	{
 		this->texture = texture;
 	}

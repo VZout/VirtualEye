@@ -150,6 +150,25 @@ namespace Virtual
 		//Returning width and height of map
 		return Vector2<int>(map->tilesSize * map->width, map->tilesSize * map->height);
 	}
+	void Renderer::loadLabel(std::string path, std::string string, Vector2<int> position, Color clr, std::string name, int size, bool is)
+	{
+		std::shared_ptr<Label> label (new Label());
+		
+		label->setFont(TTF_OpenFont(path.c_str(), size));
+		label->setTexture(SDL_CreateTextureFromSurface(renderer, TTF_RenderText_Solid(label->getFont(), string.c_str(), {clr.r, clr.g, clr.b})));
+		
+		Vector2<int> * par = new Vector2<int>;
+		SDL_QueryTexture(label->getTexture(), NULL, NULL, &par->x, &par->y);
+		label->setParametres(*par);
+		label->setCropParametres(*par);
+		
+		label->setPosition(position);
+		label->setName(name);
+		label->setIsStatic(is);
+		label->setIsDrawing(true);
+				
+		vector.push_back(label);
+	}
 	Sprite& Renderer::getElementById(std::string name)
 	{
 		for(auto &i : vector)

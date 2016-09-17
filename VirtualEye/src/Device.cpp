@@ -13,6 +13,7 @@ namespace Virtual
 		this->height = height;
 		
 		SDL_Init(SDL_INIT_EVERYTHING);
+		TTF_Init();
 	
 		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 		if(!window)

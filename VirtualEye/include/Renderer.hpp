@@ -37,6 +37,9 @@ namespace Virtual
 		/*Loads sprite into sprite vector*/
 		void loadSprite(std::string, Vector2<int>, std::string, bool = false);
 		
+		/*Creates label*/
+		void loadLabel(std::string, std::string, Vector2<int>, Color, std::string, int, bool = false);
+		
 		/*Load map from iom file*/
 		Vector2<int> loadMap(std::string);
 		

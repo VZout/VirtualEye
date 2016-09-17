@@ -45,4 +45,18 @@ namespace Virtual
 			y = yy;
 		}
 	};
+	struct Color
+	{
+		float r, g, b;
+		Color()
+		{
+			r = g = b = 255;
+		}
+		Color(float rr, float gg, float bb)
+		{
+			r = rr;
+			g = gg;
+			b = bb;
+		}
+	};
 }

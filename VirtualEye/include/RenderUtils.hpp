@@ -10,6 +10,7 @@
 #include <memory>
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 
 #include "Math.hpp"
 #include "Camera.hpp"
@@ -25,6 +26,18 @@ namespace Virtual
 		SDL_Texture* getTexture();
 	protected:
 		SDL_Texture * texture;	
+	};
+	
+	class Font
+	{
+	public:
+		~Font();
+		
+		void setFont(TTF_Font*);
+		
+		TTF_Font* getFont();
+	protected:
+		TTF_Font* font;
 	};
 	
 	/*With Drawable you can draw objects*/
@@ -85,12 +98,18 @@ namespace Virtual
 	
 	/*Single tile in a map*/
 	class Tile
-		: public Sprite
+		:public Sprite
 	{
 		int tile;
 	public:
 		void setTile(int);
 		int getTile();
+	};
+	
+	/*Single label*/
+	class Label
+		:public Sprite, public Font
+	{
 	};
 	
 	/*"Storage" of map information*/
