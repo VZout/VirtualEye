@@ -142,8 +142,8 @@ namespace Virtual
 		return tile;
 	}
 	/*Map*/
-	std::shared_ptr<Tile> Map::getTileAt(int x, int y)
+	std::shared_ptr<Tile> Map::getTileAt(Vector2<int> pos)
 	{
-		return mapSprite[x][y];
+		return tiles[pos.x][pos.y];
 	}
 }

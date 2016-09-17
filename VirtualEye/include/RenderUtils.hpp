@@ -96,9 +96,9 @@ namespace Virtual
 	/*"Storage" of map information*/
 	struct Map
 	{
-		std::vector<std::vector<int>> mapVector;
-		std::vector<std::vector<std::shared_ptr<Tile>>> mapSprite;
-		std::shared_ptr<Tile> getTileAt(int, int);
+		std::vector<std::vector<int>> numbers;
+		std::vector<std::vector<std::shared_ptr<Tile>>> tiles;
+		std::shared_ptr<Tile> getTileAt(Vector2<int>);
 		
 		Texture texture;
 		

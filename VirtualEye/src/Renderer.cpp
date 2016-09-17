@@ -27,8 +27,8 @@ namespace Virtual
 		SDL_RenderClear(renderer);
 		
 		//Rendering map
-		for(int i = 0; i < map->mapSprite.size(); i++)
-			for(auto &o : map->mapSprite[i])
+		for(int i = 0; i < map->tiles.size(); i++)
+			for(auto &o : map->tiles[i])
 				o->draw(renderer, camera);
 			
 		//Rendering sprites
@@ -97,7 +97,7 @@ namespace Virtual
 						if(buffer > max_num)
 							max_num = buffer;
 					}
-					map->mapVector.push_back(v);
+					map->numbers.push_back(v);
 				}
 				//Closing map file
 				mapFile.close();
@@ -136,7 +136,7 @@ namespace Virtual
 				
 				//Identity of values
 				for(int k = 0; k < max_num + 1; k++)
-					if(map->mapVector[i][j] == k) 
+					if(map->numbers[i][j] == k) 
 					{
 						tile->setCropPosition(Vector2<int>(k * map->tilesSize, 0));
 						tile->setTile(k);
@@ -144,7 +144,7 @@ namespace Virtual
 					
 				v.push_back(std::move(tile));
 			}
-			map->mapSprite.push_back(v);
+			map->tiles.push_back(v);
 		}
 		
 		//Returning width and height of map
