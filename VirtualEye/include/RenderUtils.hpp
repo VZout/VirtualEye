@@ -29,18 +29,6 @@ namespace Virtual
 		SDL_Texture * texture;	
 	};
 	
-	/*Dynamic font class*/
-	class Font
-	{
-	public:
-		~Font();		
-		void setFont(TTF_Font*);
-
-		TTF_Font* getFont();
-	protected:
-		TTF_Font* font;
-	};
-	
 	/*With Drawable you can draw objects*/
 	class Drawable
 	{
@@ -105,12 +93,6 @@ namespace Virtual
 	public:
 		void setTile(int);
 		int getTile();
-	};
-	
-	/*Single label*/
-	class Label
-		:public Sprite, public Font
-	{
 	};
 	
 	/*"Storage" of map information*/

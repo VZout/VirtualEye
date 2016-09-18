@@ -1,4 +1,5 @@
 #include "../../include/Device.hpp"
+#include <string>
 
 using namespace Virtual;
 
@@ -16,7 +17,6 @@ private:
 	{
 		levelProperties = renderer->loadMap("ini.iom");
 		renderer->loadSprite("player.png", {25, 25}, "player");
-		renderer->loadLabel("Slimamif.ttf", "Hello", {100, 100}, {0, 0, 0}, "text", 100);
 	}
 	void onUpdate()
 	{
