@@ -3,11 +3,11 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/
 
- #include "../include/EventManager.hpp"
+#include "../../include/VirtualEye/EventManager.hpp"
 
- namespace Virtual
- {
- 	EventManager::EventManager(void)
+namespace Virtual
+{
+	EventManager::EventManager(void)
 	{
 		event = new SDL_Event();
 	}
@@ -52,4 +52,4 @@
 		SDL_GetMouseState(&pos.x, &pos.y);
 		return pos;
 	}
- }
+}

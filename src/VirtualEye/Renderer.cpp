@@ -3,7 +3,7 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/ 
 
-#include "../include/Renderer.hpp"
+#include "../../include/VirtualEye/Renderer.hpp"
 
 namespace Virtual
 {

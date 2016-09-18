@@ -1,4 +1,4 @@
-#include "../../include/Device.hpp"
+#include "../../include/VirtualEye/Device.hpp"
 #include <string>
 
 using namespace Virtual;

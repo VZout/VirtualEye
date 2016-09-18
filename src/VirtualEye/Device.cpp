@@ -3,7 +3,7 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/
 
-#include "../include/Device.hpp"
+#include "../../include/VirtualEye/Device.hpp"
 
 namespace Virtual
 {

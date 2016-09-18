@@ -3,7 +3,7 @@
  *   MIT License  http://choosealicense.com/licenses/mit/		 *
  *  =============================================================*/
  
-#include "../include/Camera.hpp"
+#include "../../include/VirtualEye/Camera.hpp"
 
 namespace Virtual
 {	
