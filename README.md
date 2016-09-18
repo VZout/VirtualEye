@@ -5,7 +5,7 @@
 <img src="logo.png">
 
 # VirtualEye - 2D Render Game
-VirtualEye is Render Game Engine make for fun and gain experiance. A keynote to create this library is simplicity to create small games and simple RPG, shooters etc. In future i want to add python script creating, and move onUpdate() and inInit() function into them.
+VirtualEye is Render Game Engine make for fun and gain experiance. A keynote to create this library is simplicity to create small games and simple RPG, shooters etc. In future i want to add python script creating, and move onUpdate() and onInit() function into them.
 
 ## License
 VirtualEye is under MIT license. It means, you can create your own game on it, sell it, authorize it, but you MUST write that VirtualEye is Dmitro Szewczuk own.
