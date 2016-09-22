@@ -10,19 +10,20 @@ VirtualEye is Render Game Engine make for fun and gain experiance. A keynote to 
 ## License
 VirtualEye is under MIT license. It means, you can create your own game on it, sell it, authorize it, but you MUST write that VirtualEye is Dmitro Szewczuk own.
 
-## How to build
-1. Install SDL2 and SDL2_image.
-2. Clone repo by:
+## How to build(Linux)
+1. Install gcc compiler
+2. Install SDL2 and SDL2_image.
+3. Clone repo by:
 
   $ git clone https://github.com/bjornus/VirtualEye.git
 
-3. Make it
+4. Make it
 
   $ cd VirtualEye
 
   $ make
 
-4. Run it!
+5. Run it!
 
   $ cd tests/Pong
 

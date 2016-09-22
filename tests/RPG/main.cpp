@@ -1,5 +1,4 @@
 #include "../../include/VirtualEye/Device.hpp"
-#include <string>
 
 using namespace Virtual;
 
@@ -25,8 +24,8 @@ private:
 		if(eventManager->isKeyPressed(KEY(RIGHT))) velocity.x += 4;
 		if(eventManager->isKeyPressed(KEY(LEFT)))  velocity.x -= 4;
 		
-		camera->setCenter(renderer->getElementById("player").getPosition());
 		renderer->getElementById("player").move(velocity);
+		camera->setCenter(renderer->getElementById("player").getPosition());
 	}
 };
 

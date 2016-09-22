@@ -7,5 +7,5 @@ HPPOBJS = $(HPP)/Device.hpp $(HPP)/EventManager.hpp $(HPP)/Renderer.hpp $(HPP)/R
 LIBS = -lSDL2 -lSDL2_image
 
 run: $(HPPOBJS) $(CPPOBJS)
-	g++ -w tests/Pong/main.cpp $(HPPOBJS) $(CPPOBJS) -o tests/Pong/run $(LIBS)
+	g++ -w tests/RPG/main.cpp $(HPPOBJS) $(CPPOBJS) -o tests/RPG/run $(LIBS)
 	

@@ -47,8 +47,10 @@ namespace Virtual
 		
 		//Texture & position pushing
 		s->setTexture(IMG_LoadTexture(renderer, path.c_str()));
+		
 		if(s->getTexture() == NULL)
 			std::cout << "VirtualEye new log: sprite loading form " << path << " failed!" << std::endl;
+			
 		s->setPosition(position);
 		s->setName(name);
 		s->setIsStatic(is);
@@ -102,14 +104,22 @@ namespace Virtual
 				//Closing map file
 				mapFile.close();
 			}
-			else return Vector2<int>(800, 600);
-			
+			else 
+			{
+				std::cout << "VirtualEye new log: map file " << map->mapPath << " load failed!" << std::endl;
+				return Vector2<int>(800, 600);
+			}
 			//Closing ini file
 			file.close();
 		}
-		else return Vector2<int>(800, 600);
-
+		else 
+		{
+			std::cout << "VirtualEye new log: map file " << iniPath << " load failed!" << std::endl;
+			return Vector2<int>(800, 600);
+		}
+		
 		map->texture.setTexture(IMG_LoadTexture(renderer, map->texturePath.c_str()));
+		
 		if(map->texture.getTexture() == NULL)
 			std::cout << "VirtualEye new log: map tiles loading form " << map->texturePath << " failed!" << std::endl;
 
