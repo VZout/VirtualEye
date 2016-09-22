@@ -16,7 +16,7 @@ namespace Virtual
 	
 		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 		if(!window)
-			std::cout << "VirtualEye new log: Window creation failed!" << std::endl;
+			DebugLog::getInstance().addToLog("VirtualEye new log: Window creation failed!");
 
 		//Subdevices of engine
 		eventManager = std::shared_ptr<EventManager>(new EventManager);
@@ -31,6 +31,7 @@ namespace Virtual
 	int Device::start()
 	{
 		onInit();
+		DebugLog::getInstance().printLog();
 		while(!eventManager->isClosed())
 		{
 			eventManager->pollEvents();

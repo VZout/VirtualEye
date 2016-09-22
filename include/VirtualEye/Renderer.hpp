@@ -15,6 +15,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h> 
 
+#include "DebugLog.hpp"
 #include "RenderUtils.hpp"
 
 namespace Virtual

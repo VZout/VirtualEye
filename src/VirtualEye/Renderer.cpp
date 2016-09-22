@@ -11,7 +11,7 @@ namespace Virtual
 	{
 		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 		if(!renderer)
-			std::cout << "VirtualEye new log: Renderer creation failed!" << std::endl;
+			DebugLog::getInstance().addToLog("VirtualEye new log: Renderer creation failed!");
 
 		map = std::shared_ptr<Map>(new Map);
 		camera = std::shared_ptr<Camera>(new Camera);
@@ -49,7 +49,7 @@ namespace Virtual
 		s->setTexture(IMG_LoadTexture(renderer, path.c_str()));
 		
 		if(s->getTexture() == NULL)
-			std::cout << "VirtualEye new log: sprite loading form " << path << " failed!" << std::endl;
+			DebugLog::getInstance().addToLog("VirtualEye new log: sprite loading form " + path + " failed!");
 			
 		s->setPosition(position);
 		s->setName(name);
@@ -106,7 +106,7 @@ namespace Virtual
 			}
 			else 
 			{
-				std::cout << "VirtualEye new log: map file " << map->mapPath << " load failed!" << std::endl;
+				DebugLog::getInstance().addToLog("VirtualEye new log: map file " + map->mapPath + " load failed!");
 				return Vector2<int>(800, 600);
 			}
 			//Closing ini file
@@ -114,14 +114,14 @@ namespace Virtual
 		}
 		else 
 		{
-			std::cout << "VirtualEye new log: map file " << iniPath << " load failed!" << std::endl;
+			DebugLog::getInstance().addToLog("VirtualEye new log: map file " + iniPath + " load failed!");
 			return Vector2<int>(800, 600);
 		}
 		
 		map->texture.setTexture(IMG_LoadTexture(renderer, map->texturePath.c_str()));
 		
 		if(map->texture.getTexture() == NULL)
-			std::cout << "VirtualEye new log: map tiles loading form " << map->texturePath << " failed!" << std::endl;
+			DebugLog::getInstance().addToLog("VirtualEye new log: map tiles loading form " + map->texturePath + " failed!");
 
 		//Identity of Tiles
 		for(int i = 0; i < map->height; i++)
