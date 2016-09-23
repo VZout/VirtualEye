@@ -10,6 +10,7 @@
 
 #include "EventManager.hpp"
 #include "Renderer.hpp"
+#include "Clock.hpp"
 
 namespace Virtual
 {
@@ -35,6 +36,7 @@ namespace Virtual
 		std::shared_ptr<EventManager> eventManager;
 		std::shared_ptr<Renderer> renderer;
 		std::shared_ptr<Camera> camera;
+		std::shared_ptr<Clock> clock;
 		
 		Vector2<int> levelProperties;
 	private:

@@ -70,7 +70,7 @@ namespace Virtual
 		void setRectangle(Rectangle<int>);
 
 		/*Custom*/
-		void move(Vector2<int>);
+		void move(Vector2<int>, double);
 		bool isCollide(Transformable &);
 	protected:	
 		SDL_Rect rect;

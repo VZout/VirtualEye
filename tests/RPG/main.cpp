@@ -21,10 +21,10 @@ private:
 	{
 		velocity = Vector2<int>(0, 0);
 		
-		if(eventManager->isKeyPressed(KEY(RIGHT))) velocity.x += 4;
-		if(eventManager->isKeyPressed(KEY(LEFT)))  velocity.x -= 4;
+		if(eventManager->isKeyPressed(KEY(RIGHT))) velocity.x += 200;
+		if(eventManager->isKeyPressed(KEY(LEFT)))  velocity.x -= 200;
 		
-		renderer->getElementById("player").move(velocity);
+		renderer->getElementById("player").move(velocity, clock->getDelta());
 		camera->setCenter(renderer->getElementById("player").getPosition());
 	}
 };

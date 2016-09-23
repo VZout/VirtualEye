@@ -22,6 +22,7 @@ namespace Virtual
 		eventManager = std::shared_ptr<EventManager>(new EventManager);
 		renderer = std::shared_ptr<Renderer>(new Renderer(window));
 		camera = std::shared_ptr<Camera>(new Camera);
+		clock = std::shared_ptr<Clock>(new Clock);
 		
 		//Setting camera and level
 		camera->setCenter(Vector2<int>(0, 0));

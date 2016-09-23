@@ -1,8 +1,8 @@
 CPP = src/VirtualEye
 HPP = include/VirtualEye
  
-CPPOBJS = $(CPP)/Device.cpp $(CPP)/EventManager.cpp $(CPP)/Renderer.cpp $(CPP)/RenderUtils.cpp $(CPP)/Camera.cpp $(CPP)/DebugLog.cpp
-HPPOBJS = $(HPP)/Device.hpp $(HPP)/EventManager.hpp $(HPP)/Renderer.hpp $(HPP)/RenderUtils.hpp $(HPP)/Camera.hpp $(HPP)/DebugLog.hpp $(HPP)/Math.hpp
+CPPOBJS = $(CPP)/Device.cpp $(CPP)/EventManager.cpp $(CPP)/Renderer.cpp $(CPP)/RenderUtils.cpp $(CPP)/Camera.cpp $(CPP)/DebugLog.cpp $(CPP)/Clock.cpp
+HPPOBJS = $(HPP)/Device.hpp $(HPP)/EventManager.hpp $(HPP)/Renderer.hpp $(HPP)/RenderUtils.hpp $(HPP)/Camera.hpp $(HPP)/DebugLog.hpp $(HPP)/Clock.hpp $(HPP)/Math.hpp
 
 LIBS = -lSDL2 -lSDL2_image
 

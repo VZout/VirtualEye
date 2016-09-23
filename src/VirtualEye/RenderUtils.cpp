@@ -99,10 +99,10 @@ namespace Virtual
 		return Vector2<int>(rect.x - rect.w / 2, rect.y - rect.h / 2);
 	}
 	
-	void Transformable::move(Vector2<int> relativePosition)
+	void Transformable::move(Vector2<int> relativePosition, double deltaTime)
 	{
-		rect.x += relativePosition.x;
-		rect.y += relativePosition.y;
+		rect.x += relativePosition.x * deltaTime;
+		rect.y += relativePosition.y * deltaTime;
 	}
 	Rectangle<int> Transformable::getRectangle()
 	{
