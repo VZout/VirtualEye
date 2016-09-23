@@ -35,6 +35,8 @@ namespace Virtual
 		DebugLog::getInstance().printLog();
 		while(!eventManager->isClosed())
 		{
+			clock->start();
+			clock->stop();
 			eventManager->pollEvents();
 			camera->update(Vector2<int>(width, height), levelProperties);
 			renderer->draw(*camera);

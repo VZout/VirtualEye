@@ -9,11 +9,15 @@ namespace Virtual
 {
 	class Clock
 	{
-		public:
-			Clock();
-			
-			double getDelta();
-		private:
-			std::chrono::time_point<std::chrono::high_resolution_clock> timePrev;
+	public:
+		Clock();
+		
+		void start();
+		void stop();
+		double getDelta();
+	private:
+		std::chrono::time_point<std::chrono::high_resolution_clock> timePrev;
+		std::chrono::time_point<std::chrono::high_resolution_clock> timeCurrent;
+		std::chrono::duration<double> delta;
 	};
 }

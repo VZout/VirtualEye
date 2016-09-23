@@ -13,14 +13,18 @@ namespace Virtual
 	{
 		timePrev = time_point<high_resolution_clock>(high_resolution_clock::now());
 	}
-	double Clock::getDelta()
+	void Clock::start()
 	{
-		auto timeCurrent = high_resolution_clock::now();
-	 
-		duration<double> delta( timeCurrent - timePrev );
+		timeCurrent = high_resolution_clock::now();
+	}
+	void Clock::stop()
+	{
+		delta = std::chrono::duration<double>(timeCurrent - timePrev);
 
 		timePrev = high_resolution_clock::now();
-
+	}
+	double Clock::getDelta()
+	{
 		return delta.count();
 	}
 }
