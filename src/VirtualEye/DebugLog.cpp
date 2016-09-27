@@ -23,7 +23,6 @@ namespace Virtual
 	void DebugLog::addToLog(std::string string)
 	{
 		log.push_back(string);
-		std::cout << string << std::endl;
 	}
 	void DebugLog::printLog()
 	{

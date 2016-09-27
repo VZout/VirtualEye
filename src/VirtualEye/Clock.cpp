@@ -19,7 +19,7 @@ namespace Virtual
 	}
 	void Clock::stop()
 	{
-		delta = std::chrono::duration<double>(timeCurrent - timePrev);
+		delta = duration<double>(timeCurrent - timePrev);
 
 		timePrev = high_resolution_clock::now();
 	}

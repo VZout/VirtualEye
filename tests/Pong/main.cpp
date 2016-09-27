@@ -1,4 +1,4 @@
-#include "../../include/Device.hpp"
+#include "../../include/VirtualEye/Device.hpp"
 
 using namespace Virtual;
 
@@ -23,7 +23,7 @@ private:
 	void onUpdate()
 	{
 		//Moving the ball
-		renderer->getElementById("ball").move(Vector2<int>(0, mv));
+		renderer->getElementById("ball").move(Vector2<int>(0, mv), clock->getDelta());
 
 		//Moving the paddle
 		renderer->getElementById("paddle").setPosition(Vector2<int>(eventManager->getMousePosition().x, 500));
