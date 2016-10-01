@@ -9,6 +9,8 @@
 
 namespace Virtual
 {
+	#define FLIP(x) SDL_FLIP_##x
+	
 	/*With Drawable you can manipulate position and parametres objects*/
 	class Transformable
 	{
@@ -34,11 +36,13 @@ namespace Virtual
 		void setAngle(int);
 
 		/*Custom*/
+		void setFlip(SDL_RendererFlip);
 		void move(Vector2<int>, double);
 		bool isCollide(Transformable &);
 	protected:	
 		SDL_Rect rect;
 		SDL_Rect cropRect;
+		SDL_RendererFlip flip;
 		int angle;
 	};
 }

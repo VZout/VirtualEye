@@ -55,11 +55,11 @@ namespace Virtual
 			if(!is_static)
 			{
 				SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
-				SDL_RenderCopyEx(renderer, texture, &cropRect, &dRect, angle, NULL, SDL_FLIP_NONE);
+				SDL_RenderCopyEx(renderer, texture, &cropRect, &dRect, angle, NULL, flip);
 			}
 			else
 			{
-				SDL_RenderCopyEx(renderer, texture, &cropRect, &rect, angle, NULL, SDL_FLIP_NONE);
+				SDL_RenderCopyEx(renderer, texture, &cropRect, &rect, angle, NULL, flip);
 			}
 		}
 	}

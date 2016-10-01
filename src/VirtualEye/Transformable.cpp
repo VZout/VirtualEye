@@ -84,6 +84,10 @@ namespace Virtual
 		return angle;
 	}
 	
+	void Transformable::setFlip(SDL_RendererFlip flip)
+	{
+		this->flip = flip;
+	}
 	bool Transformable::isCollide(Transformable &other)
 	{
 			if(rect.x < other.getPosition().x + other.getParametres().x && rect.x + rect.w > other.getPosition().x && 
