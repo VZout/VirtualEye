@@ -4,8 +4,8 @@ project (VirtualEye)
 set(hpp include/VirtualEye)
 set(cpp src/VirtualEye)
 
-set(hppfiles ${hpp}/Camera.hpp ${hpp}/Clock.hpp ${hpp}/DebugLog.hpp ${hpp}/Device.hpp ${hpp}/EventManager.hpp ${hpp}/Math.hpp ${hpp}/Renderer.hpp ${hpp}/RenderUtils.hpp ${hpp}/Camera.hpp)
-set(cppfiles ${cpp}/Camera.cpp ${cpp}/Clock.cpp ${cpp}/DebugLog.cpp ${cpp}/DebugLog.cpp ${cpp}/Device.cpp ${cpp}/EventManager.cpp ${cpp}/Renderer.cpp ${cpp}/RenderUtils.cpp)
+set(hppfiles ${hpp}/Camera.hpp ${hpp}/Clock.hpp ${hpp}/DebugLog.hpp ${hpp}/Device.hpp ${hpp}/EventManager.hpp ${hpp}/Renderer.hpp ${hpp}/RenderUtils.hpp ${hpp}/Transformable.hpp ${hpp}/Math.hpp )
+set(cppfiles ${cpp}/Camera.cpp ${cpp}/Clock.cpp ${cpp}/DebugLog.cpp ${cpp}/Device.cpp ${cpp}/EventManager.cpp ${cpp}/Renderer.cpp ${cpp}/RenderUtils.cpp ${cpp}/Transformable.cpp)
 
 set(pro Pong)
 set(testpro tests/${pro}/main.cpp)

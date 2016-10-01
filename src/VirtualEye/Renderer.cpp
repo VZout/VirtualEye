@@ -56,6 +56,7 @@ namespace Virtual
 		s->setIsStatic(is);
 		s->setCropPosition(Vector2<int>(0, 0));
 		s->setIsDrawing(true);
+		s->setAngle(0);
 		
 		//Detect of Width and Height
 		Vector2<int> * par = new Vector2<int>;
@@ -143,6 +144,7 @@ namespace Virtual
 				tile->setName("Map");
 				tile->setIsStatic(false);
 				tile->setIsDrawing(true);
+				tile->setAngle(0);
 				
 				//Identity of values
 				for(int k = 0; k < max_num + 1; k++)

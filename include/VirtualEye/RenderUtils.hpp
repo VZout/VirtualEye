@@ -14,6 +14,7 @@
 
 #include "Math.hpp"
 #include "Camera.hpp"
+#include "Transformable.hpp"
 
 namespace Virtual
 {
@@ -48,33 +49,6 @@ namespace Virtual
 		std::string name;
 		bool is_static;
 		bool is_drawing;
-	};
-	/*With Drawable you can manipulate position and parametres objects*/
-	class Transformable
-	{
-	public:
-		/*Getters*/
-		Vector2<int> getPosition();
-		Vector2<int> getParametres();
-		Vector2<int> getCropPosition();
-		Vector2<int> getCropParametres();
-		Rectangle<int> getRectangle();
-		
-		Vector2<int> getCenter();
-
-		/*Setters*/
-		void setPosition(Vector2<int>);
-		void setParametres(Vector2<int>);
-		void setCropPosition  (Vector2<int>);
-		void setCropParametres(Vector2<int>);
-		void setRectangle(Rectangle<int>);
-
-		/*Custom*/
-		void move(Vector2<int>, double);
-		bool isCollide(Transformable &);
-	protected:	
-		SDL_Rect rect;
-		SDL_Rect cropRect;
 	};
 
 	/*Simple image*/
