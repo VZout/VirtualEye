@@ -32,6 +32,12 @@ namespace Virtual
 
 		/*onUpdate() start in rendering loop*/
 		virtual void onUpdate(){ };
+		
+		/*set width and height of window*/
+		void setParametres(Vector2<int>);
+		
+		/*set is window fullscreened*/
+		void setFullScreened(bool);
 	protected:
 		std::shared_ptr<EventManager> eventManager;
 		std::shared_ptr<Renderer> renderer;
@@ -42,5 +48,6 @@ namespace Virtual
 	private:
 		SDL_Window* window;
 		int width, height;
+		bool fullscreened;
 	};
 }

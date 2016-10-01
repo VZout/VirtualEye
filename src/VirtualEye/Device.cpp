@@ -46,6 +46,15 @@ namespace Virtual
 		
 		return 0;
 	}
+	void Device::setParametres(Vector2<int> parametres)
+	{
+		SDL_SetWindowSize(window, parametres.x, parametres.y);
+	}
+	void Device::setFullScreened(bool is)
+	{
+		if(is == true)
+			SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
+	}
 	Device::~Device(void)
 	{
 		SDL_DestroyWindow(window);

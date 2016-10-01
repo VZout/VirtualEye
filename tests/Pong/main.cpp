@@ -2,7 +2,7 @@
 
 using namespace Virtual;
 
-int mv = 5;
+int mv = 100;
 
 class Engine
 	: public Device
