@@ -14,4 +14,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY tests/${pro}/)
 
 add_executable(VirtualEye ${testpro} ${hppfiles} ${cppfiles})
 
-target_link_libraries(VirtualEye -lSDL2 -lSDL2_image)
+target_link_libraries(VirtualEye -lSDL2 -lSDL2_image -llua)

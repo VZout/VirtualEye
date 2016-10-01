@@ -12,6 +12,11 @@ namespace Virtual
 		this->width = width;
 		this->height = height;
 		
+		//Lua opening
+		state = luaL_newstate();
+		luaL_openlibs(state);
+		
+		//SDL opening
 		SDL_Init(SDL_INIT_EVERYTHING);
 	
 		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
@@ -29,9 +34,13 @@ namespace Virtual
 		levelProperties = Vector2<int>(width, height);
 	}
 	//Start game loop
-	int Device::start()
+	int Device::start(std::string file)
 	{
 		onInit();
+		
+		luaL_loadfile(state, file.c_str());
+		lua_pcall(state, 0, LUA_MULTRET, 0);
+		
 		DebugLog::getInstance().printLog();
 		while(!eventManager->isClosed())
 		{
@@ -43,6 +52,9 @@ namespace Virtual
 
 			onUpdate();
 		}
+		
+		SDL_DestroyWindow(window);
+		lua_close(state);
 		
 		return 0;
 	}

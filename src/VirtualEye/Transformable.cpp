@@ -90,10 +90,10 @@ namespace Virtual
 	}
 	bool Transformable::isCollide(Transformable &other)
 	{
-			if(rect.x < other.getPosition().x + other.getParametres().x && rect.x + rect.w > other.getPosition().x && 
-			rect.y < other.getPosition().y + other.getParametres().y && rect.y + rect.h > other.getPosition().y)
-				return true;
-			else 
-				return false;
+		if(rect.x < other.getPosition().x + other.getParametres().x && rect.x + rect.w > other.getPosition().x && 
+		rect.y < other.getPosition().y + other.getParametres().y && rect.y + rect.h > other.getPosition().y)
+			return true;
+		else 
+			return false;
 	}
 }

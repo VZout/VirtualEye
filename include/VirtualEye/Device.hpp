@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <SDL2/SDL.h>
+#include <lua5.2/lua.hpp>
 
 #include "EventManager.hpp"
 #include "Renderer.hpp"
@@ -25,7 +26,7 @@ namespace Virtual
 		~Device(void);
 
 		/*Function start main loop*/
-		int start();
+		int start(std::string);
 	protected:
 		/*onInit() start before main loop*/
 		virtual void onInit(){ };
@@ -47,6 +48,7 @@ namespace Virtual
 		Vector2<int> levelProperties;
 	private:
 		SDL_Window* window;
+		lua_State * state;
 		int width, height;
 		bool fullscreened;
 	};

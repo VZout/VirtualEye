@@ -48,5 +48,5 @@ int main()
 {
 	Engine engine(800, 600);
 	
-	return engine.start();
+	return engine.start("test.lua");
 }
