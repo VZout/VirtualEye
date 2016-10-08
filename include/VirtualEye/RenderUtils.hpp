@@ -98,4 +98,22 @@ namespace Virtual
 		TTF_Font* font;	
 	};
 	
+	/*Simple text*/
+	class Label
+		: public Sprite
+	{
+	public:
+		void draw(SDL_Renderer*, Camera&);
+		
+		void setColor(Color);
+		void setFont(std::shared_ptr<Font>);
+		void setSize(int);
+		void setText(std::string);
+	private:
+		std::string text;
+		std::shared_ptr<Font> font;
+		Color color;
+		int size;
+		bool isChanged = false;
+	};
 }

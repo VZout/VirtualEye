@@ -69,6 +69,36 @@ namespace Virtual
 
 		spriteVector.push_back(s);
 	}
+	void Renderer::loadLabel(std::string fontpath, std::string text, Vector2<int> position, std::string name, Color color, int size, bool is)
+	{
+		std::shared_ptr<Label> label(new Label);
+		
+		//Texture & position pushing
+		std::shared_ptr<Font> font(new Font);
+		
+		font->setFont(TTF_OpenFont(fontpath.c_str(), size));
+		label->setTexture(SDL_CreateTextureFromSurface(renderer, TTF_RenderText_Blended(font->getFont(), text.c_str(), {color.r, color.g, color.b})));
+		
+		label->setPosition(position);
+		label->setName(name);
+		label->setIsStatic(is);
+		label->setCropPosition(Vector2<int>(0, 0));
+		label->setIsDrawing(true);
+		label->setAngle(0);
+		label->setFlip(FLIP(NONE));
+		label->setColor(color);
+		label->setFont(font);
+		
+		//Detect of Width and Height
+		Vector2<int> * par = new Vector2<int>;
+		SDL_QueryTexture(label->getTexture(), NULL, NULL, &par->x, &par->y);
+		label->setParametres(*par);
+		label->setCropParametres(*par);
+		
+		delete par;
+
+		spriteVector.push_back(label);
+	}
 	Vector2<int> Renderer::loadMap(std::string iniPath)
 	{
 		int max_num = 0;

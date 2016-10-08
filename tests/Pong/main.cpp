@@ -16,6 +16,7 @@ private:
 	{
 		renderer->loadSprite("paddle.png", Vector2<int>(400, 500), "paddle");
 		renderer->loadSprite("ball.png", Vector2<int>(400, 300), "ball");
+		renderer->loadLabel("font.ttf", "Hello world", Vector2<int>(10, 10), "text", {0, 255, 0});
 		
 		for(int i = 0; i < 3; i++)
 			renderer->loadSprite("tile.png", Vector2<int>(350 + (i * 75), 10), "tile" + std::to_string(i));

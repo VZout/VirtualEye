@@ -90,4 +90,43 @@ namespace Virtual
 	{
 		return font;
 	}
+	/*Label*/
+	void Label::draw(SDL_Renderer * renderer, Camera & camera)
+	{
+		if(is_drawing)
+		{
+			if(isChanged)
+			{
+				SDL_QueryTexture(getTexture(), NULL, NULL, &rect.x, &rect.y);
+				setTexture(SDL_CreateTextureFromSurface(renderer, TTF_RenderText_Solid(font->getFont(), text.c_str(), {color.r, color.g, color.b})));
+				isChanged = false;
+			}
+			if(!is_static)
+			{
+				SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
+				SDL_RenderCopyEx(renderer, texture, &cropRect, &dRect, angle, NULL, flip);
+			}
+			else
+			{
+				SDL_RenderCopyEx(renderer, texture, &cropRect, &rect, angle, NULL, flip);
+			}
+		}
+	}
+	void Label::setSize(int size)
+	{
+		this->size = size;
+	}
+	void Label::setText(std::string text)
+	{
+		this->text = text;
+		isChanged = true;
+	}
+	void Label::setColor(Color color)
+	{
+		this->color = color;
+	}
+	void Label::setFont(std::shared_ptr<Font> font)
+	{
+		this->font = font;
+	}
 }

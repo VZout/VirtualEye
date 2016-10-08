@@ -47,7 +47,7 @@ namespace Virtual
 	};
 	struct Color
 	{
-		float r, g, b;
+		Uint8 r, g, b;
 		Color()
 		{
 			r = g = b = 255;
