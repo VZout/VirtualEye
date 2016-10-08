@@ -85,4 +85,17 @@ namespace Virtual
 		int width;
 		int height;
 	};
+	
+	/*Dynaic Font class*/
+	class Font
+	{
+	public:
+		~Font();
+		
+		void setFont(TTF_Font*);
+		TTF_Font* getFont();
+	private:
+		TTF_Font* font;	
+	};
+	
 }

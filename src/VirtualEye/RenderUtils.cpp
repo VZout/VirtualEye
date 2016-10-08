@@ -77,4 +77,17 @@ namespace Virtual
 	{
 		return tiles[pos.x][pos.y];
 	}
+	/*Font*/
+	Font::~Font()
+	{
+		TTF_CloseFont(font);
+	}
+	void Font::setFont(TTF_Font* font)
+	{
+		this->font = font;
+	}
+	TTF_Font* Font::getFont()
+	{
+		return font;
+	}
 }

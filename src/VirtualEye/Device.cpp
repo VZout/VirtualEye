@@ -18,6 +18,7 @@ namespace Virtual
 		
 		//SDL opening
 		SDL_Init(SDL_INIT_EVERYTHING);
+		TTF_Init();
 	
 		window = SDL_CreateWindow("VirtualEye | SDL2 Renderer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
 		if(!window)
@@ -36,11 +37,11 @@ namespace Virtual
 	//Start game loop
 	int Device::start(std::string file)
 	{
-		onInit();
-		
 		luaL_loadfile(state, file.c_str());
+				
 		lua_pcall(state, 0, LUA_MULTRET, 0);
 		
+		onInit();
 		DebugLog::getInstance().printLog();
 		while(!eventManager->isClosed())
 		{
