@@ -20,6 +20,7 @@ namespace Virtual
 	{
 		SDL_DestroyRenderer(renderer);
 		spriteVector.clear();
+		labelVector.clear();
 	}
 	void Renderer::draw(Camera & camera)
 	{
@@ -33,6 +34,10 @@ namespace Virtual
 			
 		//Rendering sprites
 		for(auto &i : spriteVector)
+			i->draw(renderer, camera);
+			
+		//Rendering labels
+		for(auto &i : labelVector)
 			i->draw(renderer, camera);
 			
 		SDL_RenderPresent(renderer);
@@ -97,7 +102,7 @@ namespace Virtual
 		
 		delete par;
 
-		spriteVector.push_back(label);
+		labelVector.push_back(label);
 	}
 	Vector2<int> Renderer::loadMap(std::string iniPath)
 	{
@@ -194,9 +199,17 @@ namespace Virtual
 		//Returning width and height of map
 		return Vector2<int>(map->tilesSize * map->width, map->tilesSize * map->height);
 	}
-	Sprite& Renderer::getElementById(std::string name)
+	Sprite& Renderer::getSpriteById(std::string name)
 	{
 		for(auto &i : spriteVector)
+		{
+			if(i->getName() == name)
+				return *i;
+		}
+	}
+	Label& Renderer::getLabelById(std::string name)
+	{
+		for(auto &i : labelVector)
 		{
 			if(i->getName() == name)
 				return *i;

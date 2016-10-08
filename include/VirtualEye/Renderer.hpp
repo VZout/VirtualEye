@@ -47,12 +47,14 @@ namespace Virtual
 		std::shared_ptr<Map> getMap();
 		
 		/*Returns reference to chosen element*/
-		Sprite& getElementById(std::string);
+		Sprite& getSpriteById(std::string);
+		Label& getLabelById(std::string);
 	private:
 		SDL_Renderer * renderer;
 		std::shared_ptr<Camera> camera;
 		std::shared_ptr<Map> map;
 		
 		std::vector<std::shared_ptr<Sprite>> spriteVector;
+		std::vector<std::shared_ptr<Label>> labelVector;
 	};
 }

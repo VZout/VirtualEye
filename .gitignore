@@ -42,5 +42,7 @@ tags
 CMakeFiles/*
 CMakeFiles/*.*
 cmake_install.cmake
+
+tests/Pong/res/*.*
 CMakeCache.txt
 Makefile
