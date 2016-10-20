@@ -9,6 +9,9 @@
 
 namespace Virtual
 {
+	/*!
+	 *  \brief Singleton to manage debugging
+	 */
 	class DebugLog
 	{
 	private:
@@ -17,8 +20,19 @@ namespace Virtual
 	private:
 		std::vector<std::string> log;
 	public:
+		/*!
+		 *  @return instance to singleton
+		 */
 		static DebugLog & getInstance();
-		void addToLog(std::string);
+		/*!
+		 * \brief Adds the string into log
+		 * 
+		 * @param string - Value that want to print into debug log
+		 */
+		void addToLog(std::string string);
+		/*!
+		 *  \brief create debug log file and print to they all logs
+		 */
 		void printLog();
 	};
 }

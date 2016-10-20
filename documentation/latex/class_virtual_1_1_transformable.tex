@@ -1,0 +1,262 @@
+\hypertarget{class_virtual_1_1_transformable}{}\section{Virtual\+:\+:Transformable Class Reference}
+\label{class_virtual_1_1_transformable}\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+
+
+Class to manupulate position and size of object.  
+
+
+
+
+{\ttfamily \#include $<$Transformable.\+hpp$>$}
+
+Inheritance diagram for Virtual\+:\+:Transformable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_virtual_1_1_transformable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ \hyperlink{class_virtual_1_1_transformable_a2bb830f06c5123ae69d0584eef5f16f3}{get\+Position} ()
+\item 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ \hyperlink{class_virtual_1_1_transformable_a816bf127c89675265776e94ef849e6e8}{get\+Parametres} ()
+\item 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ \hyperlink{class_virtual_1_1_transformable_adbccc4539561975b0de4471d05ca7541}{get\+Crop\+Position} ()
+\item 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ \hyperlink{class_virtual_1_1_transformable_a22aa918ae175dea89c27728a20c29f82}{get\+Crop\+Parametres} ()
+\item 
+\hyperlink{struct_virtual_1_1_rectangle}{Rectangle}$<$ int $>$ \hyperlink{class_virtual_1_1_transformable_aa25efa18322fe9eaa187cd7cb54909ae}{get\+Rectangle} ()
+\item 
+int \hyperlink{class_virtual_1_1_transformable_acda950f2b5d3f2b85aec5663bec79611}{get\+Angle} ()
+\item 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ \hyperlink{class_virtual_1_1_transformable_a703da601d8ef871a03b0da591edda2fe}{get\+Center} ()
+\item 
+void \hyperlink{class_virtual_1_1_transformable_a2c1168cb1d892fbddd978c7d45dfcba9}{set\+Position} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ position)
+\begin{DoxyCompactList}\small\item\em Setting position of object. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_transformable_a67d42e58b8f2fc45b565aa51e3f29f67}{set\+Parametres} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ size)
+\begin{DoxyCompactList}\small\item\em Setting size of object. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_transformable_afa2e1b7971db9c916a38f7dfa06a0b26}{set\+Crop\+Position} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ crop\+Position)
+\begin{DoxyCompactList}\small\item\em Setting position of crop of texture. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_transformable_a558026b1336c4f24c2bc70debc01800c}{set\+Crop\+Parametres} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ crop\+Size)
+\begin{DoxyCompactList}\small\item\em Setting position of crop of texture. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_transformable_ad86a98728222a2b879afa41ba27dfc58}{set\+Rectangle} (\hyperlink{struct_virtual_1_1_rectangle}{Rectangle}$<$ int $>$ rect)
+\begin{DoxyCompactList}\small\item\em Setting position and size of sprite. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_transformable_ae7305c3fe8a7bd9f4a1138a9d097bfab}{set\+Angle} (int angle)
+\begin{DoxyCompactList}\small\item\em Setting angle of sprite. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_transformable_a4d0e9c61931af6b42fac1dc0c3a1ed21}{set\+Flip} (S\+D\+L\+\_\+\+Renderer\+Flip flip)
+\begin{DoxyCompactList}\small\item\em Setting flip of texture. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_transformable_a80eb3848090682f3ad3bd3faf879f6ab}{move} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ relative\+Position, double delta)
+\begin{DoxyCompactList}\small\item\em Setting flip of texture. \end{DoxyCompactList}\item 
+\hypertarget{class_virtual_1_1_transformable_a997867ac2fabb95a7244caeeb26d8b05}{}\label{class_virtual_1_1_transformable_a997867ac2fabb95a7244caeeb26d8b05} 
+bool {\bfseries is\+Collide} (\hyperlink{class_virtual_1_1_transformable}{Transformable} \&)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_virtual_1_1_transformable_af218a7ebdc91c7714b791a5973c3ff43}{}\label{class_virtual_1_1_transformable_af218a7ebdc91c7714b791a5973c3ff43} 
+S\+D\+L\+\_\+\+Rect {\bfseries rect}
+\item 
+\hypertarget{class_virtual_1_1_transformable_a38b781918dcf60c7154f0a288c5bb434}{}\label{class_virtual_1_1_transformable_a38b781918dcf60c7154f0a288c5bb434} 
+S\+D\+L\+\_\+\+Rect {\bfseries crop\+Rect}
+\item 
+\hypertarget{class_virtual_1_1_transformable_aca6c8a4c255cc8dc72bf831cbeb918bb}{}\label{class_virtual_1_1_transformable_aca6c8a4c255cc8dc72bf831cbeb918bb} 
+S\+D\+L\+\_\+\+Renderer\+Flip {\bfseries flip}
+\item 
+\hypertarget{class_virtual_1_1_transformable_a6ce7c408bf4fc4b21147dce206a7bb29}{}\label{class_virtual_1_1_transformable_a6ce7c408bf4fc4b21147dce206a7bb29} 
+int {\bfseries angle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to manupulate position and size of object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_virtual_1_1_transformable_acda950f2b5d3f2b85aec5663bec79611}{}\label{class_virtual_1_1_transformable_acda950f2b5d3f2b85aec5663bec79611} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!get\+Angle@{get\+Angle}}
+\index{get\+Angle@{get\+Angle}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{get\+Angle()}{getAngle()}}
+{\footnotesize\ttfamily int Virtual\+::\+Transformable\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+angle of object 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_a703da601d8ef871a03b0da591edda2fe}{}\label{class_virtual_1_1_transformable_a703da601d8ef871a03b0da591edda2fe} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!get\+Center@{get\+Center}}
+\index{get\+Center@{get\+Center}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{get\+Center()}{getCenter()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$int$>$ Virtual\+::\+Transformable\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+center of texture 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_a22aa918ae175dea89c27728a20c29f82}{}\label{class_virtual_1_1_transformable_a22aa918ae175dea89c27728a20c29f82} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!get\+Crop\+Parametres@{get\+Crop\+Parametres}}
+\index{get\+Crop\+Parametres@{get\+Crop\+Parametres}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{get\+Crop\+Parametres()}{getCropParametres()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$int$>$ Virtual\+::\+Transformable\+::get\+Crop\+Parametres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+size of texture crop in object 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_adbccc4539561975b0de4471d05ca7541}{}\label{class_virtual_1_1_transformable_adbccc4539561975b0de4471d05ca7541} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!get\+Crop\+Position@{get\+Crop\+Position}}
+\index{get\+Crop\+Position@{get\+Crop\+Position}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{get\+Crop\+Position()}{getCropPosition()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$int$>$ Virtual\+::\+Transformable\+::get\+Crop\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position of texture crop in object 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_a816bf127c89675265776e94ef849e6e8}{}\label{class_virtual_1_1_transformable_a816bf127c89675265776e94ef849e6e8} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!get\+Parametres@{get\+Parametres}}
+\index{get\+Parametres@{get\+Parametres}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{get\+Parametres()}{getParametres()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$int$>$ Virtual\+::\+Transformable\+::get\+Parametres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+size of object 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_a2bb830f06c5123ae69d0584eef5f16f3}{}\label{class_virtual_1_1_transformable_a2bb830f06c5123ae69d0584eef5f16f3} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$int$>$ Virtual\+::\+Transformable\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+position of object 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_aa25efa18322fe9eaa187cd7cb54909ae}{}\label{class_virtual_1_1_transformable_aa25efa18322fe9eaa187cd7cb54909ae} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!get\+Rectangle@{get\+Rectangle}}
+\index{get\+Rectangle@{get\+Rectangle}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{get\+Rectangle()}{getRectangle()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_rectangle}{Rectangle}$<$int$>$ Virtual\+::\+Transformable\+::get\+Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+size of texture crop in object 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_a80eb3848090682f3ad3bd3faf879f6ab}{}\label{class_virtual_1_1_transformable_a80eb3848090682f3ad3bd3faf879f6ab} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!move@{move}}
+\index{move@{move}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::move (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{relative\+Position,  }\item[{double}]{delta }\end{DoxyParamCaption})}
+
+
+
+Setting flip of texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flip} & -\/ for exaple (F\+L\+I\+P(\+N\+O\+N\+E)) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_transformable_ae7305c3fe8a7bd9f4a1138a9d097bfab}{}\label{class_virtual_1_1_transformable_ae7305c3fe8a7bd9f4a1138a9d097bfab} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!set\+Angle@{set\+Angle}}
+\index{set\+Angle@{set\+Angle}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{set\+Angle()}{setAngle()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::set\+Angle (\begin{DoxyParamCaption}\item[{int}]{angle }\end{DoxyParamCaption})}
+
+
+
+Setting angle of sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & -\/ angle in degrees \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_transformable_a558026b1336c4f24c2bc70debc01800c}{}\label{class_virtual_1_1_transformable_a558026b1336c4f24c2bc70debc01800c} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!set\+Crop\+Parametres@{set\+Crop\+Parametres}}
+\index{set\+Crop\+Parametres@{set\+Crop\+Parametres}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{set\+Crop\+Parametres()}{setCropParametres()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::set\+Crop\+Parametres (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{crop\+Size }\end{DoxyParamCaption})}
+
+
+
+Setting position of crop of texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crop\+Size} & -\/ coords of crop position(width and height) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_transformable_afa2e1b7971db9c916a38f7dfa06a0b26}{}\label{class_virtual_1_1_transformable_afa2e1b7971db9c916a38f7dfa06a0b26} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!set\+Crop\+Position@{set\+Crop\+Position}}
+\index{set\+Crop\+Position@{set\+Crop\+Position}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{set\+Crop\+Position()}{setCropPosition()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::set\+Crop\+Position (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{crop\+Position }\end{DoxyParamCaption})}
+
+
+
+Setting position of crop of texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crop\+Position} & -\/ coords of crop position(x and y) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_transformable_a4d0e9c61931af6b42fac1dc0c3a1ed21}{}\label{class_virtual_1_1_transformable_a4d0e9c61931af6b42fac1dc0c3a1ed21} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!set\+Flip@{set\+Flip}}
+\index{set\+Flip@{set\+Flip}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{set\+Flip()}{setFlip()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::set\+Flip (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer\+Flip}]{flip }\end{DoxyParamCaption})}
+
+
+
+Setting flip of texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flip} & -\/ for exaple (F\+L\+I\+P(\+N\+O\+N\+E)) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_transformable_a67d42e58b8f2fc45b565aa51e3f29f67}{}\label{class_virtual_1_1_transformable_a67d42e58b8f2fc45b565aa51e3f29f67} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!set\+Parametres@{set\+Parametres}}
+\index{set\+Parametres@{set\+Parametres}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{set\+Parametres()}{setParametres()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::set\+Parametres (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{size }\end{DoxyParamCaption})}
+
+
+
+Setting size of object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ coords of position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_transformable_a2c1168cb1d892fbddd978c7d45dfcba9}{}\label{class_virtual_1_1_transformable_a2c1168cb1d892fbddd978c7d45dfcba9} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::set\+Position (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{position }\end{DoxyParamCaption})}
+
+
+
+Setting position of object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & -\/ coords of position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_transformable_ad86a98728222a2b879afa41ba27dfc58}{}\label{class_virtual_1_1_transformable_ad86a98728222a2b879afa41ba27dfc58} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!set\+Rectangle@{set\+Rectangle}}
+\index{set\+Rectangle@{set\+Rectangle}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{set\+Rectangle()}{setRectangle()}}
+{\footnotesize\ttfamily void Virtual\+::\+Transformable\+::set\+Rectangle (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_rectangle}{Rectangle}$<$ int $>$}]{rect }\end{DoxyParamCaption})}
+
+
+
+Setting position and size of sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & -\/ coords of position and width and height \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Virtual\+Eye/Transformable.\+hpp\end{DoxyCompactItemize}

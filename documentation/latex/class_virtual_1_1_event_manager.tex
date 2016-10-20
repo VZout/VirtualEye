@@ -1,0 +1,113 @@
+\hypertarget{class_virtual_1_1_event_manager}{}\section{Virtual\+:\+:Event\+Manager Class Reference}
+\label{class_virtual_1_1_event_manager}\index{Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}}
+
+
+Management of event queque.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Manager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_virtual_1_1_event_manager_ab1f3521b16ff390d968a12c9c8fbc00c}{is\+Closed} (void)
+\begin{DoxyCompactList}\small\item\em Check is the window closed. \end{DoxyCompactList}\item 
+bool \hyperlink{class_virtual_1_1_event_manager_a565bd5f26862a9f8f102078df1cfa39c}{is\+Key\+Pressed} (int id)
+\begin{DoxyCompactList}\small\item\em Check is the keyboard key pressed. \end{DoxyCompactList}\item 
+bool \hyperlink{class_virtual_1_1_event_manager_addd617c04422d16843073acc9b8a6d32}{is\+Mouse\+Key\+Pressed} (int id)
+\begin{DoxyCompactList}\small\item\em Check is the mouse key pressed. \end{DoxyCompactList}\item 
+\hypertarget{class_virtual_1_1_event_manager_a994c1f4c3a9d5af2f7c64cf91900c884}{}\label{class_virtual_1_1_event_manager_a994c1f4c3a9d5af2f7c64cf91900c884} 
+void \hyperlink{class_virtual_1_1_event_manager_a994c1f4c3a9d5af2f7c64cf91900c884}{close} (void)
+\begin{DoxyCompactList}\small\item\em Colse the window. \end{DoxyCompactList}\item 
+int \hyperlink{class_virtual_1_1_event_manager_a2e2394e7bb1ca6c7f2fc45813183d17a}{poll\+Events} (void)
+\begin{DoxyCompactList}\small\item\em Polling all events into queque. \end{DoxyCompactList}\item 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ \hyperlink{class_virtual_1_1_event_manager_a3d55fffe71640c02b40788887a1048f0}{get\+Mouse\+Position} (void)
+\begin{DoxyCompactList}\small\item\em Catch the mouse position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Management of event queque. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_virtual_1_1_event_manager_a3d55fffe71640c02b40788887a1048f0}{}\label{class_virtual_1_1_event_manager_a3d55fffe71640c02b40788887a1048f0} 
+\index{Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}!get\+Mouse\+Position@{get\+Mouse\+Position}}
+\index{get\+Mouse\+Position@{get\+Mouse\+Position}!Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}}
+\subsubsection{\texorpdfstring{get\+Mouse\+Position()}{getMousePosition()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$int$>$ Virtual\+::\+Event\+Manager\+::get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Catch the mouse position. 
+
+\begin{DoxyReturn}{Returns}
+Mouse position relative to window 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_event_manager_ab1f3521b16ff390d968a12c9c8fbc00c}{}\label{class_virtual_1_1_event_manager_ab1f3521b16ff390d968a12c9c8fbc00c} 
+\index{Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}!is\+Closed@{is\+Closed}}
+\index{is\+Closed@{is\+Closed}!Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}}
+\subsubsection{\texorpdfstring{is\+Closed()}{isClosed()}}
+{\footnotesize\ttfamily bool Virtual\+::\+Event\+Manager\+::is\+Closed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check is the window closed. 
+
+\begin{DoxyReturn}{Returns}
+true if window x button is clicked or false when it isn\textquotesingle{}t 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_event_manager_a565bd5f26862a9f8f102078df1cfa39c}{}\label{class_virtual_1_1_event_manager_a565bd5f26862a9f8f102078df1cfa39c} 
+\index{Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}!is\+Key\+Pressed@{is\+Key\+Pressed}}
+\index{is\+Key\+Pressed@{is\+Key\+Pressed}!Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}}
+\subsubsection{\texorpdfstring{is\+Key\+Pressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily bool Virtual\+::\+Event\+Manager\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Check is the keyboard key pressed. 
+
+\begin{DoxyReturn}{Returns}
+true if keyboard key pressed is clicked or false when it isn\textquotesingle{}t
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ K\+E\+Y(x) where x is the name of key like L\+E\+FT \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_event_manager_addd617c04422d16843073acc9b8a6d32}{}\label{class_virtual_1_1_event_manager_addd617c04422d16843073acc9b8a6d32} 
+\index{Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}!is\+Mouse\+Key\+Pressed@{is\+Mouse\+Key\+Pressed}}
+\index{is\+Mouse\+Key\+Pressed@{is\+Mouse\+Key\+Pressed}!Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}}
+\subsubsection{\texorpdfstring{is\+Mouse\+Key\+Pressed()}{isMouseKeyPressed()}}
+{\footnotesize\ttfamily bool Virtual\+::\+Event\+Manager\+::is\+Mouse\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Check is the mouse key pressed. 
+
+\begin{DoxyReturn}{Returns}
+true if mouse key pressed is clicked or false when it isn\textquotesingle{}t
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ M\+O\+U\+S\+E\+\_\+\+B\+U\+T\+T\+O\+N(x) where x is the name of key like L\+E\+FT \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_event_manager_a2e2394e7bb1ca6c7f2fc45813183d17a}{}\label{class_virtual_1_1_event_manager_a2e2394e7bb1ca6c7f2fc45813183d17a} 
+\index{Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}!poll\+Events@{poll\+Events}}
+\index{poll\+Events@{poll\+Events}!Virtual\+::\+Event\+Manager@{Virtual\+::\+Event\+Manager}}
+\subsubsection{\texorpdfstring{poll\+Events()}{pollEvents()}}
+{\footnotesize\ttfamily int Virtual\+::\+Event\+Manager\+::poll\+Events (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Polling all events into queque. 
+
+\begin{DoxyReturn}{Returns}
+Number of current event 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Virtual\+Eye/Event\+Manager.\+hpp\end{DoxyCompactItemize}

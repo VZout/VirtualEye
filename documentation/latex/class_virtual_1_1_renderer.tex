@@ -1,0 +1,174 @@
+\hypertarget{class_virtual_1_1_renderer}{}\section{Virtual\+:\+:Renderer Class Reference}
+\label{class_virtual_1_1_renderer}\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+
+
+Management of current scene.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_virtual_1_1_renderer_a2474ee636beae9079b5283c4c5729acc}{}\label{class_virtual_1_1_renderer_a2474ee636beae9079b5283c4c5729acc} 
+{\bfseries Renderer} (S\+D\+L\+\_\+\+Window $\ast$)
+\item 
+void \hyperlink{class_virtual_1_1_renderer_ae1151907121db309b9d1b650b3dbe076}{draw} (\hyperlink{class_virtual_1_1_camera}{Camera} \&camera)
+\begin{DoxyCompactList}\small\item\em Draws the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_renderer_a2c4ba07e2388d77606f77cf10e5af0d1}{clear\+Scene} (void)
+\begin{DoxyCompactList}\small\item\em Clearing the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_renderer_a55910b43e187352052f2b51019fd16ef}{load\+Sprite} (std\+::string path, \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ position, std\+::string name, bool is\+Displaying=false)
+\begin{DoxyCompactList}\small\item\em Loading sprite. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_renderer_a6addf8a58c9024701a5da4fe814561e8}{load\+Label} (std\+::string path, std\+::string text, \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ position, std\+::string name, \hyperlink{struct_virtual_1_1_color}{Color} color, int size=30, bool is\+Displaying=false)
+\begin{DoxyCompactList}\small\item\em Loading sprite. \end{DoxyCompactList}\item 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ \hyperlink{class_virtual_1_1_renderer_a8b1576675d456d42a8b08bfb6a2d50af}{load\+Map} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Loads map. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_virtual_1_1_map}{Map} $>$ \hyperlink{class_virtual_1_1_renderer_aaa8e493c4e05d5eaca42604555d3b419}{get\+Map} (void)
+\item 
+\hyperlink{class_virtual_1_1_sprite}{Sprite} \& \hyperlink{class_virtual_1_1_renderer_ae2be5bddf056acb2c00f77fb6f0afa6c}{get\+Sprite\+By\+Id} (std\+::string name)
+\item 
+\hyperlink{class_virtual_1_1_label}{Label} \& \hyperlink{class_virtual_1_1_renderer_a11f3dbe70c634fb465b5b21d43618f5d}{get\+Label\+By\+Id} (std\+::string name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Management of current scene. 
+
+Class of renderer manage the scene by loading sprite, label to they, cleaning the scene etc. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_virtual_1_1_renderer_a2c4ba07e2388d77606f77cf10e5af0d1}{}\label{class_virtual_1_1_renderer_a2c4ba07e2388d77606f77cf10e5af0d1} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!clear\+Scene@{clear\+Scene}}
+\index{clear\+Scene@{clear\+Scene}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{clear\+Scene()}{clearScene()}}
+{\footnotesize\ttfamily void Virtual\+::\+Renderer\+::clear\+Scene (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clearing the scene. 
+
+Deleting all vector and cleaning them. Nothing will not rendering after that. \hypertarget{class_virtual_1_1_renderer_ae1151907121db309b9d1b650b3dbe076}{}\label{class_virtual_1_1_renderer_ae1151907121db309b9d1b650b3dbe076} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!draw@{draw}}
+\index{draw@{draw}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Virtual\+::\+Renderer\+::draw (\begin{DoxyParamCaption}\item[{\hyperlink{class_virtual_1_1_camera}{Camera} \&}]{camera }\end{DoxyParamCaption})}
+
+
+
+Draws the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & the reference to camera object\\
+\hline
+\end{DoxyParams}
+Draws the scene on the screen. \hypertarget{class_virtual_1_1_renderer_a11f3dbe70c634fb465b5b21d43618f5d}{}\label{class_virtual_1_1_renderer_a11f3dbe70c634fb465b5b21d43618f5d} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!get\+Label\+By\+Id@{get\+Label\+By\+Id}}
+\index{get\+Label\+By\+Id@{get\+Label\+By\+Id}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{get\+Label\+By\+Id()}{getLabelById()}}
+{\footnotesize\ttfamily \hyperlink{class_virtual_1_1_label}{Label}\& Virtual\+::\+Renderer\+::get\+Label\+By\+Id (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The object of label by the name
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of searched label \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_renderer_aaa8e493c4e05d5eaca42604555d3b419}{}\label{class_virtual_1_1_renderer_aaa8e493c4e05d5eaca42604555d3b419} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!get\+Map@{get\+Map}}
+\index{get\+Map@{get\+Map}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{get\+Map()}{getMap()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{struct_virtual_1_1_map}{Map}$>$ Virtual\+::\+Renderer\+::get\+Map (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Dynamic pointer into map info
+\end{DoxyReturn}
+Returning map info like width and height, number of tiles etc. \hypertarget{class_virtual_1_1_renderer_ae2be5bddf056acb2c00f77fb6f0afa6c}{}\label{class_virtual_1_1_renderer_ae2be5bddf056acb2c00f77fb6f0afa6c} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!get\+Sprite\+By\+Id@{get\+Sprite\+By\+Id}}
+\index{get\+Sprite\+By\+Id@{get\+Sprite\+By\+Id}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{get\+Sprite\+By\+Id()}{getSpriteById()}}
+{\footnotesize\ttfamily \hyperlink{class_virtual_1_1_sprite}{Sprite}\& Virtual\+::\+Renderer\+::get\+Sprite\+By\+Id (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The object of sprite by the name
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of searched sprite \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_renderer_a6addf8a58c9024701a5da4fe814561e8}{}\label{class_virtual_1_1_renderer_a6addf8a58c9024701a5da4fe814561e8} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!load\+Label@{load\+Label}}
+\index{load\+Label@{load\+Label}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{load\+Label()}{loadLabel()}}
+{\footnotesize\ttfamily void Virtual\+::\+Renderer\+::load\+Label (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{std\+::string}]{text,  }\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{position,  }\item[{std\+::string}]{name,  }\item[{\hyperlink{struct_virtual_1_1_color}{Color}}]{color,  }\item[{int}]{size = {\ttfamily 30},  }\item[{bool}]{is\+Displaying = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Loading sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ path to font \\
+\hline
+{\em text} & -\/ text on label \\
+\hline
+{\em position} & -\/ integer vector of the position relative to window \\
+\hline
+{\em name} & -\/ identity name of sprite \\
+\hline
+{\em color} & -\/ color of text in label \\
+\hline
+{\em size} & -\/ size of font \\
+\hline
+{\em is\+Displaying} & -\/ fact is the object was displaying\\
+\hline
+\end{DoxyParams}
+Creating label, setting position and name of they and pushing the instance into label vector. \hypertarget{class_virtual_1_1_renderer_a8b1576675d456d42a8b08bfb6a2d50af}{}\label{class_virtual_1_1_renderer_a8b1576675d456d42a8b08bfb6a2d50af} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!load\+Map@{load\+Map}}
+\index{load\+Map@{load\+Map}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{load\+Map()}{loadMap()}}
+{\footnotesize\ttfamily \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$int$>$ Virtual\+::\+Renderer\+::load\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads map. 
+
+\begin{DoxyReturn}{Returns}
+Integer vector of width and height of map in pixels
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ path to map init file ($\ast$.iom)\\
+\hline
+\end{DoxyParams}
+Create map instance, loades tiles and pushing then into vector. \hypertarget{class_virtual_1_1_renderer_a55910b43e187352052f2b51019fd16ef}{}\label{class_virtual_1_1_renderer_a55910b43e187352052f2b51019fd16ef} 
+\index{Virtual\+::\+Renderer@{Virtual\+::\+Renderer}!load\+Sprite@{load\+Sprite}}
+\index{load\+Sprite@{load\+Sprite}!Virtual\+::\+Renderer@{Virtual\+::\+Renderer}}
+\subsubsection{\texorpdfstring{load\+Sprite()}{loadSprite()}}
+{\footnotesize\ttfamily void Virtual\+::\+Renderer\+::load\+Sprite (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{position,  }\item[{std\+::string}]{name,  }\item[{bool}]{is\+Displaying = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Loading sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ path to image \\
+\hline
+{\em position} & -\/ integer vector of the position relative to window \\
+\hline
+{\em name} & -\/ identity name of sprite \\
+\hline
+{\em is\+Displaying} & -\/ fact is the object was displaying\\
+\hline
+\end{DoxyParams}
+Loading sprite, setting position and name of they and pushing the instance into sprite vector. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Virtual\+Eye/Renderer.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{class_virtual_1_1_camera}{}\section{Virtual\+:\+:Camera Class Reference}
+\label{class_virtual_1_1_camera}\index{Virtual\+::\+Camera@{Virtual\+::\+Camera}}
+
+
+Just camera.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_virtual_1_1_camera_a6916239ab1b8ad4a9b1c20c36f28de18}{update} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ window\+Resolution, \hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ level\+Resolution)
+\begin{DoxyCompactList}\small\item\em Updates the info about resolution of window and level. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_camera_ae6c71fea6b4f46be3af9c015507576a0}{set\+Center} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ center\+Position)
+\begin{DoxyCompactList}\small\item\em Updates position of camera. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_camera_ac6ec60ab0905c4ddcaa835914d20f770}{move} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ relative\+Position)
+\begin{DoxyCompactList}\small\item\em Move the camera relativly of previous position. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{class_virtual_1_1_camera_a45d86b427fa74b7c0bf2febe1d20cb01}{get\+Rect} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Just camera. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_virtual_1_1_camera_a45d86b427fa74b7c0bf2febe1d20cb01}{}\label{class_virtual_1_1_camera_a45d86b427fa74b7c0bf2febe1d20cb01} 
+\index{Virtual\+::\+Camera@{Virtual\+::\+Camera}!get\+Rect@{get\+Rect}}
+\index{get\+Rect@{get\+Rect}!Virtual\+::\+Camera@{Virtual\+::\+Camera}}
+\subsubsection{\texorpdfstring{get\+Rect()}{getRect()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Rect Virtual\+::\+Camera\+::get\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+S\+DL rectangle of position and resolution of camera 
+\end{DoxyReturn}
+\hypertarget{class_virtual_1_1_camera_ac6ec60ab0905c4ddcaa835914d20f770}{}\label{class_virtual_1_1_camera_ac6ec60ab0905c4ddcaa835914d20f770} 
+\index{Virtual\+::\+Camera@{Virtual\+::\+Camera}!move@{move}}
+\index{move@{move}!Virtual\+::\+Camera@{Virtual\+::\+Camera}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Virtual\+::\+Camera\+::move (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{relative\+Position }\end{DoxyParamCaption})}
+
+
+
+Move the camera relativly of previous position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em relative\+Position} & -\/ Integer vector of changed position \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_camera_ae6c71fea6b4f46be3af9c015507576a0}{}\label{class_virtual_1_1_camera_ae6c71fea6b4f46be3af9c015507576a0} 
+\index{Virtual\+::\+Camera@{Virtual\+::\+Camera}!set\+Center@{set\+Center}}
+\index{set\+Center@{set\+Center}!Virtual\+::\+Camera@{Virtual\+::\+Camera}}
+\subsubsection{\texorpdfstring{set\+Center()}{setCenter()}}
+{\footnotesize\ttfamily void Virtual\+::\+Camera\+::set\+Center (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{center\+Position }\end{DoxyParamCaption})}
+
+
+
+Updates position of camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center\+Position} & -\/ Integer vector of center of camera \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_camera_a6916239ab1b8ad4a9b1c20c36f28de18}{}\label{class_virtual_1_1_camera_a6916239ab1b8ad4a9b1c20c36f28de18} 
+\index{Virtual\+::\+Camera@{Virtual\+::\+Camera}!update@{update}}
+\index{update@{update}!Virtual\+::\+Camera@{Virtual\+::\+Camera}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Virtual\+::\+Camera\+::update (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{window\+Resolution,  }\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{level\+Resolution }\end{DoxyParamCaption})}
+
+
+
+Updates the info about resolution of window and level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Resolution} & -\/ Integer vectors of resolution of window \\
+\hline
+{\em level\+Resolution} & -\/ Integer vectors of resolution of map \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Virtual\+Eye/Camera.\+hpp\end{DoxyCompactItemize}

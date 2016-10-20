@@ -10,34 +10,87 @@
 namespace Virtual
 {
 	#define FLIP(x) SDL_FLIP_##x
-	
-	/*With Drawable you can manipulate position and parametres objects*/
+
+	/*!
+	 *  \brief Class to manupulate position and size of object
+	 */
 	class Transformable
 	{
 	public:
-		/*Getters*/
+		/*!
+		 *	@return position of object 
+		 */
 		Vector2<int> getPosition();
+		/*!
+		 *	@return size of object 
+		 */
 		Vector2<int> getParametres();
+		/*!
+		 *	@return position of texture crop in object 
+		 */
 		Vector2<int> getCropPosition();
+		/*!
+		 *	@return size of texture crop in object 
+		 */
 		Vector2<int> getCropParametres();
+		/*!
+		 *	@return size of texture crop in object 
+		 */
 		Rectangle<int> getRectangle();
-		
+		/*!
+		 *	@return angle of object 
+		 */
 		int getAngle();
-		
+		/*!
+		 *	@return center of texture 
+		 */
 		Vector2<int> getCenter();
-
-		/*Setters*/
-		void setPosition(Vector2<int>);
-		void setParametres(Vector2<int>);
-		void setCropPosition  (Vector2<int>);
-		void setCropParametres(Vector2<int>);
-		void setRectangle(Rectangle<int>);
-		
-		void setAngle(int);
-
-		/*Custom*/
-		void setFlip(SDL_RendererFlip);
-		void move(Vector2<int>, double);
+		/*!
+		 *	\brief Setting position of object
+		 * 	@param position - coords of position
+		 */	
+		void setPosition(Vector2<int> position);
+		/*!
+		 *	\brief Setting size of object
+		 * 	@param size - coords of position
+		 */	
+		void setParametres(Vector2<int> size);
+		/*!
+		 *	\brief Setting position of crop of texture
+		 * 
+		 * 	@param cropPosition - coords of crop position(x and y)
+		 */	
+		void setCropPosition  (Vector2<int> cropPosition);
+		/*!
+		 *	\brief Setting position of crop of texture
+		 * 
+		 * 	@param cropSize - coords of crop position(width and height)
+		 */	
+		void setCropParametres(Vector2<int> cropSize);
+		/*!
+		 *	\brief Setting position and size of sprite
+		 * 
+		 * 	@param rect - coords of position and width and height
+		 */	
+		void setRectangle(Rectangle<int> rect);
+		/*!
+		 *	\brief Setting angle of sprite
+		 * 
+		 * 	@param angle - angle in degrees
+		 */	
+		void setAngle(int angle);
+		/*!
+		 *	\brief Setting flip of texture
+		 * 
+		 * 	@param flip - for exaple (FLIP(NONE))
+		 */	
+		void setFlip(SDL_RendererFlip flip);
+		/*!
+		 *	\brief Setting flip of texture
+		 * 
+		 * 	@param flip - for exaple (FLIP(NONE))
+		 */	
+		void move(Vector2<int> relativePosition, double delta);
 		bool isCollide(Transformable &);
 	protected:	
 		SDL_Rect rect;

@@ -18,102 +18,225 @@
 
 namespace Virtual
 {
-	/*Dynamic texture class*/
+	/*!
+	 *  \brief Dynamic texture class, like Font
+	 */
 	class Texture
 	{
 	public:
 		~Texture();
-		void setTexture(SDL_Texture*);
-		
+		/*!
+		 *  \brief Dynamic texture class
+		 * 
+		 * 	@param texture - pointer into SDL_Texture viariable
+		 */
+		void setTexture(SDL_Texture* texture);
+		/*!
+		 * 	@return SDL_Texture pointer
+		 */
 		SDL_Texture* getTexture();
 	protected:
 		SDL_Texture * texture;	
 	};
 	
-	/*With Drawable you can draw objects*/
+	/*!
+	 *  \brief Class able to drawing by engine
+	 */
 	class Drawable
 	{
 	public:
-		virtual void draw(SDL_Renderer*, Camera&) = 0;
-
-		/*Getters*/
+		/*!
+		 *  \brief Function that use engine to draw object
+		 * 
+		 * 	@param renderer - pointer into SDL_Renderer
+		 *  @param camera - reference to camera in engine
+		 */
+		virtual void draw(SDL_Renderer* renderer, Camera& camera) = 0;
+		/*!
+		 * 	@return name of object
+		 */
 		std::string  getName();
+		/*!
+		 * 	@return true if the object was static(doesn't move by camera) / false if it isn't
+		 */
 		bool isStatic();
+		/*!
+		 * 	@return true if the object was able to drawing / false if it isn't
+		 */
 		bool isDrawing();
-		
-		/*Setters*/
-		void setName	  (std::string);
-		void setIsStatic  (bool);
-		void setIsDrawing (bool);
+		/*!
+		 *  \brief Sets name of object
+		 * 
+		 * 	@param name - name of object
+		 */
+		void setName	  (std::string name);
+		/*!
+		 *  \brief Sets fact is the object able to be static(don't move by camera)
+		 * 
+		 * 	@param is - fact is the object was static
+		 */
+		void setIsStatic  (bool is);
+		/*!
+		 *  \brief Sets fact is the object able to drawing by engine
+		 * 	
+		 * 	@param is - fact is the object was able to drawing
+		 */
+		void setIsDrawing (bool is);
 	protected:	
 		std::string name;
 		bool is_static;
 		bool is_drawing;
 	};
 
-	/*Simple image*/
+	/*!
+	 *  \brief Simple sprite class, like Label
+	 */
 	class Sprite
 		:public Texture, public Drawable, public Transformable	
 	{
 	public:
-		void draw(SDL_Renderer*, Camera&);
+		/*!
+		 *  \brief Function that use engine to draw object
+		 * 
+		 * 	@param renderer - pointer into SDL_Renderer
+		 *  @param camera - reference to camera in engine
+		 */
+		void draw(SDL_Renderer* renderer, Camera& camera);
 	};
 	
-	/*Single tile in a map*/
+	/*!
+	 *  \brief Simple tile class
+	 */
 	class Tile
 		:public Sprite
 	{
 		int tile;
 	public:
-		void setTile(int);
+		/*!
+		 *  \brief Sets tile type number
+		 * 
+		 * 	@param type - number of type
+		 */
+		void setTile(int type);
+		/*!
+		 * 	@return integer tile type number
+		 */
 		int getTile();
 	};
 	
-	/*"Storage" of map information*/
-	struct Map
-	{
-		std::vector<std::vector<int>> numbers;
-		std::vector<std::vector<std::shared_ptr<Tile>>> tiles;
-		std::shared_ptr<Tile> getTileAt(Vector2<int>);
-		
-		Texture texture;
-		
-		std::string mapPath;
-		std::string texturePath;
-		int tilesSize;
-		int maxNumber;
-		int width;
-		int height;
-	};
-	
-	/*Dynaic Font class*/
+	/*!
+	 *  \brief Simple font dynamic class, like Texture
+	 */
 	class Font
 	{
 	public:
 		~Font();
-		
-		void setFont(TTF_Font*);
+		/*!
+		 *  \brief Setting traditional SDL pointer
+		 * 
+		 * 	@param font - pointer into TTF_Font viariable
+		 */
+		void setFont(TTF_Font* font);
+		/*!
+		 * 	@return TTF_Font pointer
+		 */
 		TTF_Font* getFont();
 	private:
 		TTF_Font* font;	
 	};
 	
-	/*Simple text*/
+	/*!
+	 *  \brief Simple sprite dynamic class, like Sprite
+	 */
 	class Label
 		: public Sprite
 	{
 	public:
+		/*!
+		 *  \brief Function that use engine to draw object
+		 * 
+		 * 	@param renderer - pointer into SDL_Renderer
+		 *  @param camera - reference to camera in engine
+		 */
 		void draw(SDL_Renderer*, Camera&);
-		
-		void setColor(Color);
-		void setFont(std::shared_ptr<Font>);
-		void setSize(int);
-		void setText(std::string);
+		/*!
+		 *  \brief Setting font color
+		 * 
+		 * 	@param color - RGB Color structure
+		 */
+		void setColor(Color color);
+		/*!
+		 *  \brief Setting Font into Label
+		 * 
+		 * 	@param font - Dynamic pointer into Font
+		 */
+		void setFont(std::shared_ptr<Font> font);
+		/*!
+		 *  \brief Setting Font size
+		 * 
+		 * 	@param size - integer number
+		 */
+		void setSize(int size);
+		/*!
+		 * 	@param text - string to drawing
+		 */
+		void setText(std::string text);
 	private:
 		std::string text;
 		std::shared_ptr<Font> font;
 		Color color;
 		int size;
 		bool isChanged = false;
+	};
+	
+	/*!
+	 *  \brief Info about map
+	 */
+	struct Map
+	{
+		/*!
+		 *  \brief Numbers type of one single tile
+		 */
+		std::vector<std::vector<int>> numbers;
+		/*!
+		 *  \brief Storage of all tiles of map
+		 */
+		std::vector<std::vector<std::shared_ptr<Tile>>> tiles;
+		/*!
+		 *  \brief Numbers type of one single tile
+		 * 
+		 * 	@param position - position of sprite in the table (like Vector2<int>(2, 2) to get the tile at 2:2 coords)
+		 * 
+		 *	@return Reference to tile by they position in table
+		 */
+		std::shared_ptr<Tile> getTileAt(Vector2<int> position);
+		/*!
+		 *  \brief Tileset texture
+		 */
+		Texture texture;
+		/*!
+		 *  \brief Path to map definition (*.iom)
+		 */
+		std::string mapPath;
+		/*!
+		 *  \brief Path to tilset
+		 */
+		std::string texturePath;
+		/*!
+		 *  \brief Width and height of one tile
+		 */
+		int tilesSize;
+		/*!
+		 *  \brief The biggest number of tile type
+		 */
+		int maxNumber;
+		/*!
+		 *  \brief Width of map in pixel
+		 */
+		int width;
+		/*!
+		 *  \brief Height of map in pixel
+		 */
+		int height;
 	};
 }

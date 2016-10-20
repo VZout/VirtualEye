@@ -15,30 +15,45 @@
 
 namespace Virtual
 {
-	/*Device class manage sublibs and engine*/
+	/*!
+	 *  \brief Managment of sublibraries, window and all of the classes of engine.
+	 */
 	class Device
 	{
 	public:
-		/*Constructor takes width and height of engine window*/
-		Device(int, int);
-	
-		/*Deletes window memory*/
+		/*!
+		 * 	\brief Init of window, all sublibs and all of the subclasses
+		 * 
+		 *  @param width, height - resolution of window
+		 */
+		Device(int width, int height);
 		~Device(void);
-
-		/*Function start main loop*/
-		int start(std::string);
+		/*!
+		 * 	\brief Starting the work of game engine, run of all scripts
+		 * 
+		 *  @param path - lua script path
+		 */
+		int start(std::string path);
 	protected:
-		/*onInit() start before main loop*/
+		/*!
+		 *  \brief This function starts before the main loop
+		 */
 		virtual void onInit(){ };
-
-		/*onUpdate() start in rendering loop*/
+		/*!
+		 *  \brief This function starts in the main loop
+		 */
 		virtual void onUpdate(){ };
-		
-		/*set width and height of window*/
-		void setParametres(Vector2<int>);
-		
-		/*set is window fullscreened*/
-		void setFullScreened(bool);
+		/*!
+		 * 	\brief Starting the work of game engine, run of all scripts
+		 *  @param resolution -  resolution of window in integer vector
+		 */
+		void setParametres(Vector2<int> resolution);
+		/*!
+		 * 	\brief Setting is the window run in fullscreen mode or not
+		 * 
+		 *  @param isTrue - true to set fullscreen mode, false to unset fullscreen mode
+		 */
+		void setFullScreened(bool isTrue);
 	protected:
 		std::shared_ptr<EventManager> eventManager;
 		std::shared_ptr<Renderer> renderer;

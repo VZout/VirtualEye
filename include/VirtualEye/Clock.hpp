@@ -7,14 +7,25 @@
 
 namespace Virtual
 {
+	/*!
+	 *  \brief Managment of time.
+	 */
 	class Clock
 	{
 	public:
-		Clock();
-		
-		void start();
-		void stop();
-		double getDelta();
+		Clock(void);
+		/*!
+		 *  \brief Start of the time catching.
+		 */
+		void start(void);
+		/*!
+		 *  \brief Catching, calculating the time.
+		 */
+		void stop(void);
+		/*!
+		 *  @return In-double odd of the start and stop time
+		 */
+		double getDelta(void);
 	private:
 		std::chrono::time_point<std::chrono::high_resolution_clock> timePrev;
 		std::chrono::time_point<std::chrono::high_resolution_clock> timeCurrent;

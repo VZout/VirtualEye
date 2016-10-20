@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['getangle',['getAngle',['../class_virtual_1_1_transformable.html#acda950f2b5d3f2b85aec5663bec79611',1,'Virtual::Transformable']]],
+  ['getcenter',['getCenter',['../class_virtual_1_1_transformable.html#a703da601d8ef871a03b0da591edda2fe',1,'Virtual::Transformable']]],
+  ['getcropparametres',['getCropParametres',['../class_virtual_1_1_transformable.html#a22aa918ae175dea89c27728a20c29f82',1,'Virtual::Transformable']]],
+  ['getcropposition',['getCropPosition',['../class_virtual_1_1_transformable.html#adbccc4539561975b0de4471d05ca7541',1,'Virtual::Transformable']]],
+  ['getdelta',['getDelta',['../class_virtual_1_1_clock.html#a93eb30323793a30b8fd0afee4389d471',1,'Virtual::Clock']]],
+  ['getfont',['getFont',['../class_virtual_1_1_font.html#a4771650afab7d6a292a439b29eaef81f',1,'Virtual::Font']]],
+  ['getinstance',['getInstance',['../class_virtual_1_1_debug_log.html#a7360c164a4fa8df9a68449bdf4c38ecf',1,'Virtual::DebugLog']]],
+  ['getlabelbyid',['getLabelById',['../class_virtual_1_1_renderer.html#a11f3dbe70c634fb465b5b21d43618f5d',1,'Virtual::Renderer']]],
+  ['getmap',['getMap',['../class_virtual_1_1_renderer.html#aaa8e493c4e05d5eaca42604555d3b419',1,'Virtual::Renderer']]],
+  ['getmouseposition',['getMousePosition',['../class_virtual_1_1_event_manager.html#a3d55fffe71640c02b40788887a1048f0',1,'Virtual::EventManager']]],
+  ['getname',['getName',['../class_virtual_1_1_drawable.html#a6b00363f9db9c6b0e1bf09e250f687cb',1,'Virtual::Drawable']]],
+  ['getparametres',['getParametres',['../class_virtual_1_1_transformable.html#a816bf127c89675265776e94ef849e6e8',1,'Virtual::Transformable']]],
+  ['getposition',['getPosition',['../class_virtual_1_1_transformable.html#a2bb830f06c5123ae69d0584eef5f16f3',1,'Virtual::Transformable']]],
+  ['getrect',['getRect',['../class_virtual_1_1_camera.html#a45d86b427fa74b7c0bf2febe1d20cb01',1,'Virtual::Camera']]],
+  ['getrectangle',['getRectangle',['../class_virtual_1_1_transformable.html#aa25efa18322fe9eaa187cd7cb54909ae',1,'Virtual::Transformable']]],
+  ['getspritebyid',['getSpriteById',['../class_virtual_1_1_renderer.html#ae2be5bddf056acb2c00f77fb6f0afa6c',1,'Virtual::Renderer']]],
+  ['gettexture',['getTexture',['../class_virtual_1_1_texture.html#a5c870d3c9b6db63922aa5cf451cd3422',1,'Virtual::Texture']]],
+  ['gettile',['getTile',['../class_virtual_1_1_tile.html#ae535b36cb182c5376739a4d6cdb7306b',1,'Virtual::Tile']]],
+  ['gettileat',['getTileAt',['../struct_virtual_1_1_map.html#ae92e86e0da301c4481718bc871086013',1,'Virtual::Map']]]
+];

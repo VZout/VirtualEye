@@ -1,0 +1,123 @@
+\hypertarget{class_virtual_1_1_device}{}\section{Virtual\+:\+:Device Class Reference}
+\label{class_virtual_1_1_device}\index{Virtual\+::\+Device@{Virtual\+::\+Device}}
+
+
+Managment of sublibraries, window and all of the classes of engine.  
+
+
+
+
+{\ttfamily \#include $<$Device.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_virtual_1_1_device_a01750717800affee98304503b6e7394d}{Device} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Init of window, all sublibs and all of the subclasses. \end{DoxyCompactList}\item 
+int \hyperlink{class_virtual_1_1_device_aaadbfd2dd970af7a42a858ee52d36869}{start} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Starting the work of game engine, run of all scripts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_virtual_1_1_device_acf167a3fc503db0b87bab4435bfef1ed}{}\label{class_virtual_1_1_device_acf167a3fc503db0b87bab4435bfef1ed} 
+virtual void \hyperlink{class_virtual_1_1_device_acf167a3fc503db0b87bab4435bfef1ed}{on\+Init} ()
+\begin{DoxyCompactList}\small\item\em This function starts before the main loop. \end{DoxyCompactList}\item 
+\hypertarget{class_virtual_1_1_device_abbf3596a61ffc42d8b0a533f07e892a7}{}\label{class_virtual_1_1_device_abbf3596a61ffc42d8b0a533f07e892a7} 
+virtual void \hyperlink{class_virtual_1_1_device_abbf3596a61ffc42d8b0a533f07e892a7}{on\+Update} ()
+\begin{DoxyCompactList}\small\item\em This function starts in the main loop. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_device_a15e199ed381e9cf1eea79ce2da30786e}{set\+Parametres} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ resolution)
+\begin{DoxyCompactList}\small\item\em Starting the work of game engine, run of all scripts. \end{DoxyCompactList}\item 
+void \hyperlink{class_virtual_1_1_device_a7f0a80fead7847616b92d0defad43d96}{set\+Full\+Screened} (bool is\+True)
+\begin{DoxyCompactList}\small\item\em Setting is the window run in fullscreen mode or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_virtual_1_1_device_aa1ea93335ccb046238b1fb61e1cb087f}{}\label{class_virtual_1_1_device_aa1ea93335ccb046238b1fb61e1cb087f} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_virtual_1_1_event_manager}{Event\+Manager} $>$ {\bfseries event\+Manager}
+\item 
+\hypertarget{class_virtual_1_1_device_a3c40ddcdd5514b6ceb8de171835aa522}{}\label{class_virtual_1_1_device_a3c40ddcdd5514b6ceb8de171835aa522} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_virtual_1_1_renderer}{Renderer} $>$ {\bfseries renderer}
+\item 
+\hypertarget{class_virtual_1_1_device_a34e3c67e5ed6f3aad78e69df09760079}{}\label{class_virtual_1_1_device_a34e3c67e5ed6f3aad78e69df09760079} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_virtual_1_1_camera}{Camera} $>$ {\bfseries camera}
+\item 
+\hypertarget{class_virtual_1_1_device_ae791d56234f12d666bc620d740690067}{}\label{class_virtual_1_1_device_ae791d56234f12d666bc620d740690067} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_virtual_1_1_clock}{Clock} $>$ {\bfseries clock}
+\item 
+\hypertarget{class_virtual_1_1_device_aa2bf96683fa3d4fec7b1db02e81caa0b}{}\label{class_virtual_1_1_device_aa2bf96683fa3d4fec7b1db02e81caa0b} 
+\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ {\bfseries level\+Properties}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Managment of sublibraries, window and all of the classes of engine. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_virtual_1_1_device_a01750717800affee98304503b6e7394d}{}\label{class_virtual_1_1_device_a01750717800affee98304503b6e7394d} 
+\index{Virtual\+::\+Device@{Virtual\+::\+Device}!Device@{Device}}
+\index{Device@{Device}!Virtual\+::\+Device@{Virtual\+::\+Device}}
+\subsubsection{\texorpdfstring{Device()}{Device()}}
+{\footnotesize\ttfamily Virtual\+::\+Device\+::\+Device (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Init of window, all sublibs and all of the subclasses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width,height} & -\/ resolution of window \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_virtual_1_1_device_a7f0a80fead7847616b92d0defad43d96}{}\label{class_virtual_1_1_device_a7f0a80fead7847616b92d0defad43d96} 
+\index{Virtual\+::\+Device@{Virtual\+::\+Device}!set\+Full\+Screened@{set\+Full\+Screened}}
+\index{set\+Full\+Screened@{set\+Full\+Screened}!Virtual\+::\+Device@{Virtual\+::\+Device}}
+\subsubsection{\texorpdfstring{set\+Full\+Screened()}{setFullScreened()}}
+{\footnotesize\ttfamily void Virtual\+::\+Device\+::set\+Full\+Screened (\begin{DoxyParamCaption}\item[{bool}]{is\+True }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Setting is the window run in fullscreen mode or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+True} & -\/ true to set fullscreen mode, false to unset fullscreen mode \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_device_a15e199ed381e9cf1eea79ce2da30786e}{}\label{class_virtual_1_1_device_a15e199ed381e9cf1eea79ce2da30786e} 
+\index{Virtual\+::\+Device@{Virtual\+::\+Device}!set\+Parametres@{set\+Parametres}}
+\index{set\+Parametres@{set\+Parametres}!Virtual\+::\+Device@{Virtual\+::\+Device}}
+\subsubsection{\texorpdfstring{set\+Parametres()}{setParametres()}}
+{\footnotesize\ttfamily void Virtual\+::\+Device\+::set\+Parametres (\begin{DoxyParamCaption}\item[{\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$}]{resolution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Starting the work of game engine, run of all scripts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resolution} & -\/ resolution of window in integer vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_virtual_1_1_device_aaadbfd2dd970af7a42a858ee52d36869}{}\label{class_virtual_1_1_device_aaadbfd2dd970af7a42a858ee52d36869} 
+\index{Virtual\+::\+Device@{Virtual\+::\+Device}!start@{start}}
+\index{start@{start}!Virtual\+::\+Device@{Virtual\+::\+Device}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily int Virtual\+::\+Device\+::start (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Starting the work of game engine, run of all scripts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ lua script path \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Virtual\+Eye/Device.\+hpp\end{DoxyCompactItemize}
