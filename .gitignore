@@ -43,8 +43,6 @@ CMakeFiles/*
 CMakeFiles/*.*
 cmake_install.cmake
 
-tests/Pong/res/*.*
-
 tests/Pong/VirtualEye
 
 CMakeCache.txt
