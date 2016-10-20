@@ -1,5 +1,0 @@
-VirtualEye new log: sprite loading form paddle.png failed!
-VirtualEye new log: sprite loading form ball.png failed!
-VirtualEye new log: sprite loading form tile.png failed!
-VirtualEye new log: sprite loading form tile.png failed!
-VirtualEye new log: sprite loading form tile.png failed!
