@@ -108,10 +108,17 @@ namespace Virtual
 	 *  \brief Simple tile class
 	 */
 	class Tile
-		:public Sprite
+		:public Texture, public Drawable, public Transformable	
 	{
 		int tile;
 	public:
+		/*!
+		 *  \brief Function that use engine to draw object
+		 * 
+		 * 	@param renderer - pointer into SDL_Renderer
+		 *  @param camera - reference to camera in engine
+		 */
+		void draw(SDL_Renderer * renderer, Camera & camera);
 		/*!
 		 *  \brief Sets tile type number
 		 * 
@@ -149,7 +156,7 @@ namespace Virtual
 	 *  \brief Simple sprite dynamic class, like Sprite
 	 */
 	class Label
-		: public Sprite
+		:public Texture, public Drawable, public Transformable	
 	{
 	public:
 		/*!
@@ -158,7 +165,7 @@ namespace Virtual
 		 * 	@param renderer - pointer into SDL_Renderer
 		 *  @param camera - reference to camera in engine
 		 */
-		void draw(SDL_Renderer*, Camera&);
+		void draw(SDL_Renderer * renderer, Camera & camera);
 		/*!
 		 *  \brief Setting font color
 		 * 

@@ -64,6 +64,21 @@ namespace Virtual
 		}
 	}
 	/*Tile*/
+	void Tile::draw(SDL_Renderer * renderer, Camera& camera)
+	{
+		if(is_drawing)
+		{
+			if(!is_static)
+			{
+				SDL_Rect dRect = {rect.x - camera.getRect().x, rect.y - camera.getRect().y, rect.w, rect.h};
+				SDL_RenderCopyEx(renderer, texture, &cropRect, &dRect, angle, NULL, flip);
+			}
+			else
+			{
+				SDL_RenderCopyEx(renderer, texture, &cropRect, &rect, angle, NULL, flip);
+			}
+		}
+	}
 	void Tile::setTile(int n)
 	{
 		tile = n;
