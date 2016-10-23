@@ -112,8 +112,8 @@ namespace Virtual
 		{
 			if(isChanged)
 			{
-				SDL_QueryTexture(getTexture(), NULL, NULL, &rect.x, &rect.y);
-				setTexture(SDL_CreateTextureFromSurface(renderer, TTF_RenderText_Solid(font->getFont(), text.c_str(), {color.r, color.g, color.b})));
+				setTexture(SDL_CreateTextureFromSurface(renderer, TTF_RenderText_Blended(font->getFont(), text.c_str(), {color.r, color.g, color.b})));
+				SDL_QueryTexture(getTexture(), NULL, NULL, &rect.w, &rect.h);
 				isChanged = false;
 			}
 			if(!is_static)
