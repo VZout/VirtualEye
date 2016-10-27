@@ -64,12 +64,6 @@ namespace Virtual
 	{
 		return tile;
 	}
-	/*Map*/
-	std::shared_ptr<Tile> Map::getTileAt(Vector2<int> pos)
-	{
-		return tiles[pos.x][pos.y];
-	}
-	
 	/*Label*/
 	void Label::draw(SDL_Renderer * renderer, Camera & camera)
 	{

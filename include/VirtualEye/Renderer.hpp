@@ -16,6 +16,7 @@
 
 #include "DebugLog.hpp"
 #include "RenderUtils.hpp"
+#include "Map.hpp"
 
 namespace Virtual
 {
