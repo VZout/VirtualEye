@@ -12,6 +12,7 @@
 #include "EventManager.hpp"
 #include "Renderer.hpp"
 #include "Clock.hpp"
+#include "MusicPlayer.hpp"
 
 namespace Virtual
 {
@@ -59,6 +60,7 @@ namespace Virtual
 		std::shared_ptr<Renderer> renderer;
 		std::shared_ptr<Camera> camera;
 		std::shared_ptr<Clock> clock;
+		std::shared_ptr<MusicPlayer> musicPlayer;
 		
 		Vector2<int> levelProperties;
 	private:
