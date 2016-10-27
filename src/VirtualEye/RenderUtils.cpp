@@ -22,10 +22,6 @@ namespace Virtual
 	}
 
 	/*Drawable*/
-	std::string	Drawable::getName()
-	{
-		return name;
-	}
 	bool Drawable::isStatic()
 	{
 		return is_static;
@@ -33,11 +29,6 @@ namespace Virtual
 	bool Drawable::isDrawing()
 	{
 		return is_drawing;
-	}
-	
-	void Drawable::setName(std::string name)
-	{
-		this->name = name;
 	}
 	void Drawable::setIsStatic(bool is)
 	{

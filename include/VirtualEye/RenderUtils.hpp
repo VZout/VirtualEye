@@ -15,6 +15,7 @@
 #include "Math.hpp"
 #include "Camera.hpp"
 #include "Transformable.hpp"
+#include "NameObject.hpp"
 
 namespace Virtual
 {
@@ -53,10 +54,6 @@ namespace Virtual
 		 */
 		virtual void draw(SDL_Renderer* renderer, Camera& camera) = 0;
 		/*!
-		 * 	@return name of object
-		 */
-		std::string  getName();
-		/*!
 		 * 	@return true if the object was static(doesn't move by camera) / false if it isn't
 		 */
 		bool isStatic();
@@ -64,12 +61,6 @@ namespace Virtual
 		 * 	@return true if the object was able to drawing / false if it isn't
 		 */
 		bool isDrawing();
-		/*!
-		 *  \brief Sets name of object
-		 * 
-		 * 	@param name - name of object
-		 */
-		void setName	  (std::string name);
 		/*!
 		 *  \brief Sets fact is the object able to be static(don't move by camera)
 		 * 
@@ -83,7 +74,6 @@ namespace Virtual
 		 */
 		void setIsDrawing (bool is);
 	protected:	
-		std::string name;
 		bool is_static;
 		bool is_drawing;
 	};
@@ -92,7 +82,7 @@ namespace Virtual
 	 *  \brief Simple sprite class, like Label
 	 */
 	class Sprite
-		:public Texture, public Drawable, public Transformable	
+		:public Texture, public Drawable, public Transformable, public NameObject
 	{
 	public:
 		/*!
@@ -108,7 +98,7 @@ namespace Virtual
 	 *  \brief Simple tile class
 	 */
 	class Tile
-		:public Texture, public Drawable, public Transformable	
+		:public Texture, public Drawable, public Transformable, public NameObject
 	{
 		int tile;
 	public:
@@ -156,7 +146,7 @@ namespace Virtual
 	 *  \brief Simple sprite dynamic class, like Sprite
 	 */
 	class Label
-		:public Texture, public Drawable, public Transformable	
+		:public Texture, public Drawable, public Transformable, public NameObject
 	{
 	public:
 		/*!
