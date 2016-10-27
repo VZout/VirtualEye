@@ -15,31 +15,10 @@
 #include "Math.hpp"
 #include "Camera.hpp"
 #include "Transformable.hpp"
-#include "NameObject.hpp"
+#include "MusicPlayer.hpp"
 
 namespace Virtual
 {
-	/*!
-	 *  \brief Dynamic texture class, like Font
-	 */
-	class Texture
-	{
-	public:
-		~Texture();
-		/*!
-		 *  \brief Dynamic texture class
-		 * 
-		 * 	@param texture - pointer into SDL_Texture viariable
-		 */
-		void setTexture(SDL_Texture* texture);
-		/*!
-		 * 	@return SDL_Texture pointer
-		 */
-		SDL_Texture* getTexture();
-	protected:
-		SDL_Texture * texture;	
-	};
-	
 	/*!
 	 *  \brief Class able to drawing by engine
 	 */
@@ -120,28 +99,6 @@ namespace Virtual
 		 */
 		int getTile();
 	};
-	
-	/*!
-	 *  \brief Simple font dynamic class, like Texture
-	 */
-	class Font
-	{
-	public:
-		~Font();
-		/*!
-		 *  \brief Setting traditional SDL pointer
-		 * 
-		 * 	@param font - pointer into TTF_Font viariable
-		 */
-		void setFont(TTF_Font* font);
-		/*!
-		 * 	@return TTF_Font pointer
-		 */
-		TTF_Font* getFont();
-	private:
-		TTF_Font* font;	
-	};
-	
 	/*!
 	 *  \brief Simple sprite dynamic class, like Sprite
 	 */

@@ -91,7 +91,14 @@ namespace Virtual
 		 * 	@param flip - for exaple (FLIP(NONE))
 		 */	
 		void move(Vector2<int> relativePosition, double delta);
-		bool isCollide(Transformable &);
+		/*!
+		 *	\brief Check is this Transformable collides with other
+		 *
+		 *	@return true or false
+		 *  
+		 * 	@param other - other Transformable object
+		 */	
+		bool isCollide(Transformable & other);
 	protected:	
 		SDL_Rect rect;
 		SDL_Rect cropRect;

@@ -12,20 +12,10 @@
 #include <vector>
 #include <string>
 
+#include "DynamicPointers.hpp"
+
 namespace Virtual
 {
-	class Music
-	{
-	public:
-		~Music();
-		
-		void loadMusic(Mix_Music * music);
-		void play();
-		
-		std::string name;
-	private:
-		Mix_Music * music;
-	};
 	/*!
 	 *  \brief Class to play music
 	 */

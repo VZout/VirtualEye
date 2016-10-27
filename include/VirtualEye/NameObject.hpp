@@ -3,6 +3,8 @@
  *   MIT License  http://choosealicense.com/licenses/mit         *
  *  =============================================================*/ 
 
+#include <string>
+
 class NameObject
 {
 public:

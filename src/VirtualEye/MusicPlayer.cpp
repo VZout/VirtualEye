@@ -7,34 +7,25 @@
 
 namespace Virtual
 {
-	Music::~Music()
-	{
-		Mix_FreeMusic(music);
-	}
-	void Music::loadMusic(Mix_Music *  music)
-	{
-		this->music = music;
-	}
-	void Music::play()
-	{
-		Mix_PlayMusic(music, -1);
-	}
 	MusicPlayer::MusicPlayer()
 	{
 		Mix_Init(MIX_INIT_FLAC | MIX_INIT_MOD | MIX_INIT_MP3 | MIX_INIT_OGG);
+		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 	}
 	void MusicPlayer::loadMusic(std::string path, std::string name)
 	{
 		std::shared_ptr<Music> music(new Music);
-		music->name = name;
+		
+		music->setName(name);
 		music->loadMusic(Mix_LoadMUS(path.c_str()));
+		
 		msc.push_back(music);
 	}
 	void MusicPlayer::playMusic(std::string name)
 	{
 		for(auto &i : msc)
 		{
-			if(i->name == name)	i->play();
+			if(i->getName() == name)	i->play();
 		}
 	}
 }

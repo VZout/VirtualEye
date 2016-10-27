@@ -12,7 +12,6 @@
 #include "EventManager.hpp"
 #include "Renderer.hpp"
 #include "Clock.hpp"
-#include "MusicPlayer.hpp"
 
 namespace Virtual
 {

@@ -4,8 +4,8 @@ project (VirtualEye)
 set(hpp include/VirtualEye)
 set(cpp src/VirtualEye)
 
-set(hppfiles ${hpp}/Camera.hpp ${hpp}/Clock.hpp ${hpp}/DebugLog.hpp ${hpp}/Device.hpp ${hpp}/EventManager.hpp ${hpp}/Renderer.hpp ${hpp}/RenderUtils.hpp ${hpp}/Transformable.hpp ${hpp}/MusicPlayer.hpp ${hpp}/NameObject.hpp ${hpp}/Math.hpp)
-set(cppfiles ${cpp}/Camera.cpp ${cpp}/Clock.cpp ${cpp}/DebugLog.cpp ${cpp}/Device.cpp ${cpp}/EventManager.cpp ${cpp}/Renderer.cpp ${cpp}/RenderUtils.cpp ${cpp}/Transformable.cpp ${cpp}/MusicPlayer.cpp)
+set(hppfiles ${hpp}/Camera.hpp ${hpp}/Clock.hpp ${hpp}/DebugLog.hpp ${hpp}/Device.hpp ${hpp}/EventManager.hpp ${hpp}/Renderer.hpp ${hpp}/RenderUtils.hpp ${hpp}/Transformable.hpp ${hpp}/MusicPlayer.hpp ${hpp}/DynamicPointers.hpp ${hpp}/NameObject.hpp ${hpp}/Math.hpp)
+set(cppfiles ${cpp}/Camera.cpp ${cpp}/Clock.cpp ${cpp}/DebugLog.cpp ${cpp}/Device.cpp ${cpp}/EventManager.cpp ${cpp}/Renderer.cpp ${cpp}/RenderUtils.cpp ${cpp}/Transformable.cpp ${cpp}/MusicPlayer.cpp ${cpp}/DynamicPointers.cpp)
 
 set(pro Pong)
 set(testpro tests/${pro}/main.cpp)

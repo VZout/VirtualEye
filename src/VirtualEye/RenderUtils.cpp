@@ -7,20 +7,6 @@
 
 namespace Virtual
 {
-	/*Texture*/
-	Texture::~Texture()
-	{
-		SDL_DestroyTexture(texture);
-	}
-	void Texture::setTexture(SDL_Texture * texture)
-	{
-		this->texture = texture;
-	}
-	SDL_Texture * Texture::getTexture()
-	{
-		return texture;
-	}
-
 	/*Drawable*/
 	bool Drawable::isStatic()
 	{
@@ -83,19 +69,7 @@ namespace Virtual
 	{
 		return tiles[pos.x][pos.y];
 	}
-	/*Font*/
-	Font::~Font()
-	{
-		TTF_CloseFont(font);
-	}
-	void Font::setFont(TTF_Font* font)
-	{
-		this->font = font;
-	}
-	TTF_Font* Font::getFont()
-	{
-		return font;
-	}
+	
 	/*Label*/
 	void Label::draw(SDL_Renderer * renderer, Camera & camera)
 	{
