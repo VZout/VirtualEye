@@ -10,7 +10,7 @@ var searchData=
   ['setfullscreened',['setFullScreened',['../class_virtual_1_1_device.html#a7f0a80fead7847616b92d0defad43d96',1,'Virtual::Device']]],
   ['setisdrawing',['setIsDrawing',['../class_virtual_1_1_drawable.html#af47ef44ac82ef8f11873fcf3e7a4aaa0',1,'Virtual::Drawable']]],
   ['setisstatic',['setIsStatic',['../class_virtual_1_1_drawable.html#a94ed4174ab71aa5aea957d821bc8d170',1,'Virtual::Drawable']]],
-  ['setname',['setName',['../class_virtual_1_1_drawable.html#aef40e51fef6aacd0bc200347671126f0',1,'Virtual::Drawable']]],
+  ['setname',['setName',['../class_name_object.html#a4172d35244e556278ae8b7dae238c16a',1,'NameObject']]],
   ['setparametres',['setParametres',['../class_virtual_1_1_device.html#a15e199ed381e9cf1eea79ce2da30786e',1,'Virtual::Device::setParametres()'],['../struct_virtual_1_1_rectangle.html#a7894397b7dc0a3ef61b5dfd26e40dcfa',1,'Virtual::Rectangle::setParametres()'],['../class_virtual_1_1_transformable.html#a67d42e58b8f2fc45b565aa51e3f29f67',1,'Virtual::Transformable::setParametres()']]],
   ['setposition',['setPosition',['../struct_virtual_1_1_rectangle.html#abe71777391c0d70a523bde7be00054df',1,'Virtual::Rectangle::setPosition()'],['../class_virtual_1_1_transformable.html#a2c1168cb1d892fbddd978c7d45dfcba9',1,'Virtual::Transformable::setPosition()']]],
   ['setrectangle',['setRectangle',['../class_virtual_1_1_transformable.html#ad86a98728222a2b879afa41ba27dfc58',1,'Virtual::Transformable']]],

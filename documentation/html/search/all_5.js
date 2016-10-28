@@ -10,7 +10,7 @@ var searchData=
   ['getlabelbyid',['getLabelById',['../class_virtual_1_1_renderer.html#a11f3dbe70c634fb465b5b21d43618f5d',1,'Virtual::Renderer']]],
   ['getmap',['getMap',['../class_virtual_1_1_renderer.html#aaa8e493c4e05d5eaca42604555d3b419',1,'Virtual::Renderer']]],
   ['getmouseposition',['getMousePosition',['../class_virtual_1_1_event_manager.html#a3d55fffe71640c02b40788887a1048f0',1,'Virtual::EventManager']]],
-  ['getname',['getName',['../class_virtual_1_1_drawable.html#a6b00363f9db9c6b0e1bf09e250f687cb',1,'Virtual::Drawable']]],
+  ['getname',['getName',['../class_name_object.html#a8504c3c36a4d3983116866153e60bd7d',1,'NameObject']]],
   ['getparametres',['getParametres',['../class_virtual_1_1_transformable.html#a816bf127c89675265776e94ef849e6e8',1,'Virtual::Transformable']]],
   ['getposition',['getPosition',['../class_virtual_1_1_transformable.html#a2bb830f06c5123ae69d0584eef5f16f3',1,'Virtual::Transformable']]],
   ['getrect',['getRect',['../class_virtual_1_1_camera.html#a45d86b427fa74b7c0bf2febe1d20cb01',1,'Virtual::Camera']]],

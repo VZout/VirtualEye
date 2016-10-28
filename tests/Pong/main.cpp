@@ -18,7 +18,7 @@ private:
 	{
 		renderer->loadSprite("res/paddle.png", Vector2<int>(400, 500), "paddle"); 
 		renderer->loadSprite("res/ball.png", Vector2<int>(400, 300), "ball");
-		musicPlayer->loadMusic("res/sound.mp3", "pong");
+		//musicPlayer->loadMusic("res/sound.mp3", "pong");
 		
 		for(int i = 0; i < max; i++)
 		{

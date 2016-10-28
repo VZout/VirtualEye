@@ -11,6 +11,8 @@ var annotated_dup =
       [ "Font", "class_virtual_1_1_font.html", "class_virtual_1_1_font" ],
       [ "Label", "class_virtual_1_1_label.html", "class_virtual_1_1_label" ],
       [ "Map", "struct_virtual_1_1_map.html", "struct_virtual_1_1_map" ],
+      [ "Music", "class_virtual_1_1_music.html", "class_virtual_1_1_music" ],
+      [ "MusicPlayer", "class_virtual_1_1_music_player.html", "class_virtual_1_1_music_player" ],
       [ "Rectangle", "struct_virtual_1_1_rectangle.html", "struct_virtual_1_1_rectangle" ],
       [ "Renderer", "class_virtual_1_1_renderer.html", "class_virtual_1_1_renderer" ],
       [ "Sprite", "class_virtual_1_1_sprite.html", "class_virtual_1_1_sprite" ],
@@ -18,5 +20,6 @@ var annotated_dup =
       [ "Tile", "class_virtual_1_1_tile.html", "class_virtual_1_1_tile" ],
       [ "Transformable", "class_virtual_1_1_transformable.html", "class_virtual_1_1_transformable" ],
       [ "Vector2", "struct_virtual_1_1_vector2.html", "struct_virtual_1_1_vector2" ]
-    ] ]
+    ] ],
+    [ "NameObject", "class_name_object.html", "class_name_object" ]
 ];

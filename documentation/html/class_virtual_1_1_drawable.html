@@ -110,15 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7014800911efa59b96e538149e56f8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_virtual_1_1_drawable.html#af7014800911efa59b96e538149e56f8b">draw</a> (SDL_Renderer *renderer, <a class="el" href="class_virtual_1_1_camera.html">Camera</a> &amp;camera)=0</td></tr>
 <tr class="memdesc:af7014800911efa59b96e538149e56f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that use engine to draw object.  <a href="#af7014800911efa59b96e538149e56f8b">More...</a><br /></td></tr>
 <tr class="separator:af7014800911efa59b96e538149e56f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b00363f9db9c6b0e1bf09e250f687cb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_virtual_1_1_drawable.html#a6b00363f9db9c6b0e1bf09e250f687cb">getName</a> ()</td></tr>
-<tr class="separator:a6b00363f9db9c6b0e1bf09e250f687cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7901d5ac8f7ebed5e3d5773c9699ca7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_virtual_1_1_drawable.html#a7901d5ac8f7ebed5e3d5773c9699ca7c">isStatic</a> ()</td></tr>
 <tr class="separator:a7901d5ac8f7ebed5e3d5773c9699ca7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47902855528332fd79595db7dacca2ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_virtual_1_1_drawable.html#a47902855528332fd79595db7dacca2ed">isDrawing</a> ()</td></tr>
 <tr class="separator:a47902855528332fd79595db7dacca2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef40e51fef6aacd0bc200347671126f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_virtual_1_1_drawable.html#aef40e51fef6aacd0bc200347671126f0">setName</a> (std::string name)</td></tr>
-<tr class="memdesc:aef40e51fef6aacd0bc200347671126f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets name of object.  <a href="#aef40e51fef6aacd0bc200347671126f0">More...</a><br /></td></tr>
-<tr class="separator:aef40e51fef6aacd0bc200347671126f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94ed4174ab71aa5aea957d821bc8d170"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_virtual_1_1_drawable.html#a94ed4174ab71aa5aea957d821bc8d170">setIsStatic</a> (bool is)</td></tr>
 <tr class="memdesc:a94ed4174ab71aa5aea957d821bc8d170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets fact is the object able to be static(don't move by camera)  <a href="#a94ed4174ab71aa5aea957d821bc8d170">More...</a><br /></td></tr>
 <tr class="separator:a94ed4174ab71aa5aea957d821bc8d170"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,9 +123,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aad83f4ad3292e4aefac9db62fe0d4719"><td class="memItemLeft" align="right" valign="top"><a id="aad83f4ad3292e4aefac9db62fe0d4719"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
-<tr class="separator:aad83f4ad3292e4aefac9db62fe0d4719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75aa2adddb490011c1efaea42ab16079"><td class="memItemLeft" align="right" valign="top"><a id="a75aa2adddb490011c1efaea42ab16079"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_static</b></td></tr>
 <tr class="separator:a75aa2adddb490011c1efaea42ab16079"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,25 +176,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_drawing</b></td></
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_virtual_1_1_label.html#a077d7852f09f940a9932f63fb616351c">Virtual::Label</a>, and <a class="el" href="class_virtual_1_1_sprite.html#a57f581e0307ab2b2dd7c6922dba2a057">Virtual::Sprite</a>.</p>
-
-</div>
-</div>
-<a id="a6b00363f9db9c6b0e1bf09e250f687cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b00363f9db9c6b0e1bf09e250f687cb">&sect;&nbsp;</a></span>getName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Virtual::Drawable::getName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>name of object </dd></dl>
+<p>Implemented in <a class="el" href="class_virtual_1_1_label.html#aaea754974570ba425d2b9ffe91d183c7">Virtual::Label</a>, <a class="el" href="class_virtual_1_1_tile.html#ac9adb75122a87ec5efb5107b611ba226">Virtual::Tile</a>, and <a class="el" href="class_virtual_1_1_sprite.html#a57f581e0307ab2b2dd7c6922dba2a057">Virtual::Sprite</a>.</p>
 
 </div>
 </div>
@@ -288,32 +262,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_drawing</b></td></
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">is</td><td>- fact is the object was static </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aef40e51fef6aacd0bc200347671126f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef40e51fef6aacd0bc200347671126f0">&sect;&nbsp;</a></span>setName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Virtual::Drawable::setName </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets name of object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>- name of object </td></tr>
   </table>
   </dd>
 </dl>

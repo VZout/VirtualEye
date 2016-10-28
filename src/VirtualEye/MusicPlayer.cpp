@@ -9,8 +9,7 @@ namespace Virtual
 {
 	MusicPlayer::MusicPlayer()
 	{
-		Mix_Init(MIX_INIT_FLAC | MIX_INIT_MOD | MIX_INIT_MP3 | MIX_INIT_OGG);
-		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
+
 	}
 	void MusicPlayer::loadMusic(std::string path, std::string name)
 	{

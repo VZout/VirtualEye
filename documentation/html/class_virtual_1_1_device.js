@@ -11,5 +11,6 @@ var class_virtual_1_1_device =
     [ "clock", "class_virtual_1_1_device.html#ae791d56234f12d666bc620d740690067", null ],
     [ "eventManager", "class_virtual_1_1_device.html#aa1ea93335ccb046238b1fb61e1cb087f", null ],
     [ "levelProperties", "class_virtual_1_1_device.html#aa2bf96683fa3d4fec7b1db02e81caa0b", null ],
+    [ "musicPlayer", "class_virtual_1_1_device.html#a55c94d4bf9b53bf9b48c83a0e8c861ea", null ],
     [ "renderer", "class_virtual_1_1_device.html#a3c40ddcdd5514b6ceb8de171835aa522", null ]
 ];

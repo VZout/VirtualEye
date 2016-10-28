@@ -1,6 +1,7 @@
 var searchData=
 [
   ['isclosed',['isClosed',['../class_virtual_1_1_event_manager.html#ab1f3521b16ff390d968a12c9c8fbc00c',1,'Virtual::EventManager']]],
+  ['iscollide',['isCollide',['../class_virtual_1_1_transformable.html#aae527eac3aa7053455e9064373592b21',1,'Virtual::Transformable']]],
   ['isdrawing',['isDrawing',['../class_virtual_1_1_drawable.html#a47902855528332fd79595db7dacca2ed',1,'Virtual::Drawable']]],
   ['iskeypressed',['isKeyPressed',['../class_virtual_1_1_event_manager.html#a565bd5f26862a9f8f102078df1cfa39c',1,'Virtual::EventManager']]],
   ['ismousekeypressed',['isMouseKeyPressed',['../class_virtual_1_1_event_manager.html#addd617c04422d16843073acc9b8a6d32',1,'Virtual::EventManager']]],

@@ -48,9 +48,8 @@ void \hyperlink{class_virtual_1_1_transformable_a4d0e9c61931af6b42fac1dc0c3a1ed2
 \begin{DoxyCompactList}\small\item\em Setting flip of texture. \end{DoxyCompactList}\item 
 void \hyperlink{class_virtual_1_1_transformable_a80eb3848090682f3ad3bd3faf879f6ab}{move} (\hyperlink{struct_virtual_1_1_vector2}{Vector2}$<$ int $>$ relative\+Position, double delta)
 \begin{DoxyCompactList}\small\item\em Setting flip of texture. \end{DoxyCompactList}\item 
-\hypertarget{class_virtual_1_1_transformable_a997867ac2fabb95a7244caeeb26d8b05}{}\label{class_virtual_1_1_transformable_a997867ac2fabb95a7244caeeb26d8b05} 
-bool {\bfseries is\+Collide} (\hyperlink{class_virtual_1_1_transformable}{Transformable} \&)
-\end{DoxyCompactItemize}
+bool \hyperlink{class_virtual_1_1_transformable_aae527eac3aa7053455e9064373592b21}{is\+Collide} (\hyperlink{class_virtual_1_1_transformable}{Transformable} \&other)
+\begin{DoxyCompactList}\small\item\em Check is this \hyperlink{class_virtual_1_1_transformable}{Transformable} collides with other. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -135,6 +134,24 @@ position of object
 \begin{DoxyReturn}{Returns}
 size of texture crop in object 
 \end{DoxyReturn}
+\hypertarget{class_virtual_1_1_transformable_aae527eac3aa7053455e9064373592b21}{}\label{class_virtual_1_1_transformable_aae527eac3aa7053455e9064373592b21} 
+\index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!is\+Collide@{is\+Collide}}
+\index{is\+Collide@{is\+Collide}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
+\subsubsection{\texorpdfstring{is\+Collide()}{isCollide()}}
+{\footnotesize\ttfamily bool Virtual\+::\+Transformable\+::is\+Collide (\begin{DoxyParamCaption}\item[{\hyperlink{class_virtual_1_1_transformable}{Transformable} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Check is this \hyperlink{class_virtual_1_1_transformable}{Transformable} collides with other. 
+
+\begin{DoxyReturn}{Returns}
+true or false
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & -\/ other \hyperlink{class_virtual_1_1_transformable}{Transformable} object \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_virtual_1_1_transformable_a80eb3848090682f3ad3bd3faf879f6ab}{}\label{class_virtual_1_1_transformable_a80eb3848090682f3ad3bd3faf879f6ab} 
 \index{Virtual\+::\+Transformable@{Virtual\+::\+Transformable}!move@{move}}
 \index{move@{move}!Virtual\+::\+Transformable@{Virtual\+::\+Transformable}}
