@@ -34,14 +34,23 @@ namespace Virtual
 	protected:
 		SDL_Texture * texture;	
 	};
-		
+	/*!
+	 * \brief Dynamic Music class
+	 */
 	class Music
 			: public NameObject
 	{
 	public:
 		~Music();
-			
+		/*!
+		 * \brief Loading SDL music pointer into dynamic class
+		 * 
+		 * @param music - SDL default pointer
+		 */
 		void loadMusic(Mix_Music * music);
+		/*!
+		 * \brief Plays the music
+		 */
 		void play();
 	private:
 		Mix_Music * music;

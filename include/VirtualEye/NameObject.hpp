@@ -7,6 +7,10 @@
 
 namespace Virtual
 {
+	/*!
+	 * \brief Naming a object to distinction a diffrent objects
+	 * 
+	 */
 	class NameObject
 	{
 	public:
