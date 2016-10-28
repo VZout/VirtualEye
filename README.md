@@ -9,12 +9,16 @@ VirtualEye is Render Game Engine make for fun and gain experiance. A keynote to 
 ## License
 VirtualEye is under MIT license. It means, you can create your own game on it, sell it, authorize it, but you MUST write that VirtualEye is Dmitro Szewczuk own.
 
+## Documentation
+Link into the documentation(created by doxywizard) - https://bjornus.github.io/VEDoc/html/
+
 ## Features
 - [x] Map loading
 - [x] Sprite loading
 - [x] Easy to use
 - [x] Independent map formats
-- [ ] UI
+- [x] UI
+- [x] Documentation
 
 ## How to build(Linux)
 1. Install gcc compiler
