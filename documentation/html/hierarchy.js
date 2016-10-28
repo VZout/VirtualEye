@@ -14,7 +14,7 @@ var hierarchy =
     [ "Virtual::Font", "class_virtual_1_1_font.html", null ],
     [ "Virtual::Map", "struct_virtual_1_1_map.html", null ],
     [ "Virtual::MusicPlayer", "class_virtual_1_1_music_player.html", null ],
-    [ "NameObject", "class_name_object.html", [
+    [ "Virtual::NameObject", "class_virtual_1_1_name_object.html", [
       [ "Virtual::Label", "class_virtual_1_1_label.html", null ],
       [ "Virtual::Music", "class_virtual_1_1_music.html", null ],
       [ "Virtual::Sprite", "class_virtual_1_1_sprite.html", null ],
