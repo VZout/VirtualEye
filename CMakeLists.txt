@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.9)
 project (VirtualEye)
 
+add_definitions(-std=c++11)
+
 set(hpp include/VirtualEye)
 set(cpp src/VirtualEye)
 
