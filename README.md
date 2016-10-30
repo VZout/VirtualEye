@@ -22,7 +22,7 @@ Link into the documentation(created by doxywizard) - https://bjornus.github.io/V
 
 ## How to build(Linux)
 1. Install gcc compiler
-2. Install SDL2 and SDL2_image.
+2. Install SDL2, SDL2_image, SDL2_ttf, SDL2_mixer and Lua 5.2.
 3. Install cmake
 4. Install git
 5. Clone repo by:
